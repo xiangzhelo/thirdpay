@@ -1,0 +1,31 @@
+﻿truncate table orderbank
+truncate table orderbankamt
+truncate table orderbanknotify
+WITH ENCRYPTION AS
+
+truncate table ordercard
+truncate table ordercardamt
+truncate table ordercardnotify
+
+
+QQ登陆和扫码支付
+
+http://gateway.80shop.net/StandardAPI/YZCH/Sale.aspx?userid=1001&orderid=40819320788590005&typeid=sd&productid=sd5&
+cardno=YD0500006304212&cardpwd=25145215&money=5&url=http://pay.80shop.net:8080/paycallback/qilingpaycard.html&sign=ec1dfd63717598eb4491aa3f382b6972&ext= 
+
+ChargeCardDirect10814081535150562000850trueproductproducttypeproductdeschttp://localhost��800/callback.aspx50123456895215478600000000SNDACARD11000012009-01-01 00:00:00
+ChargeCardDirect10814081535150562000850trueproductproducttypeproductdeschttp://localhost??800/callback.aspx50123456895215478600000000SNDACARD1100001
+
+http://www.cnblogs.com/upzone/archive/2010/01/13/1646838.html
+
+易宝兼容模式
+ALIPAY=>992
+ALIPAYDCODE=>
+TENPAY=>993
+
+// {58A7D70E-B3DF-454b-B640-EF4D979BF833}
+IMPLEMENT_OLECREATE(<<class>>, <<external_name>>, 
+0x58a7d70e, 0xb3df, 0x454b, 0xb6, 0x40, 0xef, 0x4d, 0x97, 0x9b, 0xf8, 0x33);
+
+api
+B640EF4D979BF833

@@ -1,0 +1,5 @@
+﻿<p>亲爱的{#useremail#}:<p>
+<p style="font-size:14px">您的密码已经被重置为：<font style="font-size:14px;font-weight:bold;color:blue">{#newpwd#}</font>，请立即登录后修改！</p>
+<p><p>————————————————————————————————
+<p style="font-size:14px;line-height:150%">如果您有任何疑问，请致电我们的24小时客服热线 400-653-9930.&nbsp;或者联系我们的在线客服：<a href="http://www.7uka.com/service.html">进入客服中心</a><br/>祝您使用愉快！<br/>{#sitename#} 
+<a href="{#sitedomain#}/">{#sitedomain#}</a><p>

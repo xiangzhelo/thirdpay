@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/shuyuyewu/!svn/ver/10025/card-gateway/doc/8_demo/netdemo/Web%20References/com.shengpay.cardpay.refundQuery
+END
+refundQueryResponse.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/shuyuyewu/!svn/ver/10025/card-gateway/doc/8_demo/netdemo/Web%20References/com.shengpay.cardpay.refundQuery/refundQueryResponse.datasource
+END
+Reference.cs
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/shuyuyewu/!svn/ver/10025/card-gateway/doc/8_demo/netdemo/Web%20References/com.shengpay.cardpay.refundQuery/Reference.cs
+END
+refundBatchQueryResponse.datasource
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/shuyuyewu/!svn/ver/10025/card-gateway/doc/8_demo/netdemo/Web%20References/com.shengpay.cardpay.refundQuery/refundBatchQueryResponse.datasource
+END
+RefundQueryAPIExporterService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/shuyuyewu/!svn/ver/10025/card-gateway/doc/8_demo/netdemo/Web%20References/com.shengpay.cardpay.refundQuery/RefundQueryAPIExporterService.wsdl
+END
+Reference.map
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/shuyuyewu/!svn/ver/10025/card-gateway/doc/8_demo/netdemo/Web%20References/com.shengpay.cardpay.refundQuery/Reference.map
+END

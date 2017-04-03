@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D016106-6927-4941-9ABF-9381F3349322}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viviapi.ETAPI</RootNamespace>
+    <AssemblyName>viviapi.ETAPI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>7uka.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/viviapi.ETAPI/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary, Version=1.5.0.0, Culture=neutral, PublicKeyToken=bcdc0d0c766dd6e4">
+      <HintPath>..\RefDLL\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\RefDLL\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="DinpayRSAAPI">
+      <HintPath>..\RefDLL\DinpayRSAAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="ThoughtWorks.QRCode">
+      <HintPath>..\RefDLL\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="15173\Card.cs" />
+    <Compile Include="Alipay\AliPay.cs" />
+    <Compile Include="Alipay\AliPayMApi.cs" />
+    <Compile Include="Alipay\BatchPay.cs" />
+    <Compile Include="Alipay\Lib\AlipayConfig.cs" />
+    <Compile Include="Alipay\Lib\AlipayCore.cs" />
+    <Compile Include="Alipay\Lib\AlipayNotify.cs" />
+    <Compile Include="Alipay\Lib\AlipaySubmit.cs" />
+    <Compile Include="Alipay\Lib\MD5.cs" />
+    <Compile Include="Alipay\Qrcode.cs" />
+    <Compile Include="Alipay\AliPayTools.cs" />
+    <Compile Include="BaoFoo\Bank.cs" />
+    <Compile Include="BaoFoo\OrderQueryResult.cs" />
+    <Compile Include="Card51\QqPay.cs" />
+    <Compile Include="Card51\TenPay.cs" />
+    <Compile Include="Card51\WapWeiXin.cs" />
+    <Compile Include="Card51\WeiXin.cs" />
+    <Compile Include="Card51\Alipay.cs" />
+    <Compile Include="Card60866\Card.cs" />
+    <Compile Include="Card70\Alipay.cs" />
+    <Compile Include="Card70\Cared70.cs" />
+    <Compile Include="Card70\WeiXin.cs" />
+    <Compile Include="Common\OrderBankUtils.cs" />
+    <Compile Include="Common\OrderCardUtils.cs" />
+    <Compile Include="Common\TaskInterval.cs" />
+    <Compile Include="Card51\Card.cs" />
+    <Compile Include="Common\SystemProcessCard.cs" />
+    <Compile Include="Common\ETAPIBase.cs" />
+    <Compile Include="Common\Withdrawal.cs" />
+    <Compile Include="Dinpay\Bank.cs" />
+    <Compile Include="ebao2\Common\AES\AES.cs" />
+    <Compile Include="ebao2\Common\AES\AESUtil.cs" />
+    <Compile Include="ebao2\Common\config\APIURLConfig.cs" />
+    <Compile Include="ebao2\Common\config\Config.cs" />
+    <Compile Include="ebao2\Common\Entity\RespondJson.cs" />
+    <Compile Include="ebao2\Common\HMAC\Digest.cs" />
+    <Compile Include="ebao2\Common\HMAC\HmacMD5.cs" />
+    <Compile Include="ebao2\Common\HMAC\HMACUtil.cs" />
+    <Compile Include="ebao2\Common\HMAC\Md5MAC .cs" />
+    <Compile Include="ebao2\Common\Util\HttpUtil.cs" />
+    <Compile Include="ebao2\Common\Util\SoftLog.cs" />
+    <Compile Include="ebao2\Common\Util\YJPayUtil.cs" />
+    <Compile Include="ebao2\EBaoNewApi.cs" />
+    <Compile Include="ebao\Digest.cs" />
+    <Compile Include="ebao\EBaoUtil.cs" />
+    <Compile Include="ebao\EBaoApi.cs" />
+    <Compile Include="Ebatong\Bank.cs" />
+    <Compile Include="Ebatong\Lib\AskForTimestamp.cs" />
+    <Compile Include="Ebatong\Lib\CommonHelper.cs" />
+    <Compile Include="Ebatong\Lib\EbatongConfig.cs" />
+    <Compile Include="Ecpss\Bank.cs" />
+    <Compile Include="Gopay\Bank.cs" />
+    <Compile Include="Heepay\Alipay.cs" />
+    <Compile Include="Heepay\WxMobilePay.cs" />
+    <Compile Include="HuiSu\Card.cs" />
+    <Compile Include="HuiYuan\Card.cs" />
+    <Compile Include="IPS\Bank.cs" />
+    <Compile Include="Longbao\Bank.cs" />
+    <Compile Include="Longbao\Card.cs" />
+    <Compile Include="OfCard\Card.cs" />
+    <Compile Include="OfCard\SUP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\SellFactory.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\com.shengpay.cardpay.payment\Reference.cs" />
+    <Compile Include="Service References\com.shengpay.cardpay.queryOrder\Reference.cs" />
+    <Compile Include="Service References\com.shengpay.cardpay.receive\Reference.cs" />
+    <Compile Include="Service References\com.shengpay.cardpay.refundQuery\Reference.cs" />
+    <Compile Include="Service References\com.shengpay.cardpay.refund\Reference.cs" />
+    <Compile Include="Shengpay\Card.cs" />
+    <Compile Include="Shengpay\PayChannelInfo.cs" />
+    <Compile Include="Swiftpass\Gateway.cs" />
+    <Compile Include="Swiftpass\Lib\ClientResponseHandler.cs" />
+    <Compile Include="Swiftpass\Lib\MD5Util.cs" />
+    <Compile Include="Swiftpass\Lib\PayHttpClient.cs" />
+    <Compile Include="Swiftpass\Lib\RequestHandler.cs" />
+    <Compile Include="Swiftpass\Lib\Utils.cs" />
+    <Compile Include="TaoShang\Bank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TaoShang\Card.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Tenpay\lib\ClientResponseHandler.cs" />
+    <Compile Include="Tenpay\lib\DirectTransClientRequestHandler.cs" />
+    <Compile Include="Tenpay\lib\DirectTransClientResponseHandler.cs" />
+    <Compile Include="Tenpay\lib\MD5Util.cs" />
+    <Compile Include="Tenpay\lib\RequestHandler.cs" />
+    <Compile Include="Tenpay\lib\ResponseHandler.cs" />
+    <Compile Include="Tenpay\lib\TenpayHttpClient.cs" />
+    <Compile Include="Tenpay\lib\TenpayUtil.cs" />
+    <Compile Include="Weixin\ResponseHandlerX.cs" />
+    <Compile Include="Weixin\TenPayRMB.cs" />
+    <Compile Include="Weixin\TenpayUtil.cs" />
+    <Compile Include="Weixin\Utility.cs" />
+    <Compile Include="Weixin\MD5Util.cs" />
+    <Compile Include="Weixin\RequestHandler.cs" />
+    <Compile Include="Weixin\SHA1Util.cs" />
+    <Compile Include="Tenpay\TenPayRMB.cs" />
+    <Compile Include="YeePay.ZGT\Bank.cs" />
+    <Compile Include="YeePay.ZGT\Common\AES\AES.cs" />
+    <Compile Include="YeePay.ZGT\Common\AES\AESUtil.cs" />
+    <Compile Include="YeePay.ZGT\Common\config\APIURLConfig.cs" />
+    <Compile Include="YeePay.ZGT\Common\Entity\RespondJson.cs" />
+    <Compile Include="YeePay.ZGT\Common\HMAC\Digest.cs" />
+    <Compile Include="YeePay.ZGT\Common\HMAC\HmacMD5.cs" />
+    <Compile Include="YeePay.ZGT\Common\HMAC\HMACUtil.cs" />
+    <Compile Include="YeePay.ZGT\Common\HMAC\Md5MAC .cs" />
+    <Compile Include="YeePay.ZGT\Common\Util\HttpUtil.cs" />
+    <Compile Include="YeePay.ZGT\Common\Util\SoftLog.cs" />
+    <Compile Include="YeePay.ZGT\Common\Util\YJPayUtil.cs" />
+    <Compile Include="YeePay.ZGT\Weixin.cs" />
+    <Compile Include="YeePay\Bank.cs" />
+    <Compile Include="YeePay\Card.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay.cmbn\log.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay.cmbn\SZX.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay.cmbn\SZXCallbackResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay.cmbn\SZXResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay.cmbn\SZXResultTest.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\Buy.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\BuyBankDirectConnectResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\BuyCallbackResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\BuyMotoOrdResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\BuyOld.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\BuyQueryOrdDetailResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\BuyRefundOrdResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\DES.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\Digest.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\ErrLog.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\FormatQueryString.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\HmacMD5.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\HttpUtils.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\QueryOrdResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\SZX.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\SZXCallbackResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\SZXResult.cs" />
+    <Compile Include="YeePay\Lib\com.yeepay\SZXResultTest.cs" />
+    <Compile Include="YeePay\Lib\FormatQueryString.cs" />
+    <Compile Include="YeePay\RMB.cs" />
+    <Compile Include="ZFuPay\Functions.cs" />
+    <Compile Include="ZFuPay\PostPay.cs" />
+    <Compile Include="ZhiFu41\Bank.cs" />
+    <Compile Include="ZhiFu41\THPayHelper\AppConstants.cs" />
+    <Compile Include="ZhiFu41\THPayHelper\KeyValue.cs" />
+    <Compile Include="ZhiFu41\THPayHelper\KeyValues.cs" />
+    <Compile Include="ZhiFu41\THPayHelper\MD5Encoder.cs" />
+    <Compile Include="ZhiFu41\THPayHelper\THConfig.cs" />
+    <Compile Include="ZhiFu41\THPayHelper\URLUtils.cs" />
+    <Compile Include="Card51\Bank.cs" />
+    <Compile Include="QianYiFu\Bank.cs" />
+    <Compile Include="Zline\Bank.cs" />
+    <Compile Include="Zline\Class\ProperConst.cs" />
+    <Compile Include="Zline\Class\RSAOperate.cs" />
+    <Compile Include="Zline\Class\RSASign.cs" />
+    <Compile Include="Zweixin\MD5Util.cs" />
+    <Compile Include="Zweixin\RequestHandler.cs" />
+    <Compile Include="Zweixin\ZweixinPay.cs" />
+    <Compile Include="Zweixin\ZweixinpayUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7uka.snk" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\all-wcprops" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\entries" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\text-base\b2CPaymentCombinatedResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\text-base\b2CPaymentResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\text-base\PaymentAPIExporterService.wsdl.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\text-base\preApprovedPaymentResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\text-base\Reference.cs.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\text-base\Reference.map.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.payment\.svn\text-base\transferPaymentResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.payment\b2CPaymentCombinatedResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.payment\b2CPaymentResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.payment\PaymentAPIExporterService.wsdl" />
+    <None Include="Service References\com.shengpay.cardpay.payment\preApprovedPaymentResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.payment\Reference.map" />
+    <None Include="Service References\com.shengpay.cardpay.payment\transferPaymentResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\all-wcprops" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\entries" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\batchOrderQueryResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\orderQueryResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\QueryB2COrderResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\queryBatchOrderAsyResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\QueryOrderAPIExporterService.wsdl.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\QueryOrderCardResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\QueryQrcodeB2COrderResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\Reference.cs.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\.svn\text-base\Reference.map.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\batchOrderQueryResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\orderQueryResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\QueryB2COrderResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\queryBatchOrderAsyResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\QueryOrderAPIExporterService.wsdl" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\QueryOrderCardResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\QueryQrcodeB2COrderResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.queryOrder\Reference.map" />
+    <None Include="Service References\com.shengpay.cardpay.receive\.svn\all-wcprops" />
+    <None Include="Service References\com.shengpay.cardpay.receive\.svn\entries" />
+    <None Include="Service References\com.shengpay.cardpay.receive\.svn\text-base\ReceB2COrderResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.receive\.svn\text-base\ReceiveOrderAPIExplorterService.wsdl.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.receive\.svn\text-base\Reference.cs.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.receive\.svn\text-base\Reference.map.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.receive\ReceB2COrderResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.receive\ReceiveOrderAPIExplorterService.wsdl" />
+    <None Include="Service References\com.shengpay.cardpay.receive\Reference.map" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\.svn\all-wcprops" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\.svn\entries" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\.svn\text-base\Reference.cs.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\.svn\text-base\Reference.map.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\.svn\text-base\refundBatchQueryResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\.svn\text-base\RefundQueryAPIExporterService.wsdl.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\.svn\text-base\refundQueryResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\Reference.map" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\refundBatchQueryResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\RefundQueryAPIExporterService.wsdl" />
+    <None Include="Service References\com.shengpay.cardpay.refundQuery\refundQueryResponse.datasource" />
+    <None Include="Service References\com.shengpay.cardpay.refund\.svn\all-wcprops" />
+    <None Include="Service References\com.shengpay.cardpay.refund\.svn\entries" />
+    <None Include="Service References\com.shengpay.cardpay.refund\.svn\text-base\Reference.cs.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refund\.svn\text-base\Reference.map.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refund\.svn\text-base\RefundAPIExporterService.wsdl.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refund\.svn\text-base\refundResponse.datasource.svn-base" />
+    <None Include="Service References\com.shengpay.cardpay.refund\Reference.map" />
+    <None Include="Service References\com.shengpay.cardpay.refund\RefundAPIExporterService.wsdl" />
+    <None Include="Service References\com.shengpay.cardpay.refund\refundResponse.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Cache\Cache.csproj">
+      <Project>{25b155c1-2e95-47d6-8adc-20b006b48544}</Project>
+      <Name>Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\DBAccess\DBAccess.csproj">
+      <Project>{0D181290-2CAE-47DB-82E4-BAB7E7AF8E5D}</Project>
+      <Name>DBAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\Lib\Lib.csproj">
+      <Project>{461225b3-0a5b-4d7a-a968-169e0292207c}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\SysConfig\SysConfig.csproj">
+      <Project>{b38d0b5d-57fe-405f-a287-8a862e999622}</Project>
+      <Name>SysConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{30F24167-FE4A-44F9-9B30-3E8915FA6882}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{EA9BF80A-B9B1-4B03-B263-EAA1029AF6B9}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysInterface\SysInterface.csproj">
+      <Project>{150b0993-ab6e-41c0-8a92-001c03d60f21}</Project>
+      <Name>SysInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Kamen\" />
+    <Folder Include="Service References\com.shengpay.cardpay.payment\.svn\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.payment\.svn\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.payment\.svn\tmp\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.payment\.svn\tmp\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.payment\.svn\tmp\text-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.queryOrder\.svn\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.queryOrder\.svn\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.queryOrder\.svn\tmp\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.queryOrder\.svn\tmp\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.queryOrder\.svn\tmp\text-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.receive\.svn\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.receive\.svn\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.receive\.svn\tmp\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.receive\.svn\tmp\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.receive\.svn\tmp\text-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refundQuery\.svn\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refundQuery\.svn\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refundQuery\.svn\tmp\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refundQuery\.svn\tmp\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refundQuery\.svn\tmp\text-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refund\.svn\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refund\.svn\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refund\.svn\tmp\prop-base\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refund\.svn\tmp\props\" />
+    <Folder Include="Service References\com.shengpay.cardpay.refund\.svn\tmp\text-base\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

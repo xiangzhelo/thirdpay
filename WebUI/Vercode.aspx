@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="viviAPI.WebUI7uka.Vercode" Codebehind="Vercode.aspx.cs" %>

@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="viviAPI.WebUI2015.longbao.site" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%=WebSiteTitleSuffix %></title>
+
+     
+    <meta name="Keywords" content=<%="'"+KeyWords+"'" %>>
+    <meta name="Description" content=<%="'"+Description+"'" %> >
+
+    <link href="/longbao/style/css/site.css" rel="stylesheet" />
+    <script src="/longbao/style/js/jquery-1.12.4.min.js"></script>
+    <asp:ContentPlaceHolder ID="Header" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="top" style="top:0px;">
+        <div class="menu">
+            <div class="menudiv">
+                <a href="#" class="logo">
+                    <img src="/longbao/style/images/logo.png" />
+                </a>
+                <ul>
+                    <li><a href="Index.aspx" '<%=System.IO.Path.GetFileName(Request.Url.ToString()).ToLower() == "index.aspx" ? "class=\"selected\"" : "" %>'>首页</a></li>
+                    <li><a href="Product.aspx" '<%=System.IO.Path.GetFileName(Request.Url.ToString()).ToLower() == "product.aspx" ? "class=\"selected\"" : "" %>'>产品大全</a></li>
+                    <li><a href="Access.aspx" '<%=System.IO.Path.GetFileName(Request.Url.ToString()).ToLower() == "access.aspx" ? "class=\"selected\"" : "" %>'>商家接入服务</a></li>
+                    <li><a href="News.aspx" '<%=System.IO.Path.GetFileName(Request.Url.ToString()).ToLower() == "news.aspx" ? "class=\"selected\"" : "" %>'>网站动态</a></li>
+                    <li><a href="About.aspx" '<%=System.IO.Path.GetFileName(Request.Url.ToString()).ToLower() == "about.aspx" ? "class=\"selected\"" : "" %>'>关于我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <asp:ContentPlaceHolder ID="Content" runat="server">
+    </asp:ContentPlaceHolder>
+    <div class="bottom">
+        <div class="contact">
+            <div class="item">
+                <i class="icon1"></i>
+                <p>
+                    <span>商务-唐金</span>
+                    <a href="#">QQ:514699777</a>
+                    <b>Tel:13128888026</b>
+                </p>
+            </div>
+            <div class="item">
+                <i class="icon2"></i>
+                <p>
+                    <span>商务-尚笑</span>
+                    <a href="#">QQ:514099777</a>
+                    <b>Tel:13266666174</b>
+                </p>
+            </div>
+            <div class="item">
+                <i class="icon3"></i>
+                <p>
+                    <span>商务-和睿</span>
+                    <a href="#">QQ:877755569</a>
+                    <b>Tel:13128888806</b>
+                </p>
+            </div>
+            <div class="item">
+                <i class="icon4"></i>
+                <p>
+                    <span>商务-嘉豪</span>
+                    <a href="#">QQ:877755539</a>
+                    <b>Tel:15507538983</b>
+                </p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>24小时在线<a href="#">企业QQ：800091681</a> 公司电话：0755-36311116</p>
+            <p>龙宝网开放平台- 掌握最新的行业解决方案</p>
+            <p>公安网备：4403101020565 粤网文[2014]0222-072号 粤B2-20140231 粤ICP备12007740号 法律顾问： 广东百椹律师事务所 | 商户服务协议 </p>
+            <p>Copyright 2009-2016 龙宝网开放平台 Www.LongPay.Com ,Inc. All rights reserved. 版权所有 深圳市神之脉网络科技有限公司</p>
+        </div>
+    </div>
+    <script src="/longbao/style/js/site.js"></script>
+</body>
+</html>
+

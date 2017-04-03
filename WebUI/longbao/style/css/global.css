@@ -1,0 +1,16 @@
+﻿body{font-size:9pt;font-family: 'Microsoft YaHei', tahoma, arial, 'Hiragino Sans GB', 宋体;}
+*{margin:0px;padding:0px;} 
+ul{list-style:none;}
+img{border:0px;}
+a{text-decoration:none;color:#666;}
+a:hover{text-decoration:underline;}
+a:link{text-decoration:none;}
+a:visited{text-decoration:none;}
+a:hover{text-decoration:none;}
+a:active{text-decoration:none;}
+
+.pull-left{float:left;}
+.pull-right{float:right;}
+
+.cl:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.cl{zoom:1;}  

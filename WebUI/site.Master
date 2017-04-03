@@ -1,0 +1,24 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="site.master.cs" Inherits="viviAPI.WebUI2015.site" %>
+<%@ Register Src="head.ascx" TagName="header" TagPrefix="uc1" %>
+<%@ Register Src="foot.ascx" TagName="footer" TagPrefix="uc1" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head  runat="server" >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>亿付商务网-中国互联网在线收款服务商</title>
+    <meta name="KeyWords" content="亿付商务网" />
+    <meta name="description" content="亿付商务网" />
+    <link href="/style1/css/site.css" rel="stylesheet" />
+    <script src="/style1/js/jquery-1.12.4.min.js"></script>
+    <asp:ContentPlaceHolder ID="header" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <uc1:header ID="header1" runat="server" showtype="solution" />
+    <asp:ContentPlaceHolder ID="Content" runat="server">
+    </asp:ContentPlaceHolder>
+    <uc1:footer ID="footer1" runat="server" />
+    <script src="/style1/js/site.js"></script>
+</body>
+</html>

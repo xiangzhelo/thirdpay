@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EA9BF80A-B9B1-4B03-B263-EAA1029AF6B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viviapi.Model</RootNamespace>
+    <AssemblyName>viviapi.Model</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>7uka.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/viviapi.Model/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\apprecharge.cs" />
+    <Compile Include="Common\FunExecResult.cs" />
+    <Compile Include="Finance\Agent\WithdrawAgent.cs" />
+    <Compile Include="Finance\Agent\WithdrawAgentNotify.cs" />
+    <Compile Include="Finance\Agent\WithdrawAgentSummary.cs" />
+    <Compile Include="Finance\BillType.cs" />
+    <Compile Include="Finance\Withdraw.cs" />
+    <Compile Include="Finance\WithdrawMode.cs" />
+    <Compile Include="Finance\WithdrawStatus.cs" />
+    <Compile Include="Finance\WithdrawSuppTranLog.cs" />
+    <Compile Include="Order\Bank\BankNotify.cs" />
+    <Compile Include="Order\Bank\OrderBankCodePay.cs" />
+    <Compile Include="Order\CardProcessResultInfo.cs" />
+    <Compile Include="Order\Card\CardWithhold.cs" />
+    <Compile Include="Order\Card\CardWithholds.cs" />
+    <Compile Include="Order\Card\CardNotify.cs" />
+    <Compile Include="Order\Card\CardOrderSummitArgs.cs" />
+    <Compile Include="Order\Card\CardOrderSupplierResponse.cs" />
+    <Compile Include="Order\Card\CardSynchCallBack.cs" />
+    <Compile Include="Order\Card\CheckAPIParameter.cs" />
+    <Compile Include="Order\Card\OrderCardTotal.cs" />
+    <Compile Include="Order\NotifyRequestState.cs" />
+    <Compile Include="Order\OrderCardSend.cs" />
+    <Compile Include="Finance\PayRate.cs" />
+    <Compile Include="Order\OrderNotifyX.cs" />
+    <Compile Include="Order\OrderCardNotifyX.cs" />
+    <Compile Include="Supplier\SupplierAccount.cs" />
+    <Compile Include="Sys\SysConfig.cs" />
+    <Compile Include="Sys\sysMailConfig.cs" />
+    <Compile Include="User\userLevel.cs" />
+    <Compile Include="User\userlogin.cs" />
+    <Compile Include="User\UserLoginByPartner.cs" />
+    <Compile Include="User\UserReservewords.cs" />
+    <Compile Include="Channel\ChannelWithdraw.cs" />
+    <Compile Include="Finance\Transfer.cs" />
+    <Compile Include="Finance\Transferscheme.cs" />
+    <Compile Include="Supplier\SuppCode.cs" />
+    <Compile Include="Sys\CallBackInfo.cs" />
+    <Compile Include="User\AdminLevel.cs" />
+    <Compile Include="APP\APPRechargeInfo.cs" />
+    <Compile Include="APP\EntrustInfo.cs" />
+    <Compile Include="APP\RechargeInfo.cs" />
+    <Compile Include="APP\TransferInfo.cs" />
+    <Compile Include="BaseData\identitycard.cs" />
+    <Compile Include="Channel\ChannelSupplier.cs" />
+    <Compile Include="Channel\CodeMappingInfo.cs" />
+    <Compile Include="Channel\ChanelInfoClassEnum.cs" />
+    <Compile Include="Channel\ChanelInfo.cs" />
+    <Compile Include="Channel\ChanelTypeEnum.cs" />
+    <Compile Include="Channel\ChanelTypeInfo.cs" />
+    <Compile Include="Channel\ChanelTypeUsers.cs" />
+    <Compile Include="Channel\OpenEnum.cs" />
+    <Compile Include="Feedback\feedbackInfo.cs" />
+    <Compile Include="News\InternalMessage.cs" />
+    <Compile Include="News\MobileSmslog.cs" />
+    <Compile Include="News\NewsInfo.cs" />
+    <Compile Include="News\NewsType.cs" />
+    <Compile Include="Order\reconciliation_temp.cs" />
+    <Compile Include="Sys\JuBaoEnum.cs" />
+    <Compile Include="Sys\JuBaoInfo.cs" />
+    <Compile Include="Order\Bank\OrderBankInfo.cs" />
+    <Compile Include="Order\OrderBase.cs" />
+    <Compile Include="Order\OrderConvern.cs" />
+    <Compile Include="Order\OrderNotify.cs" />
+    <Compile Include="Order\OrderSmsInfo.cs" />
+    <Compile Include="Order\OrderStatusEnum.cs" />
+    <Compile Include="Order\Card\OrderCardInfo.cs" />
+    <Compile Include="Order\OrderNofityStatusEnum.cs" />
+    <Compile Include="Order\OrderCardNotify.cs" />
+    <Compile Include="Order\OrderSmsNotify.cs" />
+    <Compile Include="Order\CardItemInfo.cs" />
+    <Compile Include="Other\phoneValid.cs" />
+    <Compile Include="Other\PhoneValidLog.cs" />
+    <Compile Include="Pay\PayListInfo.cs" />
+    <Compile Include="Pay\PayPriceConver.cs" />
+    <Compile Include="Pay\PayStatus.cs" />
+    <Compile Include="Pay\PTypeConf.cs" />
+    <Compile Include="Pay\RateTypeEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settled\IncreaseAmt.cs" />
+    <Compile Include="Settled\SettledStatus.cs" />
+    <Compile Include="Finance\TocashSchemeInfo.cs" />
+    <Compile Include="Settled\UsersAmtFreezeInfo.cs" />
+    <Compile Include="Supplier\SupplierInfo.cs" />
+    <Compile Include="Sys\debuginfo.cs" />
+    <Compile Include="Sys\debugtypeenum.cs" />
+    <Compile Include="Sys\Manage.cs" />
+    <Compile Include="Sys\ManageRole.cs" />
+    <Compile Include="Sys\SmsComInfo.cs" />
+    <Compile Include="Sys\SoftRegistrationInfo.cs" />
+    <Compile Include="Template\SinglePage.cs" />
+    <Compile Include="Template\TempLabel.cs" />
+    <Compile Include="Template\template.cs" />
+    <Compile Include="User\FindPwd.cs" />
+    <Compile Include="User\LoginLogModel.cs" />
+    <Compile Include="User\MemberType.cs" />
+    <Compile Include="Promotion\PromotionUserInfo.cs" />
+    <Compile Include="User\QuestionInfo.cs" />
+    <Compile Include="User\EmailCheckInfo.cs" />
+    <Compile Include="User\userHostInfo.cs" />
+    <Compile Include="User\UserInfo.cs" />
+    <Compile Include="User\UserLevelEnum.cs" />
+    <Compile Include="User\UserPayBankAppInfo.cs" />
+    <Compile Include="User\UsersAmtInfo.cs" />
+    <Compile Include="User\UserSettingInfo.cs" />
+    <Compile Include="User\usersIdImageInfo.cs" />
+    <Compile Include="User\SettlementAccount.cs" />
+    <Compile Include="User\UserStatusEnum.cs" />
+    <Compile Include="User\UsersUpdateLog.cs" />
+    <Compile Include="User\UserAccessTimeInfo.cs" />
+    <Compile Include="User\UserType.cs" />
+    <Compile Include="Sys\WebInfo.cs" />
+    <Compile Include="Sys\WebSiteInfo.cs" />
+    <Compile Include="Sys\WebSiteStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7uka.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Lib\Lib.csproj">
+      <Project>{461225b3-0a5b-4d7a-a968-169e0292207c}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

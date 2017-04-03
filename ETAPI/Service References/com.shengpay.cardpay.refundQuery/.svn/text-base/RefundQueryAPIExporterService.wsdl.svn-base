@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://www.sdo.com/mas/api/refundquery/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="RefundQueryAPIExporterService" targetNamespace="http://www.sdo.com/mas/api/refundquery/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.sdo.com/mas/api/refundquery/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:complexType name="refundBatchQueryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="beginTime" type="xs:string" />
+          <xs:element minOccurs="0" name="endTime" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="pageNo" type="xs:string" />
+          <xs:element minOccurs="0" name="pageSize" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="extension">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ext1" type="xs:string" />
+          <xs:element minOccurs="0" name="ext2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="header">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="charset" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+          <xs:element minOccurs="0" name="sender" type="tns:sender" />
+          <xs:element minOccurs="0" name="service" type="tns:service" />
+          <xs:element minOccurs="0" name="traceNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sender">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="senderId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="service">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serviceCode" type="xs:string" />
+          <xs:element minOccurs="0" name="version" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="signature">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="signMsg" type="xs:string" />
+          <xs:element minOccurs="0" name="signType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="refundBatchQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="pageNo" type="xs:string" />
+          <xs:element minOccurs="0" name="pageSize" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="refundItems" nillable="true" type="tns:refundItem" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="totalRows" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="refundItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="desc" type="xs:string" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="originalOrderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="refundAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="refundOrderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="refundTime" type="xs:string" />
+          <xs:element minOccurs="0" name="refundTransNo" type="xs:string" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMsg" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="refundQueryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="originalOrderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="refundOrderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="refundTransNo" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="refundQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="refundItems" nillable="true" type="tns:refundItem" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MasAPIException" type="tns:MasAPIException" />
+      <xs:complexType name="MasAPIException">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="processRefundBatchQuery" type="tns:processRefundBatchQuery" />
+      <xs:complexType name="processRefundBatchQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:refundBatchQueryRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processRefundBatchQueryResponse" type="tns:processRefundBatchQueryResponse" />
+      <xs:complexType name="processRefundBatchQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:refundBatchQueryResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processRefundQuery" type="tns:processRefundQuery" />
+      <xs:complexType name="processRefundQuery">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:refundQueryRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processRefundQueryResponse" type="tns:processRefundQueryResponse" />
+      <xs:complexType name="processRefundQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:refundQueryResponse" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="processRefundQueryResponse">
+    <wsdl:part name="parameters" element="tns:processRefundQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasAPIException">
+    <wsdl:part name="MasAPIException" element="tns:MasAPIException" />
+  </wsdl:message>
+  <wsdl:message name="processRefundBatchQueryResponse">
+    <wsdl:part name="parameters" element="tns:processRefundBatchQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="processRefundBatchQuery">
+    <wsdl:part name="parameters" element="tns:processRefundBatchQuery" />
+  </wsdl:message>
+  <wsdl:message name="processRefundQuery">
+    <wsdl:part name="parameters" element="tns:processRefundQuery" />
+  </wsdl:message>
+  <wsdl:portType name="RefundQueryAPI">
+    <wsdl:operation name="processRefundBatchQuery">
+      <wsdl:input name="processRefundBatchQuery" message="tns:processRefundBatchQuery" />
+      <wsdl:output name="processRefundBatchQueryResponse" message="tns:processRefundBatchQueryResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="processRefundQuery">
+      <wsdl:input name="processRefundQuery" message="tns:processRefundQuery" />
+      <wsdl:output name="processRefundQueryResponse" message="tns:processRefundQueryResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RefundQueryAPIExporterServiceSoapBinding" type="tns:RefundQueryAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="processRefundBatchQuery">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processRefundBatchQuery">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processRefundBatchQueryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processRefundQuery">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processRefundQuery">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processRefundQueryResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RefundQueryAPIExporterService">
+    <wsdl:port name="RefundQueryAPIExporterPort" binding="tns:RefundQueryAPIExporterServiceSoapBinding">
+      <soap:address location="http://cardpay.shengpay.com/api-acquire-channel/services/refundQueryService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,111 @@
+﻿@import "global.css";
+
+/***首页***/
+body{background:#EEEEEE;color:#616161;}
+h3{font-size:24px;font-weight:normal;}
+h4{font-size:18px;font-weight:normal;}
+h5{font-size:14px;font-weight:normal;}
+
+.top .head .headdiv,.top .menu .menudiv,.content{width:90%;margin:0 auto;}
+
+.top{position:fixed;width:100%;z-index:20;}
+.top .head{background:#1E1B29;height:28px;}
+.top .head .headdiv{color:#fff;color:#E8E8E8;line-height:28px;}
+.top .head .headdiv a{color:#E8E8E8;}
+.top .head .notice{float:left;}
+.top .head .notice span{float:left;width:65px;background:#009999;text-align:center;font-weight:bold;margin-right:10px;}
+.top .head .nav{float:right;}
+.top .head .nav li{padding:0px 5px;float:left;}
+.top .head .nav .phone a,.top .head .nav .qq a{background:url(../images/nav.jpg) no-repeat;padding-left:20px;}
+.top .head .nav .phone a{background-position:0px -1px;}
+.top .head .nav .qq a{background-position:0px -33px;}
+
+.top .menu{height:60px;padding-top:18px;background:#fff;filter:alpha(opacity=90);-moz-opacity:0.9;opacity:.90;}
+.top .menu .logo{float:left;background:url(../images/logo.png) no-repeat;width:208px;height:45px;}
+.top .menu ul{float:right;}
+.top .menu ul li{float:left;}
+.top .menu ul li a{float:left;font-size:16px;line-height:42px;height:42px;padding:0px 25px;color:#272727;}
+.top .menu ul li a:hover,.top .menu ul li a.selected{color:#2D88A3;}
+
+.header{padding-top:28px;overflow:hidden;position:relative;}
+.header .images{position:relative;z-index:9;}
+.header .images a{display:block;position:absolute;float:left;overflow:hidden;width:100%;overflow:hidden;}
+.header .indicators{position:absolute;bottom:20px;width:100%;text-align:center;height:30px;z-index:11;}
+.header .indicators a{display:inline-block; width:12px;height:12px;background:url(../images/round.png) no-repeat;margin:0 5px;filter:alpha(opacity=60);-moz-opacity:0.6;opacity:.60;}
+.header .indicators a.selected{background-position:left bottom;}
+
+.header .login{position:absolute;width:280px;height:310px;z-index:12;right:150px;top:160px;}
+.header .login .loginbg{position:absolute;left:0px;top:0px;width:280px;height:310px;background:#000;filter:alpha(opacity=50);-moz-opacity:0.5;opacity:.50;}
+.header .login .loginnr{position:absolute;left:0px;top:0px;padding:20px;width:240px;}
+.header .login .loginnr div{padding:5px 0px;}
+.header .login .loginnr input{width:100%;border:0px;height:40px;line-height:40px;padding-left:15px;width:225px;}
+.header .login .loginnr header{color:#EC971F;font-size:18px;text-align:center;margin:10px 0px;}
+.header .login .loginnr .yzm input{width:110px;display:inline-block;float:left;}
+.header .login .loginnr div span{display:inline-block;background:#fff;width:100px;height:40px;float:left;margin-left:15px;text-align:center;}
+.header .login .loginnr div span img{margin-top:10px;}
+.header .login .loginnr .loginbtn{padding:0px;width:240px;background:url(../images/loginbtn.png) no-repeat left bottom;cursor:pointer;}
+.header .login .loginnr .loginbtn:hover{background-position:left top;}
+.header .login .loginnr a{color:#EC971F;float:right;}
+
+.content{padding-top:70px;}
+.content .item{float:left;width:33%;text-align:center;}
+.content .item img{width:140px;}
+.content .item h4{font-weight:normal;line-height:40px;display:block;text-align:center;}
+.content .item:hover{color:#2D88A3;}
+
+.bank{padding-top:70px;width:1080px;margin:0 auto;text-align:center;}
+.bank img{float:left;width:120px;margin:20px 30px 0px;}
+.bank h4{text-align:left;}
+
+.contact{width:1080px;margin:50px auto 20px;}
+.contact b,.contact h3{color:#333333;}
+.contact h3{margin-top:10px;}
+.contact h3 span{float:left;}
+.contact h3 a{float:left;background:url(../images/qq_icon.png) no-repeat;width:100px;height:25px;margin:5px 0px 0px 50px;}
+.contact .qr-code img{width:120px;}
+.contact .qr-code div{text-align:center;line-height:30px;}
+
+.bottom{margin:30px auto 0px;background:#3B3D3E;text-align:center;color:#9E9E9E;line-height:30px;}
+.bottom a{color:#9E9E9E;}
+.bottom a:hover{color:#fff;}
+.bottom .menu{border-bottom:1px solid #2F3132;padding:30px 0px 15px 0px;}
+.bottom .copyright{border-top:1px solid #414344;padding:15px 0px 20px 0px;}
+.bottom .copyright a{display:inline-block;background:url(../images/index.png) no-repeat;height:30px;margin-top:10px;}
+.bottom .copyright a.a1{width:60px;background-position:0px -33px;}
+.bottom .copyright a.a1:hover{background-position:0px -1px;}
+.bottom .copyright a.a2{width:32px;background-position:-67px -33px;}
+.bottom .copyright a.a2:hover{background-position:-67px -1px;}
+.bottom .copyright a.a3{width:40px;background-position:-104px -33px;}
+.bottom .copyright a.a3:hover{background-position:-104px -1px;}
+.bottom .copyright a.a4{width:41px;background-position:-150px -33px;}
+.bottom .copyright a.a4:hover{background-position:-150px -1px;}
+.bottom .copyright a.a5{width:81px;background-position:-201px -33px;}
+.bottom .copyright a.a5:hover{background-position:-201px -1px;}
+
+/***内容页***/
+.nrhead{padding-top:107px;}
+.nrhead img{width:100%;}
+.nrcontent{width:85%;margin:0px auto;}
+.nrcontent header{border-bottom:1px solid #0B8AB6;}
+.nrcontent header a{padding:20px;font-size:16px;display:inline-block;}
+.nrcontent header a.selected{color:#0B8AB6;}
+.nrcontent .tabs .item img{float:left;margin-top:40px;}
+.nrcontent .tabs .item .itemhead{padding-top:30px;}
+.nrcontent .tabs .item .itemhead span{font-size:24px;font-weight:500;display:block;}
+.nrcontent .tabs .item .itemhead div{padding-left:200px;line-height:40px;font-size:16px;}
+
+.itemcontent{margin-top:70px;}
+.itemcontent span{font-size:24px;font-weight:500;display:block;line-height:40px;color:#346F8E;text-align:center;}
+.itemcontent p{padding:20px 0px;font-size:16px;line-height:40px;}
+
+.num span{color:#346F8E;font-weight:bold;font-size:16px;text-align:left;}
+.num{font-size:14px;display:inline-block;width:45%;margin:0 2% 0 2%;padding-bottom:20px;}
+.num i{float:left;width:55px;background:url(../images/number.png) 0px 10px;height:60px;}
+.num div{padding-left:80px;}
+.num2 i{background-position:0px -86px;}
+.num3 i{background-position:0px -175px;}
+.num4 i{background-position:0px -270px;}
+.num5 i{background-position:0px -355px;}
+.num6 i{background-position:0px -450px;}
+.num7 i{background-position:0px -555px;}
+

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://www.sdo.com/mas/api/query" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="QueryOrderAPIExporterService" targetNamespace="http://www.sdo.com/mas/api/query" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.sdo.com/mas/api/query" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="batchOrderQueryRequest" type="tns:batchOrderQueryRequest" />
+      <xs:element name="batchOrderQueryResponse" type="tns:batchOrderQueryResponse" />
+      <xs:element name="orderQueryRequest" type="tns:orderQueryRequest" />
+      <xs:element name="orderQueryResponse" type="tns:orderQueryResponse" />
+      <xs:element name="queryB2COrderRequest" type="tns:QueryB2COrderRequest" />
+      <xs:element name="queryB2COrderResponse" type="tns:QueryB2COrderResponse" />
+      <xs:element name="queryBatchOrderAsyRequest" type="tns:queryBatchOrderAsyRequest" />
+      <xs:element name="queryOrderCardRequest" type="tns:QueryOrderCardRequest" />
+      <xs:element name="queryOrderCardResponse" type="tns:QueryOrderCardResponse" />
+      <xs:element name="queryQrcodeB2COrderRequest" type="tns:QueryQrcodeB2COrderRequest" />
+      <xs:element name="queryQrcodeB2COrderResponse" type="tns:QueryQrcodeB2COrderResponse" />
+      <xs:complexType name="batchOrderQueryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="beginTime" type="xs:string" />
+          <xs:element minOccurs="0" name="endTime" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="memberIdType" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="orderNos" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="pageNo" type="xs:string" />
+          <xs:element minOccurs="0" name="pageSize" type="xs:string" />
+          <xs:element minOccurs="0" name="payerMemberId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="timeType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="extension">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ext1" type="xs:string" />
+          <xs:element minOccurs="0" name="ext2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="header">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="charset" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+          <xs:element minOccurs="0" name="sender" type="tns:sender" />
+          <xs:element minOccurs="0" name="service" type="tns:service" />
+          <xs:element minOccurs="0" name="traceNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sender">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="senderId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="service">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serviceCode" type="xs:string" />
+          <xs:element minOccurs="0" name="version" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="signature">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="signMsg" type="xs:string" />
+          <xs:element minOccurs="0" name="signType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="batchOrderQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="orders" nillable="true" type="tns:order" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="order">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderAmoumt" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="refundAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="transAmoumt" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="transTime" type="xs:string" />
+          <xs:element minOccurs="0" name="transType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMsg" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderQueryRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="merchantNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderQueryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transAmoumt" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="transTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryBatchOrderAsyRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="beginTime" type="xs:string" />
+          <xs:element minOccurs="0" name="endTime" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="fileType" type="xs:string" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="merchantNo" type="xs:string" />
+          <xs:element minOccurs="0" name="notifyURL" type="xs:string" />
+          <xs:element minOccurs="0" name="payerMemberId" type="xs:string" />
+          <xs:element minOccurs="0" name="queryMode" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="timeType" type="xs:string" />
+          <xs:element minOccurs="0" name="transType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="queryBatchOrderAsyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="status" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryB2COrderRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="customerNo" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryB2COrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="customerName" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="notifyUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderType" type="xs:string" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="transTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryOrderCardRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="customerNo" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryOrderCardResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cardInfos" nillable="true" type="tns:cardInfo" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="cardInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="balance" type="xs:string" />
+          <xs:element minOccurs="0" name="cardNo" type="xs:string" />
+          <xs:element minOccurs="0" name="expiredDate" type="xs:string" />
+          <xs:element minOccurs="0" name="extJson" type="xs:string" />
+          <xs:element minOccurs="0" name="paidAmount" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryQrcodeB2COrderRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="QueryQrcodeB2COrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="customerLogoUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="customerName" type="xs:string" />
+          <xs:element minOccurs="0" name="customerNo" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderType" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" type="xs:string" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="transTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MasAPIException" type="tns:MasAPIException" />
+      <xs:complexType name="MasAPIException">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="queryBatchOrder" type="tns:queryBatchOrder" />
+      <xs:complexType name="queryBatchOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:batchOrderQueryRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryBatchOrderResponse" type="tns:queryBatchOrderResponse" />
+      <xs:complexType name="queryBatchOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:batchOrderQueryResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryOrder" type="tns:queryOrder" />
+      <xs:complexType name="queryOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:orderQueryRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryOrderResponse" type="tns:queryOrderResponse" />
+      <xs:complexType name="queryOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:orderQueryResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryAsyBatchOrder" type="tns:queryAsyBatchOrder" />
+      <xs:complexType name="queryAsyBatchOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:queryBatchOrderAsyRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryAsyBatchOrderResponse" type="tns:queryAsyBatchOrderResponse" />
+      <xs:complexType name="queryAsyBatchOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:queryBatchOrderAsyResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryOrderInfo" type="tns:queryOrderInfo" />
+      <xs:complexType name="queryOrderInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:QueryB2COrderRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryOrderInfoResponse" type="tns:queryOrderInfoResponse" />
+      <xs:complexType name="queryOrderInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:QueryB2COrderResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryOrderCardInfo" type="tns:queryOrderCardInfo" />
+      <xs:complexType name="queryOrderCardInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:QueryOrderCardRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryOrderCardInfoResponse" type="tns:queryOrderCardInfoResponse" />
+      <xs:complexType name="queryOrderCardInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:QueryOrderCardResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryQrcodeOrderInfo" type="tns:queryQrcodeOrderInfo" />
+      <xs:complexType name="queryQrcodeOrderInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:QueryQrcodeB2COrderRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="queryQrcodeOrderInfoResponse" type="tns:queryQrcodeOrderInfoResponse" />
+      <xs:complexType name="queryQrcodeOrderInfoResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:QueryQrcodeB2COrderResponse" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="queryOrderInfo">
+    <wsdl:part name="parameters" element="tns:queryOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="queryAsyBatchOrder">
+    <wsdl:part name="parameters" element="tns:queryAsyBatchOrder" />
+  </wsdl:message>
+  <wsdl:message name="queryBatchOrderResponse">
+    <wsdl:part name="parameters" element="tns:queryBatchOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryOrderInfoResponse">
+    <wsdl:part name="parameters" element="tns:queryOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasAPIException">
+    <wsdl:part name="MasAPIException" element="tns:MasAPIException" />
+  </wsdl:message>
+  <wsdl:message name="queryQrcodeOrderInfoResponse">
+    <wsdl:part name="parameters" element="tns:queryQrcodeOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryOrderResponse">
+    <wsdl:part name="parameters" element="tns:queryOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryOrder">
+    <wsdl:part name="parameters" element="tns:queryOrder" />
+  </wsdl:message>
+  <wsdl:message name="queryOrderCardInfo">
+    <wsdl:part name="parameters" element="tns:queryOrderCardInfo" />
+  </wsdl:message>
+  <wsdl:message name="queryAsyBatchOrderResponse">
+    <wsdl:part name="parameters" element="tns:queryAsyBatchOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryBatchOrder">
+    <wsdl:part name="parameters" element="tns:queryBatchOrder" />
+  </wsdl:message>
+  <wsdl:message name="queryQrcodeOrderInfo">
+    <wsdl:part name="parameters" element="tns:queryQrcodeOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="queryOrderCardInfoResponse">
+    <wsdl:part name="parameters" element="tns:queryOrderCardInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="QueryOrderAPI">
+    <wsdl:operation name="queryBatchOrder">
+      <wsdl:input name="queryBatchOrder" message="tns:queryBatchOrder" />
+      <wsdl:output name="queryBatchOrderResponse" message="tns:queryBatchOrderResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOrder">
+      <wsdl:input name="queryOrder" message="tns:queryOrder" />
+      <wsdl:output name="queryOrderResponse" message="tns:queryOrderResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="queryAsyBatchOrder">
+      <wsdl:input name="queryAsyBatchOrder" message="tns:queryAsyBatchOrder" />
+      <wsdl:output name="queryAsyBatchOrderResponse" message="tns:queryAsyBatchOrderResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOrderInfo">
+      <wsdl:input name="queryOrderInfo" message="tns:queryOrderInfo" />
+      <wsdl:output name="queryOrderInfoResponse" message="tns:queryOrderInfoResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="queryOrderCardInfo">
+      <wsdl:input name="queryOrderCardInfo" message="tns:queryOrderCardInfo" />
+      <wsdl:output name="queryOrderCardInfoResponse" message="tns:queryOrderCardInfoResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="queryQrcodeOrderInfo">
+      <wsdl:input name="queryQrcodeOrderInfo" message="tns:queryQrcodeOrderInfo" />
+      <wsdl:output name="queryQrcodeOrderInfoResponse" message="tns:queryQrcodeOrderInfoResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QueryOrderAPIExporterServiceSoapBinding" type="tns:QueryOrderAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="queryBatchOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryBatchOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryBatchOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="queryAsyBatchOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryAsyBatchOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryAsyBatchOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="queryOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="queryOrderInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryOrderInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryOrderInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="queryOrderCardInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryOrderCardInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryOrderCardInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="queryQrcodeOrderInfo">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="queryQrcodeOrderInfo">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="queryQrcodeOrderInfoResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QueryOrderAPIExporterService">
+    <wsdl:port name="QueryOrderAPIExporterPort" binding="tns:QueryOrderAPIExporterServiceSoapBinding">
+      <soap:address location="http://cardpay.shengpay.com/api-acquire-channel/services/queryOrderService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

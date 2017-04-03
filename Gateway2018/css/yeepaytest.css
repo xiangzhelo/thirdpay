@@ -1,0 +1,131 @@
+﻿/* body */
+body {
+	font-family: "Microsoft Yahei", "微软雅黑", SimHei, Tahoma, Arial, Helvetica, STHeiti;
+	margin-left:15px;
+}
+
+input {
+	border:1px solid #c0c0c0;
+}
+input[type=text] {
+	height:30px;
+	border-radius: 3px;
+	font-size: 14px;
+	width: 400px;
+}
+input[type=submit] {
+	border-radius: 10px;
+	background:#ABD037;
+	color:#fff;
+	height:34px;
+	width: 90px;
+	font-weight: bold;
+}
+input[type=submit]:hover {
+	cursor:pointer;
+}
+.radio {
+	border-width:0px;
+}
+/* a */
+a {
+	text-decoration:none;
+}
+a:visited,
+a:active,
+a:link,
+a:hover {
+	cursor:pointer;
+	margin:auto;
+	color:#333;
+	text-decoration:underline;
+}
+
+
+
+
+#tabbox{ 
+	width:810px; 
+	overflow:hidden; 
+	margin-left: 10px;
+}
+.tab_conbox{
+	border: 1px solid #999;
+	border-top: none;
+	-webkit-padding-start: 20px;
+	-webkit-margin-before: 0;
+}
+.tab_conbox .tab_con{ 
+	display:none;
+	list-style: none;
+	padding-top: 20px; 
+	padding-bottom: 20px; 
+}
+.tab_conbox .tab_con2{ 
+	display:none;
+	list-style: none;
+}
+.tab_conbox .ra-img2 img {
+	vertical-align:middle;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+.tabs{
+	height: 32px;
+	border-bottom:1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+	-webkit-padding-start: 0;
+	-moz-padding-start: 0;   /*firefox*/
+	-webkit-margin-after: 0;
+	-webkit-margin-before: 0;
+	padding-left:0px;
+}
+.tabs li{
+	height:31px;
+	line-height:31px;
+	float:left;
+	border:1px solid #999;
+	border-left:none;
+	margin-bottom: -1px;
+	background: #e0e0e0;
+	overflow: hidden;
+	position: relative;
+}
+.tabs li a {
+	display: block;
+	padding: 0 22px;
+	border: 1px solid #fff;
+	outline: none;
+	text-decoration: none;
+}
+.tabs li a:hover {
+	background: #ccc;
+}    
+.tabs .thistab,.tabs .thistab a:hover{
+	background: #fff;
+	border-bottom: 1px solid #fff;
+}
+
+
+
+.tab_conbox .ra-img {
+	display: inline;
+	margin-right: 18px;
+}
+.tab_conbox .ra-img2 {
+	display: inline;
+	margin-right: 18px;
+}
+.tab_conbox .ra-img img {
+	vertical-align:middle;
+	border: 1px solid #ddd;
+	padding-left: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+#pay[disabled] {
+	background:#cfcfcf;
+}
+
+

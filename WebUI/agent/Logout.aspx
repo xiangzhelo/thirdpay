@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="viviAPI.WebUI7uka.agent.Logout" Codebehind="logout.aspx.cs" %>

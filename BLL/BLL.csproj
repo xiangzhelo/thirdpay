@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30F24167-FE4A-44F9-9B30-3E8915FA6882}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viviapi.BLL</RootNamespace>
+    <AssemblyName>viviapi.BLL</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>7uka.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/viviapi.BLL/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Base\DBAccess\bin\Debug\DBAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="IBLLStrategy, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6dc6aa925e6f48a6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IBLLStrategy\bin\Debug\IBLLStrategy.dll</HintPath>
+    </Reference>
+    <Reference Include="IMessaging, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6dc6aa925e6f48a6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\IMessaging\bin\Debug\IMessaging.dll</HintPath>
+    </Reference>
+    <Reference Include="MemcachedLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Base\MemCached\bin\Debug\MemcachedLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingFactory, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MessagingFactory\bin\Debug\MessagingFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APP\apprecharge.cs" />
+    <Compile Include="APP\entrust.cs" />
+    <Compile Include="APP\transfer.cs" />
+    <Compile Include="BaseData\base_city.cs" />
+    <Compile Include="BaseData\base_province.cs" />
+    <Compile Include="BaseData\identitycard.cs" />
+    <Compile Include="Channel\CardUtility.cs" />
+    <Compile Include="Channel\Channelsupplier.cs" />
+    <Compile Include="Channel\CodeMapping.cs" />
+    <Compile Include="Channel\Channel.cs" />
+    <Compile Include="Channel\ChannelType.cs" />
+    <Compile Include="Channel\ChannelTypeUsers.cs" />
+    <Compile Include="Channel\currchannel.cs" />
+    <Compile Include="Channel\Factory.cs" />
+    <Compile Include="Finance\Agent\WithdrawAgent.cs" />
+    <Compile Include="Finance\Agent\WithdrawAgentNotify.cs" />
+    <Compile Include="Finance\Agent\WithdrawAgentSummary.cs" />
+    <Compile Include="Finance\PayRate.cs" />
+    <Compile Include="Finance\Withdraw.cs" />
+    <Compile Include="Finance\WithdrawSuppTranLog.cs" />
+    <Compile Include="Order\Bank\BankNotify.cs" />
+    <Compile Include="Order\Bank\Factory.cs" />
+    <Compile Include="Order\Bank\OrderBankCodePay.cs" />
+    <Compile Include="Order\Card\CardNotify.cs" />
+    <Compile Include="Order\Card\CardWithhold.cs" />
+    <Compile Include="Order\Card\CardWithholds.cs" />
+    <Compile Include="Order\Card\Factory.cs" />
+    <Compile Include="Order\Card\OrderCardSend.cs" />
+    <Compile Include="Order\Card\OrderCardTotal.cs" />
+    <Compile Include="Order\OrderIncome.cs" />
+    <Compile Include="Order\Statistics.cs" />
+    <Compile Include="pay\payrate.cs" />
+    <Compile Include="Supplier\SupplierAccount.cs" />
+    <Compile Include="Sys\Settings\SettleSettings.cs" />
+    <Compile Include="Sys\Settings\OtherSettings.cs" />
+    <Compile Include="Sys\SysConfig.cs" />
+    <Compile Include="Sys\sysMailConfig.cs" />
+    <Compile Include="Sys\Settings\TransactionSettings.cs" />
+    <Compile Include="Sys\Settings\RegisterSettings.cs" />
+    <Compile Include="Sys\Settings\SiteSettings.cs" />
+    <Compile Include="Sys\Settings\SMSTempSettings.cs" />
+    <Compile Include="User\Login.cs" />
+    <Compile Include="User\UserLevel.cs" />
+    <Compile Include="User\UserLogin.cs" />
+    <Compile Include="User\UserLoginByPartner.cs" />
+    <Compile Include="User\UserReservewords.cs" />
+    <Compile Include="Channel\ChannelWithdraw.cs" />
+    <Compile Include="Communication\feedback.cs" />
+    <Compile Include="News\NewsFactory.cs" />
+    <Compile Include="Order\Bank\OrderBank.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Order\Bank\OrderBankAsynchronous.cs" />
+    <Compile Include="Order\Bank\OrderBankSynchronous.cs" />
+    <Compile Include="Order\Card\OrderCard.cs" />
+    <Compile Include="Order\Card\OrderCardAsynchronous.cs" />
+    <Compile Include="Order\Card\OrderCardSynchronous.cs" />
+    <Compile Include="Order\reconciliation_temp.cs" />
+    <Compile Include="Order\usersOrderIncome.cs" />
+    <Compile Include="other\PhoneValidFactory.cs" />
+    <Compile Include="pay\PayFactory.cs" />
+    <Compile Include="pay\paykeyfactory.cs" />
+    <Compile Include="pay\PayLogFactory.cs" />
+    <Compile Include="pay\PaymodeType.cs" />
+    <Compile Include="pay\PayPriceConverFactory.cs" />
+    <Compile Include="pay\pay_pricefactory.cs" />
+    <Compile Include="pay\ptypeconffactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="settled\IncreaseAmt.cs" />
+    <Compile Include="Finance\TocashScheme.cs" />
+    <Compile Include="Finance\Trade.cs" />
+    <Compile Include="settled\ManageTrade.cs" />
+    <Compile Include="Finance\Transfer.cs" />
+    <Compile Include="Finance\TransferScheme.cs" />
+    <Compile Include="stat\DayData.cs" />
+    <Compile Include="stat\OrderReport.cs" />
+    <Compile Include="Supplier\Factory.cs" />
+    <Compile Include="Sys\Constant.cs" />
+    <Compile Include="Sys\debuglog.cs" />
+    <Compile Include="Sys\feedback.cs" />
+    <Compile Include="Manager\ManageFactory.cs" />
+    <Compile Include="Sys\Transaction\YeePay\DES.cs" />
+    <Compile Include="Sys\Transaction\YeePay\Digest.cs" />
+    <Compile Include="Sys\Transaction\YeePay\HmacMD5.cs" />
+    <Compile Include="Sys\Transaction\YeePay\YeePay.cs" />
+    <Compile Include="Sys\WebInfoFactory.cs" />
+    <Compile Include="template\SinglePageFactory.cs" />
+    <Compile Include="template\TempLabelFactory.cs" />
+    <Compile Include="template\templateFactory.cs" />
+    <Compile Include="tools\db.cs" />
+    <Compile Include="tools\idcards.cs" />
+    <Compile Include="Communication\InternalMessage.cs" />
+    <Compile Include="Communication\SMS.cs" />
+    <Compile Include="User\FindPwdFactory.cs" />
+    <Compile Include="Promotion\Factory.cs" />
+    <Compile Include="User\Question.cs" />
+    <Compile Include="User\Factory.cs" />
+    <Compile Include="User\UserLoginLogFactory.cs" />
+    <Compile Include="User\SettlementAccountApply.cs" />
+    <Compile Include="User\UsersAmt.cs" />
+    <Compile Include="settled\UsersAmtFreeze.cs" />
+    <Compile Include="User\UserSetting.cs" />
+    <Compile Include="User\usersIdImage.cs" />
+    <Compile Include="User\UserHost.cs" />
+    <Compile Include="User\EmailCheck.cs" />
+    <Compile Include="User\UserAccessTime.cs" />
+    <Compile Include="User\SettlementAccount.cs" />
+    <Compile Include="Sys\WebSiteFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7uka.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Cache\Cache.csproj">
+      <Project>{25b155c1-2e95-47d6-8adc-20b006b48544}</Project>
+      <Name>Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\DALFactory\DALFactory.csproj">
+      <Project>{cb85bf19-5b22-4b76-99da-886bd8684d31}</Project>
+      <Name>DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\IDAL\IDAL.csproj">
+      <Project>{E45A0A4F-3B10-420B-9ED6-50A9C7109563}</Project>
+      <Name>IDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\Lib\Lib.csproj">
+      <Project>{461225B3-0A5B-4D7A-A968-169E0292207C}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\SysConfig\SysConfig.csproj">
+      <Project>{b38d0b5d-57fe-405f-a287-8a862e999622}</Project>
+      <Name>SysConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{B91E9513-3FC6-4A64-9433-EDDAFCBD7481}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{EA9BF80A-B9B1-4B03-B263-EAA1029AF6B9}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSMQMessaging\MSMQMessaging.csproj">
+      <Project>{b77b1021-18a3-4f95-8f50-1dea42372783}</Project>
+      <Name>MSMQMessaging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

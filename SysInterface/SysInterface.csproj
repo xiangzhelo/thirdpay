@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{150B0993-AB6E-41C0-8A92-001C03D60F21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viviapi.SysInterface</RootNamespace>
+    <AssemblyName>viviapi.SysInterface</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>7uka.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/viviapi.SysInterface/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoProcess.cs" />
+    <Compile Include="Bank\APINotification.cs" />
+    <Compile Include="Bank\MyAPI\BankInfo.cs" />
+    <Compile Include="Card\MyAPI\CardInfoList.cs" />
+    <Compile Include="SysAutoReissue.cs" />
+    <Compile Include="SysAutoReissueInfo.cs" />
+    <Compile Include="Bank\TaskInterval.cs" />
+    <Compile Include="Bank\Utility.cs" />
+    <Compile Include="Bank\Card70.cs" />
+    <Compile Include="Bank\HuaQi.cs" />
+    <Compile Include="Bank\MyAPI\Utility.cs" />
+    <Compile Include="Bank\YeePay.cs" />
+    <Compile Include="Bank\YeePayLib\DES.cs" />
+    <Compile Include="Bank\YeePayLib\Digest.cs" />
+    <Compile Include="Bank\YeePayLib\HmacMD5.cs" />
+    <Compile Include="Bank\Eka.cs" />
+    <Compile Include="Card\Card70\SyncResult.cs" />
+    <Compile Include="Card\Card70\Utility.cs" />
+    <Compile Include="Card\Card70\CardInfo.cs" />
+    <Compile Include="Card\Eka\CardInfo.cs" />
+    <Compile Include="Card\MyAPI\Utility.cs" />
+    <Compile Include="Card\APINotification.cs" />
+    <Compile Include="Card\MyAPI\CardInfo.cs" />
+    <Compile Include="Card\TaskInterval.cs" />
+    <Compile Include="Card\Utility.cs" />
+    <Compile Include="Card\YeePay\AnnulCardInfo.cs" />
+    <Compile Include="Card\YeePay\ChargeCardDirect.cs" />
+    <Compile Include="Card\Eka\Utility.cs" />
+    <Compile Include="Card\YeePay\AnnulCard.cs" />
+    <Compile Include="Card\YeePay\ChargeCardDirectDetails.cs" />
+    <Compile Include="Card\YeePay\Lib\ChargeCardDirentResult.cs" />
+    <Compile Include="Card\YeePay\Lib\DES.cs" />
+    <Compile Include="Card\YeePay\Lib\Digest.cs" />
+    <Compile Include="Card\YeePay\Lib\FormatQueryString.cs" />
+    <Compile Include="Card\YeePay\Lib\HmacMD5.cs" />
+    <Compile Include="Card\YeePay\Lib\SZXResult.cs" />
+    <Compile Include="Card\YeePay\Common.cs" />
+    <Compile Include="Card\YeePay\ChargeCardDirectInfo.cs" />
+    <Compile Include="Common.cs" />
+    <Compile Include="Lib\YeePay\DES.cs" />
+    <Compile Include="Lib\YeePay\Digest.cs" />
+    <Compile Include="Lib\YeePay\HmacMD5.cs" />
+    <Compile Include="Lib\YeePay\YeePay.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Withdraw\AgentDistribution.cs" />
+    <Compile Include="Withdraw\AgentDistributionInfo.cs" />
+    <Compile Include="Withdraw\CommonHelper.cs" />
+    <Compile Include="Withdraw\Notify.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Lib\Lib.csproj">
+      <Project>{461225b3-0a5b-4d7a-a968-169e0292207c}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\SysConfig\SysConfig.csproj">
+      <Project>{b38d0b5d-57fe-405f-a287-8a862e999622}</Project>
+      <Name>SysConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{30F24167-FE4A-44F9-9B30-3E8915FA6882}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMessaging\IMessaging.csproj">
+      <Project>{4E6A68B2-ACE1-4962-810E-4616BC9981E9}</Project>
+      <Name>IMessaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessagingFactory\MessagingFactory.csproj">
+      <Project>{EE242137-3EEB-4F62-B079-E5B980785F4C}</Project>
+      <Name>MessagingFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{EA9BF80A-B9B1-4B03-B263-EAA1029AF6B9}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7uka.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

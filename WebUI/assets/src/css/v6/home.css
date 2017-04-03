@@ -1,0 +1,129 @@
+﻿/*--------------------------*\
+    * trjcn.com V6 home
+    * Date: 2015-03-24
+    * Update: 2015-04-03 ymj
+    * author: ymjdesign
+    * © 2015 www.trjcn.com
+\*--------------------------*/
+
+/* 图标 */
+.icon-recruit-add, .icon-edit-perfect, .icon-box-money, .icon-box-item, .icon-box-more, .exhibition .prev, .exhibition .next, .icon-help-iphone, .icon-help-android, .icon-help-wechat, .help-service-logo, .certificate .mod, .ui-case-title i.icon-box-anli, .ui-case-strategy a i.icon-box-help { background-image: url(/trj/home-sprite.png); _background-image: url(/trj/home-sprite-ie6.png); background-repeat: no-repeat; }
+#focus .container .prev, #focus .container .next{ background-image: url(/trj/icon-sidebar.png); background-repeat: no-repeat; }
+
+/* 首页焦点图 */
+#focus { margin-bottom: 20px; position: relative; z-index: 1; width: 100%; min-width: 1000px; height: 400px; overflow: hidden; }
+.focus-images { margin: 0 auto; position: relative; z-index: 0; overflow: hidden; }
+.focus-images ul { width: 100% !important; }
+.focus-images li { width: 100% !important; height: 400px; overflow: hidden; text-align: center; }
+.focus-images li a { display: block; height: 400px; }
+.focus-nav { width: 100%; position: absolute; z-index: 1; bottom: 15px; left: 0; height: 10px; line-height: 10px; }
+.focus-nav ul { text-align: center; }
+.focus-nav ul li { cursor: pointer; display: inline-block; *display: inline; zoom: 1; width: 10px; height: 10px; margin: 0 5px; background-color: #fff; border-radius: 10px; overflow: hidden; line-height: 9999px; }
+.focus-nav ul .on { background-color: #db2d49; }
+#focus .container { position: relative; z-index: 10; }
+#focus .container .prev, #focus .container .next { display: none; position: absolute; top: 173px; cursor: pointer; width: 54px; height: 54px; background-color: #000; }
+#focus .container .prev { left: -100px; }
+#focus .container .next { right: -100px; background-position: right top; }
+
+/* 登陆注册展示 */
+.login { position: absolute; right: 0; top: 50px; width: 280px; height: 260px; }
+.login-bg { position: absolute; left: 0; top: 0; width: 280px; height: 260px; background-color: #000; opacity: 0.4; filter: alpha(opacity=40); }
+.login-tab { position: absolute; z-index: 20; right: 0; top: 0; width: 280px; height: 250px; }
+.login-tab .ui-tab-head { height: 40px; }
+.login-tab .ui-tab-head ul li { float: left; position: relative; width: 140px; height: 40px; font-size: 14px; line-height: 40px; color: #CCC; text-align: center; cursor: pointer; }
+.login-tab .ui-tab-head ul li.ui-tab-head-current { font-size: 16px; font-weight: bold; color: #FFF; }
+.login-tab .ui-tab-head .ui-tab-head-bg { display: block; position: absolute; left: 0; top: 0; width: 140px; height: 40px; background-color: #fff; opacity: 0.1; filter: alpha(opacity=10); }
+.login-tab .ui-tab-head ul li.ui-tab-head-current .ui-tab-head-bg { display: none; }
+.login-form { padding: 30px 30px 0; }
+.login-form li { padding-bottom: 10px; }
+.login-input { padding: 5px 8px; width: 204px; height: 20px; line-height: 20px; border: none; background-color: #fff; }
+.login-input.captcha { float: left; width: 104px; }
+.btn-captcha { float: right; width: 90px; height: 30px; line-height: 30px; text-align: center; background-color: #ddd; border: 0; cursor: pointer; }
+.login-forget a,.login-forget a:hover{ color: #fff; }
+.btn-login { display: block; width: 220px; height: 36px; text-align: center; line-height: 36px; font-size: 14px; color: #fff; background-color: #ef4349; border: none; cursor: pointer; }
+a.btn-login:hover { color: #fff; text-decoration: none; }
+.login-form .btn-login:hover {background:#ff4663;}
+.login-tips { float: none; padding-top: 5px; color: #fff; }
+.login-form li.fn-clear .login-tips { float: left; width: 220px; }
+.login-tips a,.login-tips a:hover{ color: #ffd800; }
+
+/* 登录成功 */
+.login-right { position: absolute; z-index: 20; right: 0; top: 0; padding: 25px; width: 230px; color: #fff; }
+.portrait { float: left; margin-right: 10px; }
+.username { font-size: 16px; }
+.username a { margin-left: 5px; font-size: 12px; color: #fff; }
+.username a:hover{color: #fff}
+.baseinfo { float: left; width: 140px; }
+.integrity span { margin: 0 5px; font-size: 18px; color: #f89d11; }
+.go-perfect, a.go-perfect:hover { display: block; position: relative; padding-left: 17px; width: 50px; color: #fff; line-height: 22px; }
+.icon-edit-perfect { display: block; position: absolute; left: 0; top: 6px; width: 12px; height: 12px; background-position: -60px -171px; vertical-align: middle; }
+.message-group { padding: 10px 0; }
+.message-item { float: left; width: 25%; *width: 24.5%; }
+.message-value, .message-value a { display: block; text-align: center; font-size: 24px; color: #ffa311; }
+.message-value a:hover{ color:#ffa311}
+.message-label { display: block; padding-bottom: 5px; text-align: center; }
+.login-right .btn-login { width: 100%; }
+.btn-login:hover{}
+/* 内容容器 */
+#content { background-color: #eee; min-width: 1000px; }
+
+
+
+
+
+/* 最顶上的导航栏开始 */
+.ui-bg-gary-f1 { background-color: #f1f1f1; }
+.part-top-allnav { height: 30px; }
+.part-top-allnav-l-a { line-height: 30px; color: #999; }
+.part-top-allnav-l-a a { margin: 0 5px; }
+.part-icon-mobile { background: url(/trj/icon-mobile.png) no-repeat; width: 9px; height: 14px; display: inline-block; font-size: 0; float: left; margin-right: 5px; }
+.part-top-allnav-list li { float: left; }
+.part-top-allnav-list .part-top-allnav-link { display: block; line-height: 14px; border-right: 1px solid #cccccc; padding: 0 7px; margin-top: 8px; position: relative; z-index: 122; }
+.part-top-allnav-list .part-top-allnav-link a { color: #666; }
+.part-top-allnav-list .part-top-allnav-link a:hover { color: #e93100; }
+.part-top-allnav-list .part-top-allnav-link a i { background: #ef4349; border-radius: 13px; display: inline-block; line-height: 13px; color: #fff; margin-left: 5px; padding: 0 2px; }
+.part-top-allnav-pr { z-index: 120; position: relative; margin-left: -1px; }
+.part-top-allnav-pr.cur { z-index: 130; }
+.part-icon-mobile-box { padding: 8px 7px; height: 14px; line-height: 14px; display: inline-block; color: #666; cursor: pointer; border-left: 1px solid #f1f1f1; border-right: 1px solid #f1f1f1; }
+.part-top-allnav-pr.cur .part-icon-mobile-box { background: #fff; position: relative; border-color: #ddd; z-index: 11; }
+.part-sn-dropdown-bd { border: 1px solid #dddddd; padding: 10px; background: #fff; position: absolute; top: 29px; right: 0; _right: -1px; color: #333; display: none; }
+.part-top-allnav-pr.cur .part-sn-dropdown-bd { display: block; }
+.part-sn-dropdown-bd p { width: 144px; }
+.part-sn-mobile-appdowm a { width: 142px; height: 26px; border: 1px solid #dddddd; border-radius: 3px; line-height: 26px; text-align: center; display: block; }
+.part-mobile-qrcode { background: url(/trj/mobile-qrcode.png) no-repeat; width: 144px; height: 110px; display: block; margin: 5px 0; }
+.part-top-allnav-l-b { margin-top: 3px;}
+.top-allnav-icon2 { position: relative; }
+.part-top-allnav-l-b .top-allnav-icon2.cur { z-index: 130; }
+.part-top-allnav-l-b .top-allnav-icon2.cur .top-allnav-icon2-bd { display: block; }
+.part-top-allnav-l-b .top-allnav-icon2-bd { border: 1px solid #dddddd; padding: 10px; background: #fff; position: absolute; top: 29px; color: #333; left: -48px; display: none; }
+.part-top-allnav-l-b span { vertical-align: middle; line-height: 1em; }
+.part-top-allnav-l-b a { background: url(/trj/icon-top-allnav.png) no-repeat; width: 24px; height: 24px; display: inline-block; vertical-align: top;}
+.part-top-allnav-l-b a.top-allnav-icon1 { background-position: left top; }
+.part-top-allnav-l-b a.top-allnav-icon2 { background-position: -32px top; }
+.part-top-allnav-l-b a.top-allnav-icon1:hover { background-position: -62px top; }
+.part-top-allnav-l-b a.top-allnav-icon2:hover { background-position: right top; }
+
+/*投资机构免费招募*/
+.btn-invest-recruit-a { padding: 0 5px; width: 100px; height: 20px; margin-top: 5px; text-align: center; line-height: 20px; font-size: 12px; color: #FFF; background-color: #ef4349; border-radius: 3px; display: inline-block !important; margin-left: 5px; }
+.btn-invest-recruit-a:hover { color: #fff; }
+
+/*投资机构免费招募*/
+.btn-invest-recruit { padding: 0 5px; width: 100px; height: 20px; margin-top: 5px; text-align: center; line-height: 20px; font-size: 12px; color: #FFF; background-color: #ef4349; border-radius: 3px; display: inline-block !important; margin-left: 5px; }
+.btn-invest-recruit:hover { color: #fff !important; }
+.fn-right { float: right; }
+
+/* 最顶上的导航栏结束 */
+
+/*猜你喜欢开始*/
+.part-like-list { padding: 20px; background: #fff;}
+.part-like-list ul{border-left:1px solid #ddd;}
+.part-like-list li { border: 1px solid #ddd; border-left:0; margin-top:-1px; padding: 10px 20px; height: 110px; vertical-align: top; overflow: hidden; width:278px; position: relative; float:left;}
+.part-like-list li div { overflow: hidden; height: 36px; }
+.part-like-list li div span { padding: 0 5px; }
+.part-like-list footer { margin-top: 10px; display: none; position: absolute; left: 80px; bottom: 10px; }
+.part-like-list li.cur footer { display: block; }
+.part-like-list li.cur div { display: none; }
+.view-more-a { border: 1px solid #ddd; margin-top: 10px; text-align: center; }
+.view-more-a a { display: inline-block; height: 36px; line-height: 36px; width: 100%; background: #f5f5f5; }
+
+/*猜你喜欢结束*/

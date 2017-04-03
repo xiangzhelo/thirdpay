@@ -1,0 +1,8 @@
+﻿<p>亲爱的{#useremail#}:<p>
+<p style="font-size:14px">感谢您注册{#sitename#}，您需要在一周之内激活您的账号。 您只需点击下面的确认链接，即可完成帐号激活。</p>
+<p>如果不是您本人的操作，可能是有用户误输入您的Email地址，您可以忽略此邮件或与{#sitename#}客服联系。</p>
+<p><a href="{#verify_email#}" style="color:#003300">{#verify_email#}</a></p>
+<p style=\"color:#999;font-size:12px\">如果无法点击该URL链接地址，请将它复制并粘帖到浏览器的地址输入框，然后单击回车即可。</p>
+<p><p>————————————————————————————————</p></p>
+<p style="font-size:14px;line-height:150%">如果您有任何疑问，请致电我们的24小时客服热线 400-653-9930.&nbsp;或者联系我们的在线客服：<a href="http://www.7uka.com/service.html">进入客服中心</a><br/>祝您使用愉快！<br/>{#sitename#} 
+<a href="{#sitedomain#}/">{#sitedomain#}</a><p>

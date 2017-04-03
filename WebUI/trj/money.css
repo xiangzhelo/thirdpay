@@ -1,0 +1,104 @@
+/*--------------------------*\
+    * trjcn.com V6 资金入驻
+    * Date: 2015-04-01
+    * Update: 2015-04-03 ymj
+    * author: ymjdesign
+    * © 2015 www.trjcn.com
+\*--------------------------*/
+html,
+body { background-color: #eee; }
+
+/* 资金入驻头部 */
+#header { padding: 16px 0; height: 48px; background-color: #444c84; }
+.logo { float: left; }
+.sub-logo { position: relative; float: left; padding-left: 40px; font-size: 18px; line-height: 40px; color: #fff; }
+.icon-sub-logo { position: absolute; top: 12px; left: 20px; display: block; width: 0; height: 18px; border-left: 1px solid #575f9b; border-right: 1px solid #2a3267; overflow: hidden; }
+.login { float: right; padding-top: 8px; }
+.login a { display: inline-block; zoom: 1; margin-left: 10px; padding: 0 20px; height: 30px; line-height: 30px; font-size: 14px; color: #c3c4d3; border: 1px solid #8f94b5; border-radius: 15px; }
+.login a:hover { color: #fff; background-color: #eb604c; border-color: #eb604c; text-decoration: none; }
+.hotline { position: relative; float: right; color: #fff; font-size: 18px; line-height: 22px; }
+.hotline dt{ font-size: 14px; }
+.icon-hotline{ position: absolute; left: -38px; top: 8px; display: block; overflow: hidden; width:  32px; height: 32px; background: url(/trj/icon-money.png) no-repeat -60px -180px; }
+
+/* 资金入驻内容 */
+#content { padding-top: 20px; }
+.money-box { padding: 40px 70px; border: 1px solid #ddd; background-color: #fff; }
+
+/* 资金入驻步骤条 */
+.money-step { width: 858px; height: 110px; overflow: hidden; position: relative; }
+.money-step-group { position: absolute; z-index: 20; width: 10000px; }
+.money-step-item { float: left; margin-right: 250px; width: 120px; background-color: #fff; text-align: center; }
+.money-step-line { position: absolute; z-index: 10; top: 40px; width: 858px; height: 3px; background-color: #dadada; }
+.money-step-line span { display: block; overflow: hidden; position: absolute; z-index: 11; width: 72%; height: 3px; background-color: #76aedf; }
+.icon-money-step-01,
+.icon-money-step-02,
+.icon-money-step-03 { background-image: url(/trj/icon-money.png); background-repeat: no-repeat; display: block; margin-left: auto; margin-right: auto; width: 80px; height: 80px; }
+.icon-money-step-01 { background-position: left -90px; }
+.icon-money-step-02 { background-position: -90px -90px; }
+.icon-money-step-03 { background-position: -180px -90px; }
+.money-step-01 .icon-money-step-01,
+.money-step-02 .icon-money-step-01,
+.money-step-03 .icon-money-step-01 { background-position: left top; }
+.money-step-02 .icon-money-step-02,
+.money-step-03 .icon-money-step-02 { background-position: -90px top; }
+.money-step-03 .icon-money-step-03 { background-position: -180px top; }
+.money-step-01 .money-step-line span { width: 29%; }
+.money-step-02 .money-step-line span { width: 72%; }
+.money-step-03 .money-step-line span { width: 100%; }
+
+/* 资金入驻 */
+.money-form { padding: 20px; font-size: 14px; }
+.money-form-item { position: relative; float: left; padding: 10px 0 10px 170px; width: 650px; overflow: hidden; }
+.money-form-label { position: absolute; display: block; left: 40px; top: 10px; width: 130px; line-height: 34px; text-align: right; }
+.money-form-required{ font-family: simsun; color: red; margin-right: 3px;}
+.money-form-value { display: block; }
+.money-form-tips { float: left; display: block; position: relative; padding-left: 35px; margin-top: 5px; width: 260px; color: #df3333; }
+.money-form-tips-s {position: relative; padding-left: 35px; margin-top: 5px; width: 260px; color: #df3333;}
+.money-form-tips-s i{ top:0;*top:8px;}
+.icon-money-tips,
+.icon-money-win,.icon-add-case{ display: block; position: absolute; left: 10px; *zoom: 1; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; background: url(/trj/icon-money.png) no-repeat left -180px; }
+.money-form-value select,.money-form-select{ float: left; margin-right: 10px; padding: 6px 10px; *margin-top: 6px; border: 1px solid #ddd;}
+.money-form-text,
+.money-form-captcha,
+.money-form-textarea { float: left; padding: 4px; width: 340px; height: 26px; line-height: 26px; border-radius: 3px; border: 1px solid #ddd; }
+.money-form-captcha { width: 208px; margin-right: 10px; }
+.money-form-textarea{ height: 120px; }
+.money-form-checkbox{ display: block; float: left; margin-right: 20px; padding: 6px 0; white-space: nowrap; }
+.money-form-checkbox input{ margin-right: 5px; vertical-align: middle; }
+.btn-add-case{ position: relative; display: block; margin-top: 10px; margin-right: 200px; width: 178px; height: 34px; border: 1px dashed #76aedf; float: left; text-align: center; line-height: 34px; font-size: 14px; color: #76aedf; }
+a.btn-add-case:hover{ border-color: #e93100; text-decoration: none; }
+.icon-add-case{ display: block; overflow: hidden; width: 10px; height: 10px; background-position: -25px -180px; position: absolute; left: 15px; top: 11px; }
+a.btn-add-case:hover .icon-add-case{ background-position: -40px -180px; }
+.btn-money-captcha,
+.btn-upload-license,
+.btn-win-back,.uploadify-button,.uploadify-button:hover { float: left; display: block; width: 120px; height: 36px; border: none; border-radius: 3px; background-color: #76aedf; color: #fff; cursor: pointer; }
+.btn-upload-license,.uploadify-button { margin-top: 3px; width: 80px; height: 28px; text-align:center; }
+.btn-money-submit { width: 200px; height: 47px; font-size: 18px; color: #fff; background-color: #eb604c; border-radius: 3px; border: none; cursor: pointer; }
+.money-form-win { position: relative; margin: 30px auto; padding-top: 50px; width: 340px; padding-left: 140px; height: 210px; background-color: #fff; border: 1px solid #eee; }
+.icon-money-win { left: 90px; margin-top: 2px; width: 32px; height: 32px; background-position: -23px -195px; }
+.money-win-titlt { font-size: 24px; color: #eb604c; }
+.money-win-desc { margin-top: 5px; width: 270px; color: #666; font-size: 14px; }
+.money-win-back { margin-top: 20px; }
+.money-win-back span{ float: left; display: block; }
+.money-win-back strong { font-size: 18px; color: #df3333; }
+.btn-win-back { display: inline-block; vertical-align: middle; text-align: center; width: auto; padding: 5px 10px; height: 20px; margin-left: 10px; }
+a.btn-win-back:hover { color: #fff; text-decoration: none; }
+.money-form-value-di input{ display:inline-block; vertical-align:middle; float:inherit; position:relative;}
+.part-fieldset-multi-select-80{ width:80px; height:32px;}
+/* 上传按钮兼容IE */
+.swfupload{left:0}
+/* 底部 */
+#footer { text-align: center; }
+#footer .container { margin-top: 20px; padding-top: 10px; line-height: 24px; color: #666; border-top: 1px solid #ddd; }
+/* 机构待遇 */
+.part-treatment-list{ background:#fff; border:1px solid #dddddd; overflow:hidden; zoom:1; padding:30px 0; margin-top:20px;}
+.part-treatment-list article{ float:left; overflow:hidden; zoom:1; padding-left:50px;}
+.part-treatment-list aside{ width:100px; height:82px; line-height:1.3em; padding-top:18px; background:url(/trj/icon-round.jpg) no-repeat; text-align:center; font-size:24px; color:#fff; float:left;}
+.part-treatment-list section{ margin-left:120px; width:326px; padding-top:11px;}
+.part-treatment-list section p{ background:url(/trj/icon-gou.gif) left center no-repeat; padding-left:20px; margin-top:5px; font-size:14px; color:#666;}
+/* 入驻企业 */
+.enterprise-in-list h5{ font-size:20px; color:#666; line-height:1em; margin-bottom:15px;}
+.enterprise-in-list div{width: 1000px;  overflow: hidden;  zoom: 1;}
+.enterprise-in-list ul{ width: 1030px;}
+.enterprise-in-list li{ float:left; margin-right: 25px; margin-bottom: 25px;}
+.enterprise-in-list img{ width:178px; height:88px; border:1px solid #ddd; display:block;}

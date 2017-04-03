@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://www.sdo.com/mas/api/receive/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReceiveOrderAPIExplorterService" targetNamespace="http://www.sdo.com/mas/api/receive/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.sdo.com/mas/api/receive/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="receB2COrderRequest" type="tns:ReceB2COrderRequest" />
+      <xs:element name="receB2COrderResponse" type="tns:ReceB2COrderResponse" />
+      <xs:complexType name="ReceB2COrderRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="buyerContact" type="xs:string" />
+          <xs:element minOccurs="0" name="buyerId" type="xs:string" />
+          <xs:element minOccurs="0" name="buyerIp" type="xs:string" />
+          <xs:element minOccurs="0" name="buyerName" type="xs:string" />
+          <xs:element minOccurs="0" name="cardPayInfo" type="xs:string" />
+          <xs:element minOccurs="0" name="cardValue" type="xs:string" />
+          <xs:element minOccurs="0" name="currency" type="xs:string" />
+          <xs:element minOccurs="0" name="depositId" type="xs:string" />
+          <xs:element minOccurs="0" name="depositIdType" type="xs:string" />
+          <xs:element minOccurs="0" name="expireTime" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="instCode" type="xs:string" />
+          <xs:element minOccurs="0" name="language" type="xs:string" />
+          <xs:element minOccurs="0" name="notifyUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderTime" type="xs:string" />
+          <xs:element minOccurs="0" name="pageUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="payChannel" type="xs:string" />
+          <xs:element minOccurs="0" name="payType" type="xs:string" />
+          <xs:element minOccurs="0" name="payeeId" type="xs:string" />
+          <xs:element minOccurs="0" name="payerAuthTicket" type="xs:string" />
+          <xs:element minOccurs="0" name="payerId" type="xs:string" />
+          <xs:element minOccurs="0" name="payerMobileNo" type="xs:string" />
+          <xs:element minOccurs="0" name="productDesc" type="xs:string" />
+          <xs:element minOccurs="0" name="productId" type="xs:string" />
+          <xs:element minOccurs="0" name="productName" type="xs:string" />
+          <xs:element minOccurs="0" name="productNum" type="xs:string" />
+          <xs:element minOccurs="0" name="productUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="sellerId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="terminalType" type="xs:string" />
+          <xs:element minOccurs="0" name="unitPrice" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="extension">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ext1" type="xs:string" />
+          <xs:element minOccurs="0" name="ext2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="header">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="charset" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+          <xs:element minOccurs="0" name="sender" type="tns:sender" />
+          <xs:element minOccurs="0" name="service" type="tns:service" />
+          <xs:element minOccurs="0" name="traceNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sender">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="senderId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="service">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serviceCode" type="xs:string" />
+          <xs:element minOccurs="0" name="version" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="signature">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="signMsg" type="xs:string" />
+          <xs:element minOccurs="0" name="signType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ReceB2COrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="customerLogoUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="customerName" type="xs:string" />
+          <xs:element minOccurs="0" name="customerNo" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderType" type="xs:string" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="transTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMsg" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="MasAPIException" type="tns:MasAPIException" />
+      <xs:complexType name="MasAPIException">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="receiveB2COrder" type="tns:receiveB2COrder" />
+      <xs:complexType name="receiveB2COrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:ReceB2COrderRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="receiveB2COrderResponse" type="tns:receiveB2COrderResponse" />
+      <xs:complexType name="receiveB2COrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:ReceB2COrderResponse" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="receiveB2COrder">
+    <wsdl:part name="parameters" element="tns:receiveB2COrder" />
+  </wsdl:message>
+  <wsdl:message name="receiveB2COrderResponse">
+    <wsdl:part name="parameters" element="tns:receiveB2COrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasAPIException">
+    <wsdl:part name="MasAPIException" element="tns:MasAPIException" />
+  </wsdl:message>
+  <wsdl:portType name="ReceiveOrderAPI">
+    <wsdl:operation name="receiveB2COrder">
+      <wsdl:input name="receiveB2COrder" message="tns:receiveB2COrder" />
+      <wsdl:output name="receiveB2COrderResponse" message="tns:receiveB2COrderResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ReceiveOrderAPIExplorterServiceSoapBinding" type="tns:ReceiveOrderAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="receiveB2COrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="receiveB2COrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="receiveB2COrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceiveOrderAPIExplorterService">
+    <wsdl:port name="ReceiveOrderAPIExplorterPort" binding="tns:ReceiveOrderAPIExplorterServiceSoapBinding">
+      <soap:address location="http://cardpay.shengpay.com/api-acquire-channel/services/receiveOrderService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

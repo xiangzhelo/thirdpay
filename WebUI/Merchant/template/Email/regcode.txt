@@ -1,0 +1,8 @@
+﻿ 
+<p style="font-size: 14px">
+    您正在注册翁贝网</p>
+<p></p>
+<p></p>
+<p align="center">您的验证码为{#regcode#}</p>
+————————————————————————————————<p style="font-size:14px;line-height:150%">如果您有任何疑问，请致电我们的24小时客服热线 .&nbsp;或者联系我们的在线客服：<a href="http://www.wengbei.com/">进入客服中心</a><br/>祝您使用愉快！<br/>{#sitename#} 
+<a href="{#sitedomain#}/">{#sitedomain#}</a><p>

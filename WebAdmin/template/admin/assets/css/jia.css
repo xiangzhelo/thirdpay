@@ -1,0 +1,19 @@
+/* CSS Document */
+.header .dl-title a { display:block; width:138px; height:46px; background:url(../img/logox.png) no-repeat 0 0;}
+.header .dl-title span { display:none;}
+.nav-item { width:150px;}
+.nav-item-mask { width:148px;}
+.bui-nav-tab-item .tab-item-inner { background-position:-16px -4px;}
+.tab-nav-actived .tab-item-inner { background-position:-16px -29px;}
+
+/*------页面---*/
+.h2tit { border-bottom:1px solid #eee; margin-bottom:8px; padding-bottom:8px;}
+.header, .dl-main-nav { background:none;}
+.dl-main-nav { background:url(../img/n_bg.gif) repeat-x 0 0; padding-left:150px; padding-top:25px;}
+.header { background:none; height:auto;}
+.dl-title { margin-left:10px; padding-top:8px; position:absolute; z-index:9999; left:0; top:0;}
+.dl-log { position:absolute; z-index:9999; right:0; top:0;}
+
+
+
+

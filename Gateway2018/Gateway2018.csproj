@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67E56941-C1B4-45A4-8D48-C0F6CE579C8D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viviAPI.Gateway2018</RootNamespace>
+    <AssemblyName>viviAPI.Gateway2018</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>7uka.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="ThoughtWorks.QRCode, Version=1.0.5409.14711, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\ThoughtWorks.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="viviapi.Cache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\viviapi.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="viviapi.SysConfig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\viviapi.SysConfig.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\support.css" />
+    <Content Include="css\yeepaytest.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Receive\Card51\QqPay.aspx" />
+    <Content Include="Receive\Card51\tenpay.aspx" />
+    <Content Include="Receive\Card51\wapweixin.aspx" />
+    <Content Include="Receive\Heepay\WxMobilePay.aspx" />
+    <Content Include="Receive\YeePayZGT\callback.aspx" />
+    <Content Include="Receive\ZFuPay\Notify.aspx" />
+    <Content Include="Return\Card51\tenpay.aspx" />
+    <Content Include="Return\Card51\wapweixin.aspx" />
+    <Content Include="Return\Heepay\WxMobilePay.aspx" />
+    <Content Include="Return\ZFuPay\Result.aspx" />
+    <Content Include="WxH5.aspx" />
+    <Content Include="WxZGTCode.aspx" />
+    <Content Include="yeepayApi.aspx" />
+    <Content Include="yeepayTest.aspx" />
+    <Content Include="gatereceive.aspx" />
+    <Content Include="gateway.aspx" />
+    <Content Include="images\corBank\BOC.gif" />
+    <Content Include="images\corBank\CCB.gif" />
+    <Content Include="images\corBank\CEB.gif" />
+    <Content Include="images\corBank\CMB.gif" />
+    <Content Include="images\corBank\ICBC.gif" />
+    <Content Include="images\corBank\SPDB.gif" />
+    <Content Include="images\dianka\DXGK.png" />
+    <Content Include="images\dianka\JWYKT.png" />
+    <Content Include="images\dianka\JYYKT.png" />
+    <Content Include="images\dianka\LTYKT.png" />
+    <Content Include="images\dianka\QBCZK.png" />
+    <Content Include="images\dianka\SDYKT.png" />
+    <Content Include="images\dianka\SFYKT.png" />
+    <Content Include="images\dianka\SHYKT.png" />
+    <Content Include="images\dianka\THYKT.png" />
+    <Content Include="images\dianka\TXYKT.png" />
+    <Content Include="images\dianka\TXYKTZX.png" />
+    <Content Include="images\dianka\WMYKT.png" />
+    <Content Include="images\dianka\WYYKT.png" />
+    <Content Include="images\dianka\YDSZX.png" />
+    <Content Include="images\dianka\ZTYKT.png" />
+    <Content Include="images\dianka\ZYYKT.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\perBank\ABC.gif" />
+    <Content Include="images\perBank\BCCB.gif" />
+    <Content Include="images\perBank\BCM.gif" />
+    <Content Include="images\perBank\BJRCB.gif" />
+    <Content Include="images\perBank\BOC.gif" />
+    <Content Include="images\perBank\BOS.gif" />
+    <Content Include="images\perBank\CCB.gif" />
+    <Content Include="images\perBank\CEB.gif" />
+    <Content Include="images\perBank\CIB.gif" />
+    <Content Include="images\perBank\CITIC.gif" />
+    <Content Include="images\perBank\CMB.gif" />
+    <Content Include="images\perBank\CMBC.gif" />
+    <Content Include="images\perBank\GDB.gif" />
+    <Content Include="images\perBank\HXB.gif" />
+    <Content Include="images\perBank\ICBC.gif" />
+    <Content Include="images\perBank\PAB.gif" />
+    <Content Include="images\perBank\PSBC.gif" />
+    <Content Include="images\perBank\SPDB.gif" />
+    <Content Include="images\weixin.jpg" />
+    <Content Include="images\yeepay.gif" />
+    <Content Include="images\zfb.png" />
+    <Content Include="jquery.min.js" />
+    <Content Include="PayDo.aspx" />
+    <Content Include="Receive\Alipay\batchpay.aspx" />
+    <Content Include="Receive\Alipay\diytool.aspx" />
+    <Content Include="Receive\Card15173\Card.aspx" />
+    <Content Include="Receive\Card51\Card.aspx" />
+    <Content Include="Receive\Card51\WeiXin.aspx" />
+    <Content Include="Receive\Card51\Alipay.aspx" />
+    <Content Include="Receive\Cared70\alipay.aspx" />
+    <Content Include="Receive\Cared70\weixin.aspx" />
+    <Content Include="Receive\Ecpss\bank.aspx" />
+    <Content Include="Receive\swiftpass\result.aspx" />
+    <Content Include="Receive\TaoShang\bank.aspx" />
+    <Content Include="Receive\TaoShang\card.aspx" />
+    <Content Include="Receive\Weixin\callback.aspx" />
+    <Content Include="Receive\ZhiFu41\bank.aspx" />
+    <Content Include="Receive\Card51\bank.aspx" />
+    <Content Include="Receive\QianYiFu\bank.aspx" />
+    <Content Include="Receive\longbao\bank.aspx" />
+    <Content Include="Receive\Cared70\Card.aspx" />
+    <Content Include="Receive\Zline\bank.aspx" />
+    <Content Include="Receive\Zweixin\callback.aspx" />
+    <Content Include="Receive\Zweixin\Feedback.aspx" />
+    <Content Include="Receive\Zweixin\NativeCall.aspx" />
+    <Content Include="Receive\Zweixin\PayNotifyUrl.aspx" />
+    <Content Include="Receive\Zweixin\Warn.aspx" />
+    <Content Include="Return\Card51\Alipay.aspx" />
+    <Content Include="Return\Card51\Card.aspx" />
+    <Content Include="Return\Card51\WeiXin.aspx" />
+    <Content Include="Return\Cared70\alipay.aspx" />
+    <Content Include="Return\Cared70\weixin.aspx" />
+    <Content Include="Return\Ecpss\bank.aspx" />
+    <Content Include="Return\longbao\bank.aspx" />
+    <Content Include="Return\TaoShang\bank.aspx" />
+    <Content Include="Return\TaoShang\card.aspx" />
+    <Content Include="Return\ZhiFu41\Bank.aspx" />
+    <Content Include="Return\Card51\Bank.aspx" />
+    <Content Include="Return\QianYiFu\Bank.aspx" />
+    <Content Include="Return\Zline\Bank.aspx" />
+    <Content Include="Static\css\css.css" />
+    <Content Include="Static\images\bg01.png" />
+    <Content Include="Static\images\correct.png" />
+    <Content Include="Static\images\page-02.png" />
+    <Content Include="Static\images\page01.jpg" />
+    <Content Include="Static\images\page02.jpg" />
+    <Content Include="Static\images\rwm_pic.png" />
+    <Content Include="Static\images\start.png" />
+    <Content Include="Static\images\top-wait.jpg" />
+    <Content Include="Static\images\wx_bg.jpg" />
+    <Content Include="Static\images\wx_input.png" />
+    <Content Include="Static\images\wx_pic.jpg" />
+    <Content Include="Static\images\zfb_bg.jpg" />
+    <Content Include="Static\images\zfb_bz.jpg" />
+    <Content Include="Static\images\zfb_input.png" />
+    <Content Include="Static\images\zfb_rwm.png" />
+    <Content Include="Static\images\zfb_top.jpg" />
+    <Content Include="Static\images\支付宝bg.jpg" />
+    <Content Include="Static\js\lib\jquery-2.1.0.min.js" />
+    <Content Include="Static\js\lib\pay.js" />
+    <Content Include="Static\wxcss\banner.jpg" />
+    <Content Include="Static\js\lib\jquery-1.6.2.min.js" />
+    <Content Include="Static\wxcss\style.css" />
+    <Content Include="Static\wxcss\surprised.png" />
+    <Content Include="test.aspx" />
+    <Content Include="ViViSoft_TEST.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WeCode.aspx" />
+    <Content Include="CardReceive.aspx" />
+    <Content Include="weixinBank.aspx" />
+    <Content Include="tenpayBank.aspx" />
+    <Content Include="alipayBank.aspx" />
+    <Content Include="yeepayNewApi.aspx" />
+    <Content Include="ZweixinBank.aspx" />
+    <Content Include="ZweixinCode.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AliDCode.aspx.cs">
+      <DependentUpon>AliDCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AliDCode.aspx.designer.cs">
+      <DependentUpon>AliDCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ChargeBank.aspx.cs">
+      <DependentUpon>ChargeBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChargeBank.aspx.designer.cs">
+      <DependentUpon>ChargeBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Connect\Report.aspx.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Connect\Report.aspx.designer.cs">
+      <DependentUpon>Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card51\QqPay.aspx.cs">
+      <DependentUpon>QqPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51\QqPay.aspx.designer.cs">
+      <DependentUpon>QqPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card51\tenpay.aspx.cs">
+      <DependentUpon>tenpay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51\tenpay.aspx.designer.cs">
+      <DependentUpon>tenpay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card51\wapweixin.aspx.cs">
+      <DependentUpon>wapweixin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51\wapweixin.aspx.designer.cs">
+      <DependentUpon>wapweixin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Heepay\WxMobilePay.aspx.cs">
+      <DependentUpon>WxMobilePay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Heepay\WxMobilePay.aspx.designer.cs">
+      <DependentUpon>WxMobilePay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\YeePayZGT\callback.aspx.cs">
+      <DependentUpon>callback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\YeePayZGT\callback.aspx.designer.cs">
+      <DependentUpon>callback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\ZFuPay\Notify.aspx.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\ZFuPay\Notify.aspx.designer.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Card51\tenpay.aspx.cs">
+      <DependentUpon>tenpay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Card51\tenpay.aspx.designer.cs">
+      <DependentUpon>tenpay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Card51\wapweixin.aspx.cs">
+      <DependentUpon>wapweixin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Card51\wapweixin.aspx.designer.cs">
+      <DependentUpon>wapweixin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Heepay\WxMobilePay.aspx.cs">
+      <DependentUpon>WxMobilePay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Heepay\WxMobilePay.aspx.designer.cs">
+      <DependentUpon>WxMobilePay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\ZFuPay\Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\ZFuPay\Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxH5.aspx.cs">
+      <DependentUpon>WxH5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxH5.aspx.designer.cs">
+      <DependentUpon>WxH5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxZGTCode.aspx.cs">
+      <DependentUpon>WxZGTCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WxZGTCode.aspx.designer.cs">
+      <DependentUpon>WxZGTCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WxZGTQr.ashx.cs">
+      <DependentUpon>WxZGTQr.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="yeepayApi.aspx.cs">
+      <DependentUpon>yeepayApi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yeepayApi.aspx.designer.cs">
+      <DependentUpon>yeepayApi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yeepayTest.aspx.cs">
+      <DependentUpon>yeepayTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yeepayTest.aspx.designer.cs">
+      <DependentUpon>yeepayTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gatereceive.aspx.cs">
+      <DependentUpon>gatereceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gatereceive.aspx.designer.cs">
+      <DependentUpon>gatereceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="gateway.aspx.cs">
+      <DependentUpon>gateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gateway.aspx.designer.cs">
+      <DependentUpon>gateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GoToPay.aspx.cs">
+      <DependentUpon>GoToPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoToPay.aspx.designer.cs">
+      <DependentUpon>GoToPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayDo.aspx.cs">
+      <DependentUpon>PayDo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayDo.aspx.designer.cs">
+      <DependentUpon>PayDo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Alipay\batchpay.aspx.cs">
+      <DependentUpon>batchpay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Alipay\batchpay.aspx.designer.cs">
+      <DependentUpon>batchpay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Alipay\diytool.aspx.cs">
+      <DependentUpon>diytool.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Alipay\diytool.aspx.designer.cs">
+      <DependentUpon>diytool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Alipay\MApi.aspx.cs">
+      <DependentUpon>MApi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Alipay\MApi.aspx.designer.cs">
+      <DependentUpon>MApi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Alipay\Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Alipay\Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Baofoo\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Baofoo\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card15173\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card15173\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card51esales\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51esales\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PayResult.aspx.cs">
+      <DependentUpon>PayResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PayResult.aspx.designer.cs">
+      <DependentUpon>PayResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receive\Card51\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card51\WeiXin.aspx.cs">
+      <DependentUpon>WeiXin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51\WeiXin.aspx.designer.cs">
+      <DependentUpon>WeiXin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card51\Alipay.aspx.cs">
+      <DependentUpon>Alipay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51\Alipay.aspx.designer.cs">
+      <DependentUpon>Alipay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card60866\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card60866\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Cared70\alipay.aspx.cs">
+      <DependentUpon>alipay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Cared70\alipay.aspx.designer.cs">
+      <DependentUpon>alipay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Cared70\weixin.aspx.cs">
+      <DependentUpon>weixin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Cared70\weixin.aspx.designer.cs">
+      <DependentUpon>weixin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Dinpay\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Dinpay\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Ebatong\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Ebatong\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Ecpss\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Ecpss\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Gopay\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Gopay\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\HuiSu\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\HuiSu\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\HuiYuan\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\HuiYuan\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\IPS\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\IPS\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\OfCard\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\OfCard\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\ShengPay\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\ShengPay\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\swiftpass\result.aspx.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\swiftpass\result.aspx.designer.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\TaoShang\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\TaoShang\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\TaoShang\card.aspx.cs">
+      <DependentUpon>card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\TaoShang\card.aspx.designer.cs">
+      <DependentUpon>card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\TenPay\Notify.aspx.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\TenPay\Notify.aspx.designer.cs">
+      <DependentUpon>Notify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Weixin\callback.aspx.cs">
+      <DependentUpon>callback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Weixin\callback.aspx.designer.cs">
+      <DependentUpon>callback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Weixin\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Weixin\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Weixin\NativeCall.aspx.cs">
+      <DependentUpon>NativeCall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Weixin\NativeCall.aspx.designer.cs">
+      <DependentUpon>NativeCall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Weixin\PayNotifyUrl.aspx.cs">
+      <DependentUpon>PayNotifyUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Weixin\PayNotifyUrl.aspx.designer.cs">
+      <DependentUpon>PayNotifyUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Weixin\Warn.aspx.cs">
+      <DependentUpon>Warn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Weixin\Warn.aspx.designer.cs">
+      <DependentUpon>Warn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\YeePay\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\YeePay\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\YeePay\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\YeePay\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\ZhiFu41\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\ZhiFu41\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Card51\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Card51\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\QianYiFu\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\QianYiFu\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\longbao\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\longbao\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Cared70\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Cared70\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Zline\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Zline\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Zweixin\callback.aspx.cs">
+      <DependentUpon>callback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Zweixin\callback.aspx.designer.cs">
+      <DependentUpon>callback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Zweixin\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Zweixin\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Zweixin\NativeCall.aspx.cs">
+      <DependentUpon>NativeCall.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Zweixin\NativeCall.aspx.designer.cs">
+      <DependentUpon>NativeCall.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Zweixin\PayNotifyUrl.aspx.cs">
+      <DependentUpon>PayNotifyUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Zweixin\PayNotifyUrl.aspx.designer.cs">
+      <DependentUpon>PayNotifyUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Zweixin\Warn.aspx.cs">
+      <DependentUpon>Warn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Zweixin\Warn.aspx.designer.cs">
+      <DependentUpon>Warn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Alipay\MApi.aspx.cs">
+      <DependentUpon>MApi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Alipay\MApi.aspx.designer.cs">
+      <DependentUpon>MApi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Receive\Alipay\qrcode.aspx.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Receive\Alipay\qrcode.aspx.designer.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Alipay\qrcode.aspx.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Alipay\qrcode.aspx.designer.cs">
+      <DependentUpon>qrcode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Alipay\Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Alipay\Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Baofoo\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Baofoo\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Card51\Alipay.aspx.cs">
+      <DependentUpon>Alipay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Card51\Alipay.aspx.designer.cs">
+      <DependentUpon>Alipay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Card51\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Card51\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Card51\WeiXin.aspx.cs">
+      <DependentUpon>WeiXin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Card51\WeiXin.aspx.designer.cs">
+      <DependentUpon>WeiXin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Cared70\alipay.aspx.cs">
+      <DependentUpon>alipay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Cared70\alipay.aspx.designer.cs">
+      <DependentUpon>alipay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Cared70\weixin.aspx.cs">
+      <DependentUpon>weixin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Cared70\weixin.aspx.designer.cs">
+      <DependentUpon>weixin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Dinpay\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Dinpay\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Ebatong\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Ebatong\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Ecpss\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Ecpss\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Gopay\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Gopay\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Gopay\ShowUrl.aspx.cs">
+      <DependentUpon>ShowUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Gopay\ShowUrl.aspx.designer.cs">
+      <DependentUpon>ShowUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\IPS\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\IPS\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\longbao\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\longbao\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\TaoShang\bank.aspx.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\TaoShang\bank.aspx.designer.cs">
+      <DependentUpon>bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\TaoShang\card.aspx.cs">
+      <DependentUpon>card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\TaoShang\card.aspx.designer.cs">
+      <DependentUpon>card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Tenpay\Result.aspx.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Tenpay\Result.aspx.designer.cs">
+      <DependentUpon>Result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\ZhiFu41\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\ZhiFu41\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Card51\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Card51\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\QianYiFu\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\QianYiFu\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Return\Zline\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Return\Zline\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectBank.aspx.cs">
+      <DependentUpon>SelectBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SelectBank.aspx.designer.cs">
+      <DependentUpon>SelectBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowUrl.aspx.cs">
+      <DependentUpon>ShowUrl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowUrl.aspx.designer.cs">
+      <DependentUpon>ShowUrl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\HuaQi\gateway.aspx.cs">
+      <DependentUpon>gateway.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\HuaQi\gateway.aspx.designer.cs">
+      <DependentUpon>gateway.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\YeePay\AnnulCard.aspx.cs">
+      <DependentUpon>AnnulCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\YeePay\AnnulCard.aspx.designer.cs">
+      <DependentUpon>AnnulCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\YeePay\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\YeePay\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\Eka\Bank.aspx.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\Eka\Bank.aspx.designer.cs">
+      <DependentUpon>Bank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\Eka\Card.aspx.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\Eka\Card.aspx.designer.cs">
+      <DependentUpon>Card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\YeePay\ChargeCardDirect.aspx.cs">
+      <DependentUpon>ChargeCardDirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\YeePay\ChargeCardDirect.aspx.designer.cs">
+      <DependentUpon>ChargeCardDirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\YZCH\Pay.aspx.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\YZCH\Pay.aspx.designer.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StandardAPI\YZCH\Sale.aspx.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StandardAPI\YZCH\Sale.aspx.designer.cs">
+      <DependentUpon>Sale.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\SyncLocalCache.ashx.cs">
+      <DependentUpon>SyncLocalCache.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ViViSoft_CardTEST.aspx.cs">
+      <DependentUpon>ViViSoft_CardTEST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViViSoft_CardTEST.aspx.designer.cs">
+      <DependentUpon>ViViSoft_CardTEST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViViSoft_TEST.aspx.cs">
+      <DependentUpon>ViViSoft_TEST.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViViSoft_TEST.aspx.designer.cs">
+      <DependentUpon>ViViSoft_TEST.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WS\QueryOrder.ashx.cs">
+      <DependentUpon>QueryOrder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WS\request.ashx.cs">
+      <DependentUpon>request.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="WeCode.aspx.cs">
+      <DependentUpon>WeCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WeCode.aspx.designer.cs">
+      <DependentUpon>WeCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="wxqrcode.ashx.cs">
+      <DependentUpon>wxqrcode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CardReceive.aspx.cs">
+      <DependentUpon>CardReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CardReceive.aspx.designer.cs">
+      <DependentUpon>CardReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="weixinBank.aspx.cs">
+      <DependentUpon>weixinBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="weixinBank.aspx.designer.cs">
+      <DependentUpon>weixinBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tenpayBank.aspx.cs">
+      <DependentUpon>tenpayBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tenpayBank.aspx.designer.cs">
+      <DependentUpon>tenpayBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="alipayBank.aspx.cs">
+      <DependentUpon>alipayBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="alipayBank.aspx.designer.cs">
+      <DependentUpon>alipayBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="yeepayNewApi.aspx.cs">
+      <DependentUpon>yeepayNewApi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="yeepayNewApi.aspx.designer.cs">
+      <DependentUpon>yeepayNewApi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZweixinBank.aspx.cs">
+      <DependentUpon>ZweixinBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZweixinBank.aspx.designer.cs">
+      <DependentUpon>ZweixinBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZweixinCode.aspx.cs">
+      <DependentUpon>ZweixinCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZweixinCode.aspx.designer.cs">
+      <DependentUpon>ZweixinCode.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChargeBank.aspx" />
+    <Content Include="Configurations\memcached.config" />
+    <Content Include="Configurations\runtimeconfiguration.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\Cache\Cache.csproj">
+      <Project>{25b155c1-2e95-47d6-8adc-20b006b48544}</Project>
+      <Name>Cache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\Lib\Lib.csproj">
+      <Project>{461225B3-0A5B-4D7A-A968-169E0292207C}</Project>
+      <Name>Lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\SysConfig\SysConfig.csproj">
+      <Project>{b38d0b5d-57fe-405f-a287-8a862e999622}</Project>
+      <Name>SysConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{30F24167-FE4A-44F9-9B30-3E8915FA6882}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETAPI\ETAPI.csproj">
+      <Project>{0D016106-6927-4941-9ABF-9381F3349322}</Project>
+      <Name>ETAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMessaging\IMessaging.csproj">
+      <Project>{4E6A68B2-ACE1-4962-810E-4616BC9981E9}</Project>
+      <Name>IMessaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MessagingFactory\MessagingFactory.csproj">
+      <Project>{EE242137-3EEB-4F62-B079-E5B980785F4C}</Project>
+      <Name>MessagingFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{EA9BF80A-B9B1-4B03-B263-EAA1029AF6B9}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSMQMessaging\MSMQMessaging.csproj">
+      <Project>{B77B1021-18A3-4F95-8F50-1DEA42372783}</Project>
+      <Name>MSMQMessaging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServerDAL\SQLServerDAL.csproj">
+      <Project>{35F36085-52BD-4C9C-9C59-1E3F2DF01D83}</Project>
+      <Name>SQLServerDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysInterface\SysInterface.csproj">
+      <Project>{150b0993-ab6e-41c0-8a92-001c03d60f21}</Project>
+      <Name>SysInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebComponents\WebComponents.csproj">
+      <Project>{77FB4EF2-1515-4084-A511-A8EE9DEC077F}</Project>
+      <Name>WebComponents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Receive\Alipay\MApi.aspx" />
+    <Content Include="Receive\Alipay\Result.aspx" />
+    <Content Include="Receive\Card51esales\Card.aspx" />
+    <Content Include="PayResult.aspx" />
+    <Content Include="Receive\OfCard\Card.aspx" />
+    <Content Include="Receive\TenPay\Notify.aspx" />
+    <Content Include="Receive\YeePay\Bank.aspx" />
+    <Content Include="Receive\YeePay\Card.aspx" />
+    <Content Include="Return\Alipay\MApi.aspx" />
+    <Content Include="Return\Alipay\Result.aspx" />
+    <Content Include="Return\Tenpay\Result.aspx" />
+    <Content Include="ShowUrl.aspx" />
+    <Content Include="StandardAPI\YeePay\Bank.aspx" />
+    <Content Include="StandardAPI\YZCH\Sale.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Tools\SyncLocalCache.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AliDCode.aspx" />
+    <Content Include="Connect\Report.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Configurations\log4net.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="GoToPay.aspx" />
+    <Content Include="Receive\Baofoo\Bank.aspx" />
+    <Content Include="Receive\Card60866\Card.aspx" />
+    <Content Include="Receive\Dinpay\Bank.aspx" />
+    <Content Include="Receive\Ebatong\Bank.aspx" />
+    <Content Include="Receive\Gopay\bank.aspx" />
+    <Content Include="Receive\HuiSu\Card.aspx" />
+    <Content Include="Receive\HuiYuan\Card.aspx" />
+    <Content Include="Receive\IPS\bank.aspx" />
+    <Content Include="Receive\ShengPay\Card.aspx" />
+    <Content Include="Receive\Alipay\qrcode.aspx" />
+    <Content Include="Return\Alipay\qrcode.aspx" />
+    <Content Include="Return\Baofoo\Bank.aspx" />
+    <Content Include="Return\Dinpay\Bank.aspx" />
+    <Content Include="Return\Ebatong\Bank.aspx" />
+    <Content Include="Return\Gopay\Bank.aspx" />
+    <Content Include="Return\Gopay\ShowUrl.aspx" />
+    <Content Include="Return\IPS\Bank.aspx" />
+    <Content Include="Search.aspx" />
+    <Content Include="SelectBank.aspx" />
+    <Content Include="StandardAPI\HuaQi\gateway.aspx" />
+    <Content Include="StandardAPI\Eka\Bank.aspx" />
+    <Content Include="StandardAPI\Eka\Card.aspx" />
+    <Content Include="StandardAPI\YeePay\AnnulCard.aspx" />
+    <Content Include="StandardAPI\YeePay\ChargeCardDirect.aspx" />
+    <Content Include="StandardAPI\YZCH\Pay.aspx" />
+    <Content Include="Static\images\12.jpg" />
+    <Content Include="Static\images\1GNtZmpnkr.png" />
+    <Content Include="Static\images\2R3cKfrKqS.png" />
+    <Content Include="Static\images\icon_tdwaiting.gif" />
+    <Content Include="Static\images\jbrk.gif" />
+    <Content Include="Static\images\new-btn-fixed.png" />
+    <Content Include="Static\images\top.gif" />
+    <Content Include="Static\images\wjlogo1.gif" />
+    <Content Include="Static\images\wjlogo2.gif" />
+    <Content Include="Static\js\gotopay.js" />
+    <Content Include="Static\js\lib\jquery-1.4.2.js" />
+    <Content Include="Static\js\query.js" />
+    <Content Include="Static\style\alice.components.security-core-2.1.css" />
+    <Content Include="Static\style\css.css" />
+    <Content Include="Static\style\excashier.base-2.3-mobileBarCode.css" />
+    <Content Include="Static\style\report.css" />
+    <Content Include="TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7uka.snk" />
+    <Content Include="Receive\Weixin\Feedback.aspx" />
+    <Content Include="Receive\Weixin\NativeCall.aspx" />
+    <Content Include="Receive\Weixin\PayNotifyUrl.aspx" />
+    <Content Include="Receive\Weixin\Warn.aspx" />
+    <Content Include="Static\js\plug-in\jquery.artDialog.js" />
+    <Content Include="Static\js\plug-in\jquery.artDialog.source.js" />
+    <Content Include="Static\js\plug-in\skins\aero.css" />
+    <Content Include="Static\js\plug-in\skins\aero\aero_s.png" />
+    <Content Include="Static\js\plug-in\skins\aero\aero_s2.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_close.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_e.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_n.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_ne.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_nw.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_s.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_se.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_sw.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="Static\js\plug-in\skins\aero\ie6\aui_w.png" />
+    <Content Include="Static\js\plug-in\skins\black.css" />
+    <Content Include="Static\js\plug-in\skins\black\bg.png" />
+    <Content Include="Static\js\plug-in\skins\black\bg2.png" />
+    <Content Include="Static\js\plug-in\skins\black\bg_css3.png" />
+    <Content Include="Static\js\plug-in\skins\black\bg_css3_2.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\close.hover.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\close.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\e.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\n.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\ne.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\nw.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\s.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\se.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\sw.png" />
+    <Content Include="Static\js\plug-in\skins\black\ie6\w.png" />
+    <Content Include="Static\js\plug-in\skins\blue.css" />
+    <Content Include="Static\js\plug-in\skins\blue\bg.png" />
+    <Content Include="Static\js\plug-in\skins\blue\bg2.png" />
+    <Content Include="Static\js\plug-in\skins\blue\bg_css3.png" />
+    <Content Include="Static\js\plug-in\skins\blue\bg_css3_2.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\close.hover.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\close.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\e.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\n.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\ne.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\nw.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\s.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\se.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\sw.png" />
+    <Content Include="Static\js\plug-in\skins\blue\ie6\w.png" />
+    <Content Include="Static\js\plug-in\skins\chrome.css" />
+    <Content Include="Static\js\plug-in\skins\chrome\border.png" />
+    <Content Include="Static\js\plug-in\skins\chrome\chrome_s.png" />
+    <Content Include="Static\js\plug-in\skins\default.css" />
+    <Content Include="Static\js\plug-in\skins\green.css" />
+    <Content Include="Static\js\plug-in\skins\green\bg.png" />
+    <Content Include="Static\js\plug-in\skins\green\bg2.png" />
+    <Content Include="Static\js\plug-in\skins\green\bg_css3.png" />
+    <Content Include="Static\js\plug-in\skins\green\bg_css3_2.png" />
+    <Content Include="Static\js\plug-in\skins\green\color_bg.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\close.hover.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\close.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\e.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\n.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\ne.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\nw.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\s.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\se.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\sw.png" />
+    <Content Include="Static\js\plug-in\skins\green\ie6\w.png" />
+    <Content Include="Static\js\plug-in\skins\icons\error.png" />
+    <Content Include="Static\js\plug-in\skins\icons\face-sad.png" />
+    <Content Include="Static\js\plug-in\skins\icons\face-smile.png" />
+    <Content Include="Static\js\plug-in\skins\icons\loading.gif" />
+    <Content Include="Static\js\plug-in\skins\icons\question.png" />
+    <Content Include="Static\js\plug-in\skins\icons\succeed.png" />
+    <Content Include="Static\js\plug-in\skins\icons\warning.png" />
+    <Content Include="Static\js\plug-in\skins\idialog.css" />
+    <Content Include="Static\js\plug-in\skins\idialog\idialog_s.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\idialog_s2.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_close.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_e.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_n.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_s.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_se.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="Static\js\plug-in\skins\idialog\ie6\aui_w.png" />
+    <Content Include="Static\js\plug-in\skins\opera.css" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_close.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_e.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_n.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_ne.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_nw.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_s.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_se.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_sw.png" />
+    <Content Include="Static\js\plug-in\skins\opera\ie6\aui_w.png" />
+    <Content Include="Static\js\plug-in\skins\opera\s1.png" />
+    <Content Include="Static\js\plug-in\skins\opera\s2.png" />
+    <Content Include="Static\js\plug-in\skins\simple.css" />
+    <Content Include="Static\js\plug-in\skins\twitter.css" />
+    <Content Include="ViViSoft_CardTEST.aspx" />
+    <Content Include="WS\QueryOrder.ashx" />
+    <Content Include="WS\request.ashx" />
+    <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
+    <None Include="Static\images\_notes\rwm_pic.png.mno" />
+    <None Include="Static\wxcss\payqrcode" />
+    <Content Include="wxqrcode.ashx" />
+    <Content Include="WxZGTQr.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Class\" />
+    <Folder Include="Zweixin\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

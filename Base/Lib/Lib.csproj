@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{461225B3-0A5B-4D7A-A968-169E0292207C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viviLib</RootNamespace>
+    <AssemblyName>viviLib</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>7uka.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>http://localhost/viviLib/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AntiXssLibrary, Version=1.5.0.0, Culture=neutral, PublicKeyToken=bcdc0d0c766dd6e4">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\RefDLL\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\RefDLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Security\AES.cs" />
+    <Compile Include="comm\Common.cs" />
+    <Compile Include="comm\RandomController.cs" />
+    <Compile Include="comm\TypeParse.cs" />
+    <Compile Include="comm\Utils.cs" />
+    <Compile Include="config\ConfigHelper.cs" />
+    <Compile Include="config\LogSetting.cs" />
+    <Compile Include="database\PageData.cs" />
+    <Compile Include="database\SearchParam.cs" />
+    <Compile Include="database\SqlKey.cs" />
+    <Compile Include="ExceptionHandling\ExceptionHandler.cs" />
+    <Compile Include="Image\VerifyImage.cs" />
+    <Compile Include="Image\VerifyImageInfo.cs" />
+    <Compile Include="IO\DirFile.cs" />
+    <Compile Include="IO\File.cs" />
+    <Compile Include="IO\FileHelp.cs" />
+    <Compile Include="Js\MessageObject.cs" />
+    <Compile Include="Logging\LogHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScheduledTask\IScheduledTaskExecute.cs" />
+    <Compile Include="ScheduledTask\ScheduledTask.cs" />
+    <Compile Include="ScheduledTask\ScheduledTaskConfiguration.cs" />
+    <Compile Include="ScheduledTask\ScheduledTaskConfigurationSectionHandler.cs" />
+    <Compile Include="ScheduledTask\ScheduledTaskExecuteBase.cs" />
+    <Compile Include="ScheduledTask\ScheduledTaskLog.cs" />
+    <Compile Include="Security\AntiXss.cs" />
+    <Compile Include="Security\Cryptography.cs" />
+    <Compile Include="Security\Des3.cs" />
+    <Compile Include="Text\StringText.cs" />
+    <Compile Include="Text\PageValidate.cs" />
+    <Compile Include="Text\Regular.cs" />
+    <Compile Include="Text\RegularType.cs" />
+    <Compile Include="Text\Strings.cs" />
+    <Compile Include="Text\Validate.cs" />
+    <Compile Include="TimeControl\FormatConvertor.cs" />
+    <Compile Include="comm\Utility.cs" />
+    <Compile Include="web\Request.cs" />
+    <Compile Include="web\SafeCookie.cs" />
+    <Compile Include="web\ServerVariables.cs" />
+    <Compile Include="web\WebBase.cs" />
+    <Compile Include="web\WebClientHelper.cs" />
+    <Compile Include="web\XRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7uka.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

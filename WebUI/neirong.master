@@ -1,0 +1,224 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/site.Master" AutoEventWireup="true" CodeBehind="neirong.master.cs" Inherits="viviAPI.WebUI2015.neirong" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="Header" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Content" runat="server">
+    <link href="/longbao/style/css/site.css" rel="stylesheet">
+    <div class="content cl" style="padding-top: 0;">
+        <div class="left">
+            <div class="leftmenu">
+                <header>亿付产品</header>
+                <div id="product">
+                    <a href="javascript:;" class="selected">微信扫码</a>
+                    <a href="javascript:;">支付宝</a>
+                    <a href="javascript:;">在线收款</a>
+                    <a href="javascript:;">在线销卡</a>
+                    <a href="javascript:;">财付通</a>
+                </div>
+            </div>
+            <div class="leftmenu">
+                <header>商户接入</header>
+                <div id="access">
+                    <a href="javascript:;">结算灵活</a>
+                    <a href="javascript:;">开通快捷</a>
+                    <a href="javascript:;">贴心服务</a>
+                    <a href="javascript:;">自助平台</a>
+                    <a href="javascript:;">费率优惠</a>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="product_info" <%= System.IO.Path.GetFileName(Request.Url.ToString()).ToLower() == "product.aspx" || System.IO.Path.GetFileName(Request.Url.ToString()).ToLower() == "access.aspx" ? "" : " style=\"display: none;\"" %>>
+                <img src="/longbao/style/content/a1.jpg" class="con-right_top">
+                <p>用户扫描商户展示在各种场景的二维码进行支付。</p>
+                <p>步骤1：商户根据微信支付的规则，为不同商品生成不同的二维码（如图6.1），展示在各种场景，用于用户扫描购买。</p>
+                <p>步骤2：用户使用微信“扫一扫”（如图6.2）扫描二维码后，获取商品支付信息，引导用户完成支付（如图6.3）</p>
+                <table align="center" class="table-auto">
+                    <tbody>
+                        <tr>
+                            <td valign="bottom">
+                                <img src="/longbao/style/content/chapter6_1_1.png" alt="支付二维码" class="mb10" width="250px">
+                                <p class="tc mb20">图6.1 支付二维码</p>
+                            </td>
+                            <td>
+                                <img src="/longbao/style/content/chapter6_1_2.jpg" alt="打开微信扫一扫二维码" class="mb10" width="250px">
+                                <p class="tc mb20">图6.2 打开微信扫一扫二维码</p>
+                            </td>
+                            <td class="table-padd">
+                                <img src="/longbao/style/content/chapter6_1_3.jpg" alt="确认支付页面" class="mb10" width="250px">
+                                <p class="tc mb20">图6.3 确认支付页面</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>步骤（3）：用户确认支付，输入支付密码（如图6.4）。</p>
+                <p>步骤（4）：支付完成后会提示用户支付成功（如图6.5），商户后台得到支付成功的通知，然后进行发货处理</p>
+                <table align="center" class="table-auto">
+                    <tbody>
+                        <tr>
+                            <td valign="bottom">
+                                <img src="/longbao/style/content/chapter6_1_4.jpg" alt="支付二维码" class="mb10" width="250px">
+                                <p class="tc mb20">图6.4 用户确认支付，输入密码</p>
+                            </td>
+                            <td>
+                                <img src="/longbao/style/content/chapter6_1_5.jpg" alt="打开微信扫一扫二维码" class="mb10" width="250px">
+                                <p class="tc mb20">图6.5 支付成功提示</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="product_info" style="display: none;">
+                <img src="/longbao/style/content/a1.jpg" class="con-right_top">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">一.支付宝快捷开通</h3>
+                <img src="/longbao/style/content/a2.png" class="con-right_top">
+                <h3>第一步:注册激活账号</h3>
+                <p>使用您有效的Email注册亿付商户，并邮箱激活相应账号完成注册。</p>
+                <h3>第二步:提交申请表</h3>
+                <p>提交您独立网站的基本信息（ICP备案等），我们依据此信息及您的经营状况做审核。（请确保您提供的信息真实有效如有假冒将不予开通）</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>营业信息审核1-5个工作日期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc;">二.支付宝API使用</h3>
+                <img src="/longbao/style/content/a3.png" class="con-right_top">
+                <h3>第一步:申请商户</h3>
+                <p>根据自身业务情况，了解亿付相应行业产品方案。联系亿付销售经理，签署相应协议。</p>
+                <h3>第二步:商户信息提交</h3>
+                <p>提交企业及网站相应的基本信息，我们会依据此信息做相应审核。（请确保您提供的信息真实有效如有假冒将不予开通）</p>
+                <h3>第三步:技术接入开通服务</h3>
+                <p>营业信息审核期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc;">三.商户信息变更</h3>
+                <img src="/longbao/style/content/a4.png" class="con-right_top">
+                <h3>第一步:下载填写申请表</h3>
+                <p>下载、填写申请表（请将申请表各项内容填写完整，以避免申请表内容遗漏而造成信息无法修改）</p>
+                <h3>第二步:提交申请表</h3>
+                <p>根据变更内容不同，您需要使用注册邮箱或传真形式，提交申请表。</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>请耐心等待亿付工作人员对您提交的变更信息进行审核，亿付将按照您变更后的信息为您提供相关服务。</p>
+            </div>
+            <div class="product_info" style="display: none;">
+                <img src="/longbao/style/content/a2.jpg" class="con-right_top">
+                <h3>在线收款</h3>
+                <img src="/longbao/style/content/a5.png" class="con-right_top">
+                <h3 style="padding: 10px 0px; border-top: 1px dashed #dcdcdc;">使用遇到问题？</h3>
+                <h3>发起我要收款马上就能收到钱吗？</h3>
+                <p>答：不会。您将您的收款链接发给对方付款，只有在对方付款成功后，款项才会直接打入您的亿付账户。</p>
+                <h3>使用我要收款交易得来的钱可以提现吗？</h3>
+                <p>答：可以。</p>
+                <h3>每天发起收款的限额是多少？</h3>
+                <p>限额根据银行卡开通时银行卡限额标准。</p>
+            </div>
+            <div class="product_info" style="display: none;">
+                <img src="/longbao/style/content/a1.jpg" class="con-right_top">
+                <h3 style="padding-top: 5px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">产品简介</h3>
+                <img src="/longbao/style/content/a6.png" class="con-right_top">
+                <h3 style="padding-top: 5px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">产品特色</h3>
+                <img src="/longbao/style/content/a7.png" class="con-right_top">
+                <h3 style="padding-top: 5px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">开通流程</h3>
+                <img src="/longbao/style/content/a8.png" class="con-right_top">
+                <h3 style="padding-top: 5px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">卡种支持</h3>
+                <p>盛大卡 完美 网易 腾讯 天宏 天下一卡通 联通 移动 电信 光宇 久游 纵游 征途 骏网 搜狐</p>
+                <h3>点卡费率</h3>
+                <p>盛大卡 87 完美 88 网易 88 腾讯 87 天宏 86 天下一卡通 86 联通 96 移动 96 电信 95 光宇 85 久游 82 纵游 87 征途 </p>
+                <p>88 骏网 86 搜狐 87</p>
+                <h3>销卡优势</h3>
+                <p>只需提供 卡号 密码 即可销卡方便快捷。</p>
+            </div>
+            <div class="product_info" style="display: none;">
+                <img src="/longbao/style/content/a1.jpg" class="con-right_top">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">一.财付通快捷开通</h3>
+                <img src="/longbao/style/content/a9.png" class="con-right_top">
+                <h3>第一步:注册激活账号</h3>
+                <p>使用您有效的Email注册亿付商户，并邮箱激活相应账号完成注册。</p>
+                <h3>第二步:提交申请表</h3>
+                <p>提交您独立网站的基本信息（ICP备案等），我们依据此信息及您的经营状况做审核。（请确保您提供的信息真实有效如有假冒将不予开通）</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>营业信息审核1-5个工作日期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc;">二.财付通API使用</h3>
+                <img src="/longbao/style/content/a3.png" class="con-right_top">
+                <h3>第一步:申请商户</h3>
+                <p>根据自身业务情况，了解亿付相应行业产品方案。联系亿付销售经理，签署相应协议。</p>
+                <h3>第二步:商户信息提交</h3>
+                <p>提交企业及网站相应的基本信息，我们会依据此信息做相应审核。（请确保您提供的信息真实有效如有假冒将不予开通）</p>
+                <h3>第三步:技术接入开通服务</h3>
+                <p>营业信息审核期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc;">三.商户信息变更</h3>
+                <img src="/longbao/style/content/a4.png" class="con-right_top">
+                <h3>第一步:下载填写申请表</h3>
+                <p>下载、填写申请表（请将申请表各项内容填写完整，以避免申请表内容遗漏而造成信息无法修改）</p>
+                <h3>第二步:提交申请表</h3>
+                <p>根据变更内容不同，您需要使用注册邮箱或传真形式，提交申请表。</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>请耐心等待亿付工作人员对您提交的变更信息进行审核，亿付将按照您变更后的信息为您提供相关服务。</p>
+            </div>
+            <div class="access_info" style="display: none;">
+                <img src="/longbao/style/content/jieru1.jpg" class="con-right_top" width="720">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">结算灵活</h3>
+                <img src="/longbao/style/content/a10.png" class="con-right_top">
+                <h3>第一步:注册激活账号</h3>
+                <p>使用您有效的Email注册亿付商户，并邮箱激活相应账号完成注册。</p>
+                <h3>第二步:提交申请表</h3>
+                <p>提交您独立网站的基本信息（ICP备案等），我们依据此信息及您的经营状况做审核。（请确保您提供信息的真实性和有效性）</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>营业信息审核1-5个工作日期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+            </div>
+            <div class="access_info" style="display: none;">
+                <img src="/longbao/style/content/jieru1.jpg" class="con-right_top" width="720">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">开通快捷</h3>
+                <img src="/longbao/style/content/a11.png" class="con-right_top">
+                <h3>第一步:注册激活账号</h3>
+                <p>使用您有效的Email注册亿付商户，并邮箱激活相应账号完成注册。</p>
+                <h3>第二步:提交申请表</h3>
+                <p>提交您独立网站的基本信息（ICP备案等），我们依据此信息及您的经营状况做审核。（请确保您提供信息的真实性和有效性）</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>营业信息审核1-5个工作日期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+            </div>
+            <div class="access_info" style="display: none;">
+                <img src="/longbao/style/content/jieru1.jpg" class="con-right_top" width="720">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">贴心服务</h3>
+                <img src="/longbao/style/content/a12.png" class="con-right_top">
+                <h3>第一步:注册激活账号</h3>
+                <p>使用您有效的Email注册亿付商户，并邮箱激活相应账号完成注册。</p>
+                <h3>第二步:提交申请表</h3>
+                <p>提交您独立网站的基本信息（ICP备案等），我们依据此信息及您的经营状况做审核。（请确保您提供信息的真实性和有效性）</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>营业信息审核1-5个工作日期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+            </div>
+            <div class="access_info" style="display: none;">
+                <img src="/longbao/style/content/jieru1.jpg" class="con-right_top" width="720">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">自助平台</h3>
+                <img src="/longbao/style/content/a13.png" class="con-right_top">
+                <h3>第一步:注册激活账号</h3>
+                <p>使用您有效的Email注册亿付商户，并邮箱激活相应账号完成注册。</p>
+                <h3>第二步:提交申请表</h3>
+                <p>提交您独立网站的基本信息（ICP备案等），我们依据此信息及您的经营状况做审核。（请确保您提供信息的真实性和有效性）</p>
+                <h3>第三步:等待审核完成变更</h3>
+                <p>营业信息审核1-5个工作日期间，您可以同步进行支付接口工具包的下载，进行开发。审核通过并接入完毕后，即可享受亿付的平台服务。</p>
+            </div>
+            <div class="access_info" style="display: none;">
+                <img src="/longbao/style/content/jieru1.jpg" class="con-right_top" width="720">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">费率优惠</h3>
+                <img src="/longbao/style/content/a14.png" class="con-right_top">
+                <h3 style="padding-top: 10px; border-top: 1px dashed #dcdcdc; margin-top: 10px;">合作银行</h3>
+                <p>支持国内 上百家银行支付 包括 支付宝 财富通 等接口</p>
+            </div>
+            <asp:ContentPlaceHolder ID="RightContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <script src="/longbao/style/js/site.js"></script>
+    <script>
+        var str = document.URL;
+        var strs = str.split("#");
+        if (strs[1] != null && strs[1] >= 0) {
+            $(".left a").removeClass("selected");
+            $(".right>div").hide();
+            $(".left a").eq(strs[1]).addClass("selected");
+            $(".right>div").eq(strs[1]).show();
+        }
+    </script>
+</asp:Content>

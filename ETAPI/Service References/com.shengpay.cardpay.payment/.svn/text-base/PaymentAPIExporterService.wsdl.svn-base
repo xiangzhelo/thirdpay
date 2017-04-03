@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tns="http://www.sdo.com/mas/api/payment/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PaymentAPIExporterService" targetNamespace="http://www.sdo.com/mas/api/payment/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.sdo.com/mas/api/payment/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="b2CPaymentCombinatedRequest" type="tns:b2CPaymentCombinatedRequest" />
+      <xs:element name="b2CPaymentCombinatedResponse" type="tns:b2CPaymentCombinatedResponse" />
+      <xs:element name="b2CPaymentRequest" type="tns:b2CPaymentRequest" />
+      <xs:element name="b2CPaymentResponse" type="tns:b2CPaymentResponse" />
+      <xs:element name="preApprovedPaymentRequest" type="tns:preApprovedPaymentRequest" />
+      <xs:element name="preApprovedPaymentResponse" type="tns:preApprovedPaymentResponse" />
+      <xs:element name="transferPaymentRequest" type="tns:transferPaymentRequest" />
+      <xs:element name="transferPaymentResponse" type="tns:transferPaymentResponse" />
+      <xs:complexType name="preApprovedPaymentRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:string" />
+          <xs:element minOccurs="0" name="bizCode" type="xs:string" />
+          <xs:element minOccurs="0" name="contractNO" type="xs:string" />
+          <xs:element minOccurs="0" name="currency" type="xs:string" />
+          <xs:element minOccurs="0" name="ext" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="instCode" type="xs:string" />
+          <xs:element minOccurs="0" name="memo" type="xs:string" />
+          <xs:element minOccurs="0" name="notifyURL" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderTime" type="xs:string" />
+          <xs:element minOccurs="0" name="payMode" type="xs:string" />
+          <xs:element minOccurs="0" name="paySchedule" type="tns:paySchedule" />
+          <xs:element minOccurs="0" name="payeeAccount" type="tns:accountIdentify" />
+          <xs:element minOccurs="0" name="payerAccount" type="tns:accountIdentify" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="extension">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ext1" type="xs:string" />
+          <xs:element minOccurs="0" name="ext2" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="header">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="charset" type="xs:string" />
+          <xs:element minOccurs="0" name="sendTime" type="xs:string" />
+          <xs:element minOccurs="0" name="sender" type="tns:sender" />
+          <xs:element minOccurs="0" name="service" type="tns:service" />
+          <xs:element minOccurs="0" name="traceNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="sender">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="senderId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="service">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="serviceCode" type="xs:string" />
+          <xs:element minOccurs="0" name="version" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="paySchedule">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="daysOfMonth" type="xs:string" />
+          <xs:element minOccurs="0" name="daysOfWeek" type="xs:string" />
+          <xs:element minOccurs="0" name="endCount" type="xs:string" />
+          <xs:element minOccurs="0" name="endTime" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="xs:string" />
+          <xs:element minOccurs="0" name="frequency" type="xs:string" />
+          <xs:element minOccurs="0" name="hour" type="xs:string" />
+          <xs:element minOccurs="0" name="interval" type="xs:string" />
+          <xs:element minOccurs="0" name="monthsOfYear" type="xs:string" />
+          <xs:element minOccurs="0" name="startTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="accountIdentify">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNo" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="xs:string" />
+          <xs:element minOccurs="0" name="memberId" type="xs:string" />
+          <xs:element minOccurs="0" name="memberIdType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="signature">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="signMsg" type="xs:string" />
+          <xs:element minOccurs="0" name="signType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="preApprovedPaymentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="amount" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transAmoumt" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="transTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="returnInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="errorCode" type="xs:string" />
+          <xs:element minOccurs="0" name="errorMsg" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPaymentRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="order" type="tns:b2COrder" />
+          <xs:element minOccurs="0" name="payee" type="tns:b2CPayee" />
+          <xs:element minOccurs="0" name="payer" type="tns:b2CPayer" />
+          <xs:element minOccurs="0" name="payment" type="tns:b2CPayment" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="tokenId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2COrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderAmoumt" type="xs:string" />
+          <xs:element minOccurs="0" name="orderType" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPayee">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountId" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" type="xs:string" />
+          <xs:element minOccurs="0" name="memberId" type="xs:string" />
+          <xs:element minOccurs="0" name="ptId" type="xs:string" />
+          <xs:element minOccurs="0" name="receivableAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="receivableFee" type="xs:string" />
+          <xs:element minOccurs="0" name="sdId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPayer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountId" type="xs:string" />
+          <xs:element minOccurs="0" name="accountType" type="xs:string" />
+          <xs:element minOccurs="0" name="memberId" type="xs:string" />
+          <xs:element minOccurs="0" name="payableAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="payableFee" type="xs:string" />
+          <xs:element minOccurs="0" name="ptId" type="xs:string" />
+          <xs:element minOccurs="0" name="ptIdType" type="tns:memberIdType" />
+          <xs:element minOccurs="0" name="sdId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPayment">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="instCode" type="xs:string" />
+          <xs:element minOccurs="0" name="payChannel" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="paymentItems" nillable="true" type="tns:paymentItem" />
+          <xs:element minOccurs="0" name="paymentType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="paymentItem">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="key" type="xs:string" />
+          <xs:element minOccurs="0" name="value" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPaymentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankForm" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="paidAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="paidFee" type="xs:string" />
+          <xs:element minOccurs="0" name="payableAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="payableFee" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentNo" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentTime" type="xs:string" />
+          <xs:element minOccurs="0" name="receivableFee" type="xs:string" />
+          <xs:element minOccurs="0" name="receivedFee" type="xs:string" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPaymentCombinatedRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="combExtensionInfo" type="tns:extension" />
+          <xs:element minOccurs="0" name="combOrderInfo" type="tns:b2COrder" />
+          <xs:element minOccurs="0" name="combRequestHeader" type="tns:header" />
+          <xs:element minOccurs="0" name="combSignature" type="tns:signature" />
+          <xs:element minOccurs="0" name="combTokenID" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="combinatedPaymentDetailInfos" nillable="true" type="tns:b2CPaymentCombinatedDetailInfo" />
+          <xs:element minOccurs="0" name="sessionID" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPaymentCombinatedDetailInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="instCode" type="xs:string" />
+          <xs:element minOccurs="0" name="payChannel" type="xs:string" />
+          <xs:element minOccurs="0" name="payeeInfo" type="tns:b2CPayee" />
+          <xs:element minOccurs="0" name="payerInfo" type="tns:b2CPayer" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="paymentDetailParameters" nillable="true" type="tns:paymentItem" />
+          <xs:element minOccurs="0" name="paymentType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="b2CPaymentCombinatedResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="combResponseExtension" type="tns:extension" />
+          <xs:element minOccurs="0" name="combResponseHeader" type="tns:header" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="combResponseInfos" nillable="true" type="tns:combPaymentResponseInfo" />
+          <xs:element minOccurs="0" name="combResponseSignature" type="tns:signature" />
+          <xs:element minOccurs="0" name="combReturnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="customerOrderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="sessionId" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="combPaymentResponseInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankForm" type="xs:string" />
+          <xs:element minOccurs="0" name="instCode" type="xs:string" />
+          <xs:element minOccurs="0" name="paidAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="paidFee" type="xs:string" />
+          <xs:element minOccurs="0" name="payChannel" type="xs:string" />
+          <xs:element minOccurs="0" name="payableAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="payableFee" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentNo" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentTime" type="xs:string" />
+          <xs:element minOccurs="0" name="paymentType" type="xs:string" />
+          <xs:element minOccurs="0" name="receivableFee" type="xs:string" />
+          <xs:element minOccurs="0" name="receivedFee" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transferPaymentRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="order" type="tns:transferOrder" />
+          <xs:element minOccurs="0" name="payee" type="tns:transferPayee" />
+          <xs:element minOccurs="0" name="payer" type="tns:transferPayer" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transferOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="clientIP" type="xs:string" />
+          <xs:element minOccurs="0" name="contractNO" type="xs:string" />
+          <xs:element minOccurs="0" name="currency" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="xs:string" />
+          <xs:element minOccurs="0" name="memo" type="xs:string" />
+          <xs:element minOccurs="0" name="notifyURL" type="xs:string" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="orderTime" type="xs:string" />
+          <xs:element minOccurs="0" name="returnURL" type="xs:string" />
+          <xs:element minOccurs="0" name="transType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transferPayee">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="accountNo" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="xs:string" />
+          <xs:element minOccurs="0" name="memberId" type="xs:string" />
+          <xs:element minOccurs="0" name="memberIdType" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transferPayer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardValue" type="xs:string" />
+          <xs:element minOccurs="0" name="dynamicPwd" type="xs:string" />
+          <xs:element minOccurs="0" name="extension" type="xs:string" />
+          <xs:element minOccurs="0" name="instAccountNo" type="xs:string" />
+          <xs:element minOccurs="0" name="instCode" type="xs:string" />
+          <xs:element minOccurs="0" name="memberId" type="xs:string" />
+          <xs:element minOccurs="0" name="memberIdType" type="xs:string" />
+          <xs:element minOccurs="0" name="mobileNo" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="payMode" type="xs:string" />
+          <xs:element minOccurs="0" name="payerName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="transferPaymentResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="extension" type="tns:extension" />
+          <xs:element minOccurs="0" name="header" type="tns:header" />
+          <xs:element minOccurs="0" name="orderAmount" type="xs:string" />
+          <xs:element minOccurs="0" name="orderNo" type="xs:string" />
+          <xs:element minOccurs="0" name="payUrl" type="xs:string" />
+          <xs:element minOccurs="0" name="returnInfo" type="tns:returnInfo" />
+          <xs:element minOccurs="0" name="signature" type="tns:signature" />
+          <xs:element minOccurs="0" name="transAmoumt" type="xs:string" />
+          <xs:element minOccurs="0" name="transNo" type="xs:string" />
+          <xs:element minOccurs="0" name="transStatus" type="xs:string" />
+          <xs:element minOccurs="0" name="transTime" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="memberIdType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SD_ID" />
+          <xs:enumeration value="PT_ID" />
+          <xs:enumeration value="MEMBER_ID" />
+          <xs:enumeration value="MERCHANT_NO" />
+          <xs:enumeration value="SFT_LOGIN_ID" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="MasAPIException" type="tns:MasAPIException" />
+      <xs:complexType name="MasAPIException">
+        <xs:sequence />
+      </xs:complexType>
+      <xs:element name="processPreApprovedPay" type="tns:processPreApprovedPay" />
+      <xs:complexType name="processPreApprovedPay">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:preApprovedPaymentRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processPreApprovedPayResponse" type="tns:processPreApprovedPayResponse" />
+      <xs:complexType name="processPreApprovedPayResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:preApprovedPaymentResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processB2CPay" type="tns:processB2CPay" />
+      <xs:complexType name="processB2CPay">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:b2CPaymentRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processB2CPayResponse" type="tns:processB2CPayResponse" />
+      <xs:complexType name="processB2CPayResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:b2CPaymentResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processB2CCombinatedPay" type="tns:processB2CCombinatedPay" />
+      <xs:complexType name="processB2CCombinatedPay">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:b2CPaymentCombinatedRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processB2CCombinatedPayResponse" type="tns:processB2CCombinatedPayResponse" />
+      <xs:complexType name="processB2CCombinatedPayResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:b2CPaymentCombinatedResponse" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processTransfer" type="tns:processTransfer" />
+      <xs:complexType name="processTransfer">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:transferPaymentRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="processTransferResponse" type="tns:processTransferResponse" />
+      <xs:complexType name="processTransferResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:transferPaymentResponse" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="processB2CCombinatedPayResponse">
+    <wsdl:part name="parameters" element="tns:processB2CCombinatedPayResponse" />
+  </wsdl:message>
+  <wsdl:message name="processB2CPayResponse">
+    <wsdl:part name="parameters" element="tns:processB2CPayResponse" />
+  </wsdl:message>
+  <wsdl:message name="processTransfer">
+    <wsdl:part name="parameters" element="tns:processTransfer" />
+  </wsdl:message>
+  <wsdl:message name="processB2CCombinatedPay">
+    <wsdl:part name="parameters" element="tns:processB2CCombinatedPay" />
+  </wsdl:message>
+  <wsdl:message name="processB2CPay">
+    <wsdl:part name="parameters" element="tns:processB2CPay" />
+  </wsdl:message>
+  <wsdl:message name="processPreApprovedPay">
+    <wsdl:part name="parameters" element="tns:processPreApprovedPay" />
+  </wsdl:message>
+  <wsdl:message name="processTransferResponse">
+    <wsdl:part name="parameters" element="tns:processTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="MasAPIException">
+    <wsdl:part name="MasAPIException" element="tns:MasAPIException" />
+  </wsdl:message>
+  <wsdl:message name="processPreApprovedPayResponse">
+    <wsdl:part name="parameters" element="tns:processPreApprovedPayResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PaymentAPI">
+    <wsdl:operation name="processPreApprovedPay">
+      <wsdl:input name="processPreApprovedPay" message="tns:processPreApprovedPay" />
+      <wsdl:output name="processPreApprovedPayResponse" message="tns:processPreApprovedPayResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="processB2CPay">
+      <wsdl:input name="processB2CPay" message="tns:processB2CPay" />
+      <wsdl:output name="processB2CPayResponse" message="tns:processB2CPayResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="processB2CCombinatedPay">
+      <wsdl:input name="processB2CCombinatedPay" message="tns:processB2CCombinatedPay" />
+      <wsdl:output name="processB2CCombinatedPayResponse" message="tns:processB2CCombinatedPayResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+    <wsdl:operation name="processTransfer">
+      <wsdl:input name="processTransfer" message="tns:processTransfer" />
+      <wsdl:output name="processTransferResponse" message="tns:processTransferResponse" />
+      <wsdl:fault name="MasAPIException" message="tns:MasAPIException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PaymentAPIExporterServiceSoapBinding" type="tns:PaymentAPI">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="processPreApprovedPay">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processPreApprovedPay">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processPreApprovedPayResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processB2CPay">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processB2CPay">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processB2CPayResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processB2CCombinatedPay">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processB2CCombinatedPay">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processB2CCombinatedPayResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="processTransfer">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="processTransfer">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="processTransferResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MasAPIException">
+        <soap:fault use="literal" name="MasAPIException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PaymentAPIExporterService">
+    <wsdl:port name="PaymentAPIExporterPort" binding="tns:PaymentAPIExporterServiceSoapBinding">
+      <soap:address location="http://cardpay.shengpay.com/api-acquire-channel/services/paymentService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

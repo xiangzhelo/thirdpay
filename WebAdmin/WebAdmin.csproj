@@ -1,0 +1,1862 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A91FF9DD-7276-4722-BCEC-BF14E335380F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>viviAPI.WebAdmin</RootNamespace>
+    <AssemblyName>viviAPI.WebAdmin</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>7uka.snk</AssemblyOriginatorKeyFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AspNetPager, Version=7.0.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\AspNetPager.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells, Version=7.6.0.0, Culture=neutral, PublicKeyToken=00725b1ceb58d0a9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.Net20, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="viviapi.Cache, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\viviapi.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="viviapi.SysConfig, Version=1.0.0.0, Culture=neutral, PublicKeyToken=03403be00e338d8b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\viviapi.SysConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="viviLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6dc6aa925e6f48a6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\RefDLL\viviLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="360\account.js" />
+    <Content Include="360\base.css" />
+    <Content Include="360\base.js" />
+    <Content Include="360\bdbg11.png" />
+    <Content Include="360\i360_email.png" />
+    <Content Include="360\i360_logo2.png" />
+    <Content Include="360\jquery-1.9.1.min.js" />
+    <Content Include="360\loading.gif" />
+    <Content Include="360\quc_index_bg.jpg" />
+    <Content Include="360\registerNew.png" />
+    <Content Include="360\sp.png" />
+    <Content Include="360\two-code.png" />
+    <Content Include="360\uc_login.js" />
+    <Content Include="360\uc_login_reg.css" />
+    <Content Include="Configurations\IP\zh-CN\000.000.000.000-000.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\001.000.000.000-001.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\002.000.000.000-002.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\003.000.000.000-003.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\004.000.000.000-004.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\005.000.000.000-005.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\006.000.000.000-006.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\007.000.000.000-007.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\008.000.000.000-008.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\009.000.000.000-009.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\010.000.000.000-010.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\011.000.000.000-011.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\012.000.000.000-012.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\013.000.000.000-013.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\014.000.000.000-014.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\015.000.000.000-015.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\016.000.000.000-016.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\017.000.000.000-017.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\018.000.000.000-018.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\019.000.000.000-019.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\020.000.000.000-020.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\021.000.000.000-021.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\022.000.000.000-022.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\023.000.000.000-023.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\024.000.000.000-024.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\025.000.000.000-025.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\026.000.000.000-026.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\027.000.000.000-027.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\028.000.000.000-028.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\029.000.000.000-029.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\030.000.000.000-030.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\031.000.000.000-031.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\032.000.000.000-032.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\033.000.000.000-033.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\034.000.000.000-034.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\035.000.000.000-035.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\036.000.000.000-036.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\037.000.000.000-037.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\038.000.000.000-038.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\039.000.000.000-039.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\040.000.000.000-040.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\041.000.000.000-041.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\042.000.000.000-042.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\043.000.000.000-043.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\044.000.000.000-044.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\045.000.000.000-045.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\046.000.000.000-046.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\047.000.000.000-047.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\048.000.000.000-048.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\049.000.000.000-049.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\050.000.000.000-050.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\051.000.000.000-051.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\052.000.000.000-052.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\053.000.000.000-053.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\054.000.000.000-054.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\055.000.000.000-055.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\056.000.000.000-056.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\057.000.000.000-057.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\058.000.000.000-058.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\059.000.000.000-059.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\060.000.000.000-060.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\061.000.000.000-061.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\062.000.000.000-062.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\063.000.000.000-063.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\064.000.000.000-064.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\065.000.000.000-065.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\066.000.000.000-066.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\067.000.000.000-067.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\068.000.000.000-068.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\069.000.000.000-069.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\070.000.000.000-070.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\071.000.000.000-071.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\072.000.000.000-072.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\073.000.000.000-073.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\074.000.000.000-074.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\075.000.000.000-075.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\076.000.000.000-076.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\077.000.000.000-077.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\078.000.000.000-078.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\079.000.000.000-079.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\080.000.000.000-080.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\081.000.000.000-081.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\082.000.000.000-082.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\083.000.000.000-083.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\084.000.000.000-084.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\085.000.000.000-085.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\086.000.000.000-086.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\087.000.000.000-087.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\088.000.000.000-088.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\089.000.000.000-089.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\090.000.000.000-090.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\091.000.000.000-091.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\092.000.000.000-092.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\093.000.000.000-093.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\094.000.000.000-094.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\095.000.000.000-095.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\096.000.000.000-096.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\097.000.000.000-097.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\098.000.000.000-098.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\099.000.000.000-099.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\100.000.000.000-100.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\101.000.000.000-101.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\102.000.000.000-102.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\103.000.000.000-103.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\104.000.000.000-104.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\105.000.000.000-105.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\106.000.000.000-106.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\107.000.000.000-107.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\108.000.000.000-108.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\109.000.000.000-109.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\110.000.000.000-110.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\111.000.000.000-111.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\112.000.000.000-112.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\113.000.000.000-113.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\114.000.000.000-114.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\115.000.000.000-115.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\116.000.000.000-116.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\117.000.000.000-117.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\118.000.000.000-118.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\119.000.000.000-119.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\120.000.000.000-120.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\121.000.000.000-121.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\122.000.000.000-122.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\123.000.000.000-123.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\124.000.000.000-124.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\125.000.000.000-125.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\126.000.000.000-126.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\127.000.000.000-127.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\128.000.000.000-128.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\129.000.000.000-129.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\130.000.000.000-130.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\131.000.000.000-131.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\132.000.000.000-132.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\133.000.000.000-133.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\134.000.000.000-134.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\135.000.000.000-135.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\136.000.000.000-136.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\137.000.000.000-137.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\138.000.000.000-138.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\139.000.000.000-139.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\140.000.000.000-140.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\141.000.000.000-141.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\142.000.000.000-142.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\143.000.000.000-143.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\144.000.000.000-144.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\145.000.000.000-145.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\146.000.000.000-146.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\147.000.000.000-147.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\148.000.000.000-148.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\149.000.000.000-149.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\150.000.000.000-150.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\151.000.000.000-151.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\152.000.000.000-152.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\153.000.000.000-153.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\154.000.000.000-154.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\155.000.000.000-155.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\156.000.000.000-156.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\157.000.000.000-157.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\158.000.000.000-158.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\159.000.000.000-159.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\160.000.000.000-160.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\161.000.000.000-161.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\162.000.000.000-162.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\163.000.000.000-163.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\164.000.000.000-164.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\165.000.000.000-165.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\166.000.000.000-166.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\167.000.000.000-167.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\168.000.000.000-168.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\169.000.000.000-169.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\170.000.000.000-170.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\171.000.000.000-171.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\172.000.000.000-172.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\173.000.000.000-173.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\174.000.000.000-174.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\175.000.000.000-175.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\176.000.000.000-176.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\177.000.000.000-177.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\178.000.000.000-178.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\179.000.000.000-179.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\180.000.000.000-180.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\181.000.000.000-181.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\182.000.000.000-182.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\183.000.000.000-183.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\184.000.000.000-184.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\185.000.000.000-185.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\186.000.000.000-186.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\187.000.000.000-187.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\188.000.000.000-188.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\189.000.000.000-189.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\190.000.000.000-190.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\191.000.000.000-191.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\192.000.000.000-192.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\193.000.000.000-193.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\194.000.000.000-194.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\195.000.000.000-195.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\196.000.000.000-196.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\197.000.000.000-197.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\198.000.000.000-198.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\199.000.000.000-199.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\200.000.000.000-200.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\201.000.000.000-201.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\202.000.000.000-202.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\203.000.000.000-203.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\204.000.000.000-204.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\205.000.000.000-205.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\206.000.000.000-206.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\207.000.000.000-207.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\208.000.000.000-208.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\209.000.000.000-209.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\210.000.000.000-210.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\211.000.000.000-211.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\212.000.000.000-212.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\213.000.000.000-213.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\214.000.000.000-214.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\215.000.000.000-215.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\216.000.000.000-216.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\217.000.000.000-217.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\218.000.000.000-218.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\219.000.000.000-219.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\220.000.000.000-220.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\221.000.000.000-221.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\222.000.000.000-222.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\223.000.000.000-223.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\224.000.000.000-224.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\225.000.000.000-225.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\226.000.000.000-226.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\227.000.000.000-227.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\228.000.000.000-228.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\229.000.000.000-229.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\230.000.000.000-230.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\231.000.000.000-231.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\232.000.000.000-232.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\233.000.000.000-233.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\234.000.000.000-234.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\235.000.000.000-235.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\236.000.000.000-236.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\237.000.000.000-237.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\238.000.000.000-238.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\239.000.000.000-239.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\240.000.000.000-240.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\241.000.000.000-241.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\242.000.000.000-242.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\243.000.000.000-243.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\244.000.000.000-244.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\245.000.000.000-245.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\246.000.000.000-246.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\247.000.000.000-247.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\248.000.000.000-248.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\249.000.000.000-249.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\250.000.000.000-250.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\251.000.000.000-251.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\252.000.000.000-252.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\253.000.000.000-253.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\254.000.000.000-254.255.255.255.txt" />
+    <Content Include="Configurations\IP\zh-CN\255.000.000.000-255.255.255.255.txt" />
+    <Content Include="Console\main.aspx" />
+    <Content Include="Console\Order\weixinList.aspx" />
+    <Content Include="Console\Order\alipayList.aspx" />
+    <Content Include="Console\Order\qqpayList.aspx" />
+    <Content Include="Console\Order\BankList2.aspx" />
+    <Content Include="Console\style\ccbsoftkeyboard.htm" />
+    <Content Include="Console\style\images\paykeylogo\41.jpg" />
+    <Content Include="Console\style\images\paykeylogo\qianyifu.jpg" />
+    <Content Include="Console\style\images\paykeylogo\weixin.jpg" />
+    <Content Include="Console\style\images\paykeylogo\zhonglian.png" />
+    <Content Include="Console\supplier\AcctEdit.aspx" />
+    <Content Include="Console\Login-old.aspx" />
+    <Content Include="Console\supplier\List2.aspx" />
+    <Content Include="template\admin\assets\css\bui-min.css" />
+    <Content Include="template\admin\assets\css\dpl-min.css" />
+    <Content Include="template\admin\assets\css\jia.css" />
+    <Content Include="template\admin\assets\css\main-min.css" />
+    <Content Include="template\admin\assets\img\icon_bg.png" />
+    <Content Include="template\admin\assets\img\left-slib.gif" />
+    <Content Include="template\admin\assets\img\logox.png" />
+    <Content Include="template\admin\assets\img\menu-500-188.png" />
+    <Content Include="template\admin\assets\js\bui-min.js" />
+    <Content Include="template\admin\assets\js\common\main-min.js" />
+    <Content Include="template\admin\assets\js\config-min.js" />
+    <Content Include="template\admin\assets\js\jquery-1.8.1.min.js" />
+    <Content Include="template\admin\assets\js\main-min.js" />
+    <Content Include="template\admin\css\basic.css" />
+    <Content Include="template\admin\css\style.css" />
+    <Content Include="template\admin\assets\img\n_bg.gif" />
+    <Content Include="template\admin\assets\img\tab-140-120.gif" />
+    <Content Include="template\admin\js\jquery-1.2.pack.js" />
+    <Content Include="Console\User\UserDomain.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Console\Cache\Manage.aspx" />
+    <Content Include="Console\ChangePwd.aspx" />
+    <Content Include="Console\Channel\Edit.aspx" />
+    <Content Include="Console\Channel\List.aspx" />
+    <Content Include="Console\Channel\TypeEdit.aspx" />
+    <Content Include="Console\Channel\TypeList.aspx" />
+    <Content Include="Console\Channel\CodeMappingEdit.aspx" />
+    <Content Include="Console\Channel\CodeMappinglList.aspx" />
+    <Content Include="Console\Channel\SellCard.aspx" />
+    <Content Include="Console\Channel\WithdrawChannels.aspx" />
+    <Content Include="Console\Sys\CleanUpData.aspx" />
+    <Content Include="Console\Sys\DataBackup.aspx" />
+    <Content Include="Console\Default.aspx" />
+    <Content Include="Console\SysMailConfig.aspx" />
+    <Content Include="Console\EmailTest.aspx" />
+    <Content Include="Console\Message\Feedbacks.aspx" />
+    <Content Include="Console\Message\FeedbackReply.aspx" />
+    <Content Include="Console\Cache\Remote.aspx" />
+    <Content Include="Console\Index.aspx" />
+    <Content Include="Console\Message\Reports.aspx" />
+    <Content Include="Console\Message\ReportReply.aspx" />
+    <Content Include="Console\Left.aspx" />
+    <Content Include="Console\Login.aspx" />
+    <Content Include="Console\login2.aspx" />
+    <Content Include="Console\Logout.aspx" />
+    <Content Include="Console\Manage\List.aspx" />
+    <Content Include="Console\Manage\Edit.aspx" />
+    <Content Include="Console\Manage\LoginLog.aspx" />
+    <Content Include="Console\Manage\Md5.aspx" />
+    <Content Include="Console\Tools\Md5.aspx" />
+    <Content Include="Console\News\NewsEdit.aspx" />
+    <Content Include="Console\News\NewsList.aspx" />
+    <Content Include="Console\Order\BankList.aspx" />
+    <Content Include="Console\Order\BankDetail.aspx" />
+    <Content Include="Console\Order\BankReports.aspx" />
+    <Content Include="Console\Order\CardList.aspx" />
+    <Content Include="Console\Order\CardDetail.aspx" />
+    <Content Include="Console\Order\CardSendLog.aspx" />
+    <Content Include="Console\Order\CardWithholds.aspx" />
+    <Content Include="Console\Order\ModifyOrder.aspx" />
+    <Content Include="Console\Order\DebugInfos.aspx" />
+    <Content Include="Console\Order\DebugInfoDetail.aspx" />
+    <Content Include="Console\Order\Reconciliation.aspx" />
+    <Content Include="Console\Order\Reconciliation2.aspx" />
+    <Content Include="Console\Order\BankResetOrder.aspx" />
+    <Content Include="Console\Manage\Salesman.aspx" />
+    <Content Include="Console\separator.html" />
+    <Content Include="Console\Withdraw\SysSettle.aspx" />
+    <Content Include="Console\Finance\Freeze.aspx" />
+    <Content Include="Console\Finance\IncreaseAmtEdit.aspx" />
+    <Content Include="Console\Finance\IncreaseAmts.aspx" />
+    <Content Include="Console\Settled\Recharges.aspx" />
+    <Content Include="Console\Withdraw\TocashSchemeModi.aspx" />
+    <Content Include="Console\Withdraw\TocashSchemes.aspx" />
+    <Content Include="Console\Finance\Trades.aspx" />
+    <Content Include="Console\Finance\Transfers.aspx" />
+    <Content Include="Console\Settled\TransferschemeModi.aspx" />
+    <Content Include="Console\Finance\Thaw.aspx" />
+    <Content Include="Console\SiteInfo.aspx" />
+    <Content Include="Console\Stat\OrderReport.aspx" />
+    <Content Include="Console\Stat\orderreport2.aspx" />
+    <Content Include="Console\Stat\orderreport3.aspx" />
+    <Content Include="Console\Stat\orderreport4.aspx" />
+    <Content Include="Console\Stat\orderreport5.aspx" />
+    <Content Include="Console\Stat\orderreport6.aspx" />
+    <Content Include="Console\Stat\orderreport7.aspx" />
+    <Content Include="Console\Stat\usersOrderIncomes.aspx" />
+    <Content Include="Console\style\admin.css" />
+    <Content Include="Console\style\before_login.css" />
+    <Content Include="Console\style\images\1.gif" />
+    <Content Include="Console\style\images\2.gif" />
+    <Content Include="Console\style\images\3.gif" />
+    <Content Include="Console\style\images\bbs.gif" />
+    <Content Include="Console\style\images\bg.gif" />
+    <Content Include="Console\style\images\bg_left.gif" />
+    <Content Include="Console\style\images\bg_top.gif" />
+    <Content Include="Console\style\images\boardclose.gif" />
+    <Content Include="Console\style\images\button_bg.gif" />
+    <Content Include="Console\style\images\cc07.gif" />
+    <Content Include="Console\style\images\close.gif" />
+    <Content Include="Console\style\images\cxbg.gif" />
+    <Content Include="Console\style\images\dot.gif" />
+    <Content Include="Console\style\images\empty.gif" />
+    <Content Include="Console\style\images\folder_close.gif" />
+    <Content Include="Console\style\images\folder_open.gif" />
+    <Content Include="Console\style\images\help.gif" />
+    <Content Include="Console\style\images\HINT.GIF" />
+    <Content Include="Console\style\images\html_editor.gif" />
+    <Content Include="Console\style\images\icon.gif" />
+    <Content Include="Console\style\images\ico_succeed.gif" />
+    <Content Include="Console\style\images\index_conn_left.gif" />
+    <Content Include="Console\style\images\index_conn_left_bottom.gif" />
+    <Content Include="Console\style\images\index_conn_right.gif" />
+    <Content Include="Console\style\images\index_login_bg.gif" />
+    <Content Include="Console\style\images\item.gif" />
+    <Content Include="Console\style\images\leftclose.gif" />
+    <Content Include="Console\style\images\leftopen.gif" />
+    <Content Include="Console\style\images\login.gif" />
+    <Content Include="Console\style\images\login_bottom_bg.gif" />
+    <Content Include="Console\style\images\login_but.gif" />
+    <Content Include="Console\style\images\login_conn_left.gif" />
+    <Content Include="Console\style\images\login_conn_left_b.gif" />
+    <Content Include="Console\style\images\login_conn_right.gif" />
+    <Content Include="Console\style\images\login_conn_right_b.gif" />
+    <Content Include="Console\style\images\login_top_bg.gif" />
+    <Content Include="Console\style\images\Logo.gif" />
+    <Content Include="Console\style\images\open.gif" />
+    <Content Include="Console\style\images\passbg.gif" />
+    <Content Include="Console\style\images\paykeylogo\15173.gif" />
+    <Content Include="Console\style\images\paykeylogo\19pay.JPG" />
+    <Content Include="Console\style\images\paykeylogo\51card.gif" />
+    <Content Include="Console\style\images\paykeylogo\51zhifuka.JPG" />
+    <Content Include="Console\style\images\paykeylogo\ips.gif" />
+    <Content Include="Console\style\images\paykeylogo\600.jpg" />
+    <Content Include="Console\style\images\paykeylogo\60866.JPG" />
+    <Content Include="Console\style\images\paykeylogo\70card.gif" />
+    <Content Include="Console\style\images\paykeylogo\95588tw.gif" />
+    <Content Include="Console\style\images\paykeylogo\alipay.gif" />
+    <Content Include="Console\style\images\paykeylogo\baofoo.jpg" />
+    <Content Include="Console\style\images\paykeylogo\ekapay.gif" />
+    <Content Include="Console\style\images\paykeylogo\ekapay.jpg" />
+    <Content Include="Console\style\images\paykeylogo\gopay.png" />
+    <Content Include="Console\style\images\paykeylogo\hnapay.JPG" />
+    <Content Include="Console\style\images\paykeylogo\kb.gif" />
+    <Content Include="Console\style\images\paykeylogo\Kuaiqian.jpg" />
+    <Content Include="Console\style\images\paykeylogo\lianxin.JPG" />
+    <Content Include="Console\style\images\paykeylogo\longbao.JPG" />
+    <Content Include="Console\style\images\paykeylogo\mengma.JPG" />
+    <Content Include="Console\style\images\paykeylogo\ofpay.jpg" />
+    <Content Include="Console\style\images\paykeylogo\shengpay.JPG" />
+    <Content Include="Console\style\images\paykeylogo\tenpay.gif" />
+    <Content Include="Console\style\images\paykeylogo\yeepay.gif" />
+    <Content Include="Console\style\images\right.png" />
+    <Content Include="Console\style\images\separator1.gif" />
+    <Content Include="Console\style\images\separator2.gif" />
+    <Content Include="Console\style\images\softkeyboard.gif" />
+    <Content Include="Console\style\images\topbg.gif" />
+    <Content Include="Console\style\images\top_bg.gif" />
+    <Content Include="Console\style\images\top_bg0.gif" />
+    <Content Include="Console\style\images\Unknown.png" />
+    <Content Include="Console\style\images\VV.GIF" />
+    <Content Include="Console\style\images\VV1.GIF" />
+    <Content Include="Console\style\images\wrong.png" />
+    <Content Include="Console\style\left1a.css" />
+    <Content Include="Console\style\left1b.css" />
+    <Content Include="Console\style\login.css" />
+    <Content Include="Console\style\meun.css" />
+    <Content Include="Console\style\page.css" />
+    <Content Include="Console\style\page_show.css" />
+    <Content Include="Console\style\style.css" />
+    <Content Include="Console\style\union.css" />
+    <Content Include="Console\style\user.css" />
+    <Content Include="Console\supplier\APIConfig.aspx" />
+    <Content Include="Console\supplier\Edit.aspx" />
+    <Content Include="Console\supplier\List.aspx" />
+    <Content Include="Console\Sys\CahceManage.aspx" />
+    <Content Include="Console\Sys\TransactionSettings.aspx" />
+    <Content Include="Console\Template\Configuration.aspx" />
+    <Content Include="Console\Top.aspx" />
+    <Content Include="Console\Manage\Trades.aspx" />
+    <Content Include="Console\User\Agentratelimit.aspx" />
+    <Content Include="Console\User\GotoMerchantAdmin.aspx" />
+    <Content Include="Console\User\idimg.aspx" />
+    <Content Include="Console\Finance\PayRate.aspx" />
+    <Content Include="Console\Finance\PayRateEdit.aspx" />
+    <Content Include="Console\User\PromUserList.aspx" />
+    <Content Include="Console\User\QuestionEdit.aspx" />
+    <Content Include="Console\User\Questions.aspx" />
+    <Content Include="Console\Message\SMSRecords.aspx" />
+    <Content Include="Console\User\UserAdd.aspx" />
+    <Content Include="Console\User\UserChannel.aspx" />
+    <Content Include="Console\User\UserEdit.aspx" />
+    <Content Include="Console\User\DomainList.aspx" />
+    <Content Include="Console\User\Credentials.aspx" />
+    <Content Include="Console\User\UserImageCheck.aspx" />
+    <Content Include="Console\User\UserList.aspx" />
+    <Content Include="Console\User\UserLoginLog.aspx" />
+    <Content Include="Console\User\SettleAccountBill.aspx" />
+    <Content Include="Console\Finance\UserPayRateEdit.aspx" />
+    <Content Include="Console\User\UserUpdateLog.aspx" />
+    <Content Include="Console\Withdraw\Audits.aspx" />
+    <Content Include="Console\Withdraw\SuppTransLogs.aspx" />
+    <Content Include="Console\Withdraw\Historys.aspx" />
+    <Content Include="Console\Withdraw\Pay.aspx" />
+    <Content Include="Console\Withdraw\PayingByApi.aspx" />
+    <Content Include="Console\Withdraw\Pays.aspx" />
+    <Content Include="Console\Withdraw\Reissue.aspx" />
+    <Content Include="ueditor\dialogs\anchor\anchor.html" />
+    <Content Include="ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="ueditor\dialogs\attachment\callbacks.js" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="ueditor\dialogs\attachment\fileTypeMaps.js" />
+    <Content Include="ueditor\dialogs\background\background.css" />
+    <Content Include="ueditor\dialogs\background\background.html" />
+    <Content Include="ueditor\dialogs\background\background.js" />
+    <Content Include="ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="ueditor\dialogs\gmap\gmap.html" />
+    <Content Include="ueditor\dialogs\help\help.css" />
+    <Content Include="ueditor\dialogs\help\help.html" />
+    <Content Include="ueditor\dialogs\help\help.js" />
+    <Content Include="ueditor\dialogs\image\image.css" />
+    <Content Include="ueditor\dialogs\image\image.html" />
+    <Content Include="ueditor\dialogs\image\image.js" />
+    <Content Include="ueditor\dialogs\image\images\center_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\images\left_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\images\none_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\images\right_focus.jpg" />
+    <Content Include="ueditor\dialogs\image\imageUploader.swf" />
+    <Content Include="ueditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="ueditor\dialogs\internal.js" />
+    <Content Include="ueditor\dialogs\link\link.html" />
+    <Content Include="ueditor\dialogs\map\map.html" />
+    <Content Include="ueditor\dialogs\music\music.css" />
+    <Content Include="ueditor\dialogs\music\music.html" />
+    <Content Include="ueditor\dialogs\music\music.js" />
+    <Content Include="ueditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\size.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="ueditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="ueditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="ueditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="ueditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="ueditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="ueditor\dialogs\spechars\spechars.html" />
+    <Content Include="ueditor\dialogs\spechars\spechars.js" />
+    <Content Include="ueditor\dialogs\table\dragicon.png" />
+    <Content Include="ueditor\dialogs\table\edittable.css" />
+    <Content Include="ueditor\dialogs\table\edittable.html" />
+    <Content Include="ueditor\dialogs\table\edittable.js" />
+    <Content Include="ueditor\dialogs\table\edittd.html" />
+    <Content Include="ueditor\dialogs\table\edittip.html" />
+    <Content Include="ueditor\dialogs\tangram.js" />
+    <Content Include="ueditor\dialogs\template\config.js" />
+    <Content Include="ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="ueditor\dialogs\template\template.css" />
+    <Content Include="ueditor\dialogs\template\template.html" />
+    <Content Include="ueditor\dialogs\template\template.js" />
+    <Content Include="ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="ueditor\dialogs\video\video.css" />
+    <Content Include="ueditor\dialogs\video\video.html" />
+    <Content Include="ueditor\dialogs\video\video.js" />
+    <Content Include="ueditor\dialogs\webapp\webapp.html" />
+    <Content Include="ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="ueditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="ueditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="ueditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="ueditor\lang\en\en.js" />
+    <Content Include="ueditor\lang\en\images\addimage.png" />
+    <Content Include="ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="ueditor\lang\en\images\background.png" />
+    <Content Include="ueditor\lang\en\images\button.png" />
+    <Content Include="ueditor\lang\en\images\copy.png" />
+    <Content Include="ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="ueditor\lang\en\images\imglabel.png" />
+    <Content Include="ueditor\lang\en\images\listbackground.png" />
+    <Content Include="ueditor\lang\en\images\localimage.png" />
+    <Content Include="ueditor\lang\en\images\music.png" />
+    <Content Include="ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="ueditor\lang\en\images\upload.png" />
+    <Content Include="ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="ueditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="ueditor\themes\default\css\ueditor.css" />
+    <Content Include="ueditor\themes\default\dialogbase.css" />
+    <Content Include="ueditor\themes\default\images\anchor.gif" />
+    <Content Include="ueditor\themes\default\images\arrow.png" />
+    <Content Include="ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="ueditor\themes\default\images\filescan.png" />
+    <Content Include="ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="ueditor\themes\default\images\icons.gif" />
+    <Content Include="ueditor\themes\default\images\icons.png" />
+    <Content Include="ueditor\themes\default\images\lock.gif" />
+    <Content Include="ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="ueditor\themes\default\images\scale.png" />
+    <Content Include="ueditor\themes\default\images\spacer.gif" />
+    <Content Include="ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="ueditor\themes\default\images\upload.png" />
+    <Content Include="ueditor\themes\default\images\videologo.gif" />
+    <Content Include="ueditor\themes\default\images\word.gif" />
+    <Content Include="ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="ueditor\themes\iframe.css" />
+    <Content Include="ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="ueditor\third-party\swfupload\fileprogress.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.cookies.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.proxy.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.queue.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.speed.js" />
+    <Content Include="ueditor\third-party\swfupload\swfupload.swf" />
+    <Content Include="ueditor\third-party\swfupload\swfupload_fp9.swf" />
+    <Content Include="ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="ueditor\ueditor.all.js" />
+    <Content Include="ueditor\ueditor.all.min.js" />
+    <Content Include="ueditor\ueditor.config.js" />
+    <Content Include="ueditor\ueditor.parse.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCPRestSDK.cs" />
+    <Compile Include="Console\AgentWithdraw\AgentDistNotifyInfo.aspx.cs">
+      <DependentUpon>AgentDistNotifyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistNotifyInfo.aspx.designer.cs">
+      <DependentUpon>AgentDistNotifyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistNotifys.aspx.cs">
+      <DependentUpon>AgentDistNotifys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistNotifys.aspx.designer.cs">
+      <DependentUpon>AgentDistNotifys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDists.aspx.cs">
+      <DependentUpon>AgentDists.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDists.aspx.designer.cs">
+      <DependentUpon>AgentDists.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistsInfo.aspx.cs">
+      <DependentUpon>AgentDistsInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistsInfo.aspx.designer.cs">
+      <DependentUpon>AgentDistsInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistsSchemeModi.aspx.cs">
+      <DependentUpon>AgentDistsSchemeModi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistsSchemeModi.aspx.designer.cs">
+      <DependentUpon>AgentDistsSchemeModi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistsSchemes.aspx.cs">
+      <DependentUpon>AgentDistsSchemes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentDistsSchemes.aspx.designer.cs">
+      <DependentUpon>AgentDistsSchemes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentSummarys.aspx.cs">
+      <DependentUpon>AgentSummarys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\AgentWithdraw\AgentSummarys.aspx.designer.cs">
+      <DependentUpon>AgentSummarys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\ChangePwd2.aspx.cs">
+      <DependentUpon>ChangePwd2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\ChangePwd2.aspx.designer.cs">
+      <DependentUpon>ChangePwd2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\News\SendMsg.aspx.cs">
+      <DependentUpon>SendMsg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\News\SendMsg.aspx.designer.cs">
+      <DependentUpon>SendMsg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\News\MsgList.aspx.cs">
+      <DependentUpon>MsgList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\News\MsgList.aspx.designer.cs">
+      <DependentUpon>MsgList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\News\MsgView.aspx.cs">
+      <DependentUpon>MsgView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\News\MsgView.aspx.designer.cs">
+      <DependentUpon>MsgView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\CardReports.aspx.cs">
+      <DependentUpon>CardReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\CardReports.aspx.designer.cs">
+      <DependentUpon>CardReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\CardResetOrder.aspx.cs">
+      <DependentUpon>CardResetOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\CardResetOrder.aspx.designer.cs">
+      <DependentUpon>CardResetOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\weixinList.aspx.cs">
+      <DependentUpon>weixinList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\weixinList.aspx.designer.cs">
+      <DependentUpon>weixinList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\alipayList.aspx.cs">
+      <DependentUpon>alipayList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\alipayList.aspx.designer.cs">
+      <DependentUpon>alipayList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\qqpayList.aspx.cs">
+      <DependentUpon>qqpayList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\qqpayList.aspx.designer.cs">
+      <DependentUpon>qqpayList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\BankList2.aspx.cs">
+      <DependentUpon>BankList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\BankList2.aspx.designer.cs">
+      <DependentUpon>BankList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\supplier\AcctEdit.aspx.cs">
+      <DependentUpon>AcctEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\supplier\AcctEdit.aspx.designer.cs">
+      <DependentUpon>AcctEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\supplier\List2.aspx.cs">
+      <DependentUpon>List2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\supplier\List2.aspx.designer.cs">
+      <DependentUpon>List2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\SysMailList.aspx.cs">
+      <DependentUpon>SysMailList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\SysMailList.aspx.designer.cs">
+      <DependentUpon>SysMailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Sys\RegisterSettings.aspx.cs">
+      <DependentUpon>RegisterSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Sys\RegisterSettings.aspx.designer.cs">
+      <DependentUpon>RegisterSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Sys\OtherSettings.aspx.cs">
+      <DependentUpon>OtherSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Sys\OtherSettings.aspx.designer.cs">
+      <DependentUpon>OtherSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserLevels.aspx.cs">
+      <DependentUpon>UserLevels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserLevels.aspx.designer.cs">
+      <DependentUpon>UserLevels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\LevelEdit.aspx.cs">
+      <DependentUpon>LevelEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\LevelEdit.aspx.designer.cs">
+      <DependentUpon>LevelEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\PayRateShow.aspx.cs">
+      <DependentUpon>PayRateShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\PayRateShow.aspx.designer.cs">
+      <DependentUpon>PayRateShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\ApiKeyEdit.aspx.cs">
+      <DependentUpon>ApiKeyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\ApiKeyEdit.aspx.designer.cs">
+      <DependentUpon>ApiKeyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserDomain.aspx.cs">
+      <DependentUpon>UserDomain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserDomain.aspx.designer.cs">
+      <DependentUpon>UserDomain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Login-old.aspx.cs">
+      <DependentUpon>Login-old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Login-old.aspx.designer.cs">
+      <DependentUpon>Login-old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Cache\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Cache\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\ChangePwd.aspx.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\ChangePwd.aspx.designer.cs">
+      <DependentUpon>ChangePwd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\TypeEdit.aspx.cs">
+      <DependentUpon>TypeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\TypeEdit.aspx.designer.cs">
+      <DependentUpon>TypeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\TypeList.aspx.cs">
+      <DependentUpon>TypeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\TypeList.aspx.designer.cs">
+      <DependentUpon>TypeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\CodeMappingEdit.aspx.cs">
+      <DependentUpon>CodeMappingEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\CodeMappingEdit.aspx.designer.cs">
+      <DependentUpon>CodeMappingEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\CodeMappinglList.aspx.cs">
+      <DependentUpon>CodeMappinglList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\CodeMappinglList.aspx.designer.cs">
+      <DependentUpon>CodeMappinglList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\SellCard.aspx.cs">
+      <DependentUpon>SellCard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\SellCard.aspx.designer.cs">
+      <DependentUpon>SellCard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Channel\WithdrawChannels.aspx.cs">
+      <DependentUpon>WithdrawChannels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Channel\WithdrawChannels.aspx.designer.cs">
+      <DependentUpon>WithdrawChannels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Sys\CleanUpData.aspx.cs">
+      <DependentUpon>CleanUpData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Sys\CleanUpData.aspx.designer.cs">
+      <DependentUpon>CleanUpData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Sys\DataBackup.aspx.cs">
+      <DependentUpon>DataBackup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Sys\DataBackup.aspx.designer.cs">
+      <DependentUpon>DataBackup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\SysMailConfig.aspx.cs">
+      <DependentUpon>SysMailConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\SysMailConfig.aspx.designer.cs">
+      <DependentUpon>SysMailConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\EmailTest.aspx.cs">
+      <DependentUpon>EmailTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\EmailTest.aspx.designer.cs">
+      <DependentUpon>EmailTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Message\Feedbacks.aspx.cs">
+      <DependentUpon>Feedbacks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Message\Feedbacks.aspx.designer.cs">
+      <DependentUpon>Feedbacks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Message\FeedbackReply.aspx.cs">
+      <DependentUpon>FeedbackReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Message\FeedbackReply.aspx.designer.cs">
+      <DependentUpon>FeedbackReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Cache\Remote.aspx.cs">
+      <DependentUpon>Remote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Cache\Remote.aspx.designer.cs">
+      <DependentUpon>Remote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Message\Reports.aspx.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Message\Reports.aspx.designer.cs">
+      <DependentUpon>Reports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Message\ReportReply.aspx.cs">
+      <DependentUpon>ReportReply.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Message\ReportReply.aspx.designer.cs">
+      <DependentUpon>ReportReply.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Left.aspx.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Left.aspx.designer.cs">
+      <DependentUpon>Left.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\login2.aspx.cs">
+      <DependentUpon>login2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\login2.aspx.designer.cs">
+      <DependentUpon>login2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\LoginLog.aspx.cs">
+      <DependentUpon>LoginLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\LoginLog.aspx.designer.cs">
+      <DependentUpon>LoginLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\Md5.aspx.cs">
+      <DependentUpon>Md5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\Md5.aspx.designer.cs">
+      <DependentUpon>Md5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Tools\Md5.aspx.cs">
+      <DependentUpon>Md5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Tools\Md5.aspx.designer.cs">
+      <DependentUpon>Md5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\News\NewsEdit.aspx.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\News\NewsEdit.aspx.designer.cs">
+      <DependentUpon>NewsEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\News\NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\News\NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\BankList.aspx.cs">
+      <DependentUpon>BankList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\BankList.aspx.designer.cs">
+      <DependentUpon>BankList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\BankDetail.aspx.cs">
+      <DependentUpon>BankDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\BankDetail.aspx.designer.cs">
+      <DependentUpon>BankDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\BankReports.aspx.cs">
+      <DependentUpon>BankReports.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\BankReports.aspx.designer.cs">
+      <DependentUpon>BankReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\CardList.aspx.cs">
+      <DependentUpon>CardList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\CardList.aspx.designer.cs">
+      <DependentUpon>CardList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\CardDetail.aspx.cs">
+      <DependentUpon>CardDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\CardDetail.aspx.designer.cs">
+      <DependentUpon>CardDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\CardSendLog.aspx.cs">
+      <DependentUpon>CardSendLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\CardSendLog.aspx.designer.cs">
+      <DependentUpon>CardSendLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\CardWithholds.aspx.cs">
+      <DependentUpon>CardWithholds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\CardWithholds.aspx.designer.cs">
+      <DependentUpon>CardWithholds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\ModifyOrder.aspx.cs">
+      <DependentUpon>ModifyOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\ModifyOrder.aspx.designer.cs">
+      <DependentUpon>ModifyOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\DebugInfos.aspx.cs">
+      <DependentUpon>DebugInfos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\DebugInfos.aspx.designer.cs">
+      <DependentUpon>DebugInfos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\DebugInfoDetail.aspx.cs">
+      <DependentUpon>DebugInfoDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\DebugInfoDetail.aspx.designer.cs">
+      <DependentUpon>DebugInfoDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\Reconciliation.aspx.cs">
+      <DependentUpon>Reconciliation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\Reconciliation.aspx.designer.cs">
+      <DependentUpon>Reconciliation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\Reconciliation2.aspx.cs">
+      <DependentUpon>Reconciliation2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\Reconciliation2.aspx.designer.cs">
+      <DependentUpon>Reconciliation2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Order\BankResetOrder.aspx.cs">
+      <DependentUpon>BankResetOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Order\BankResetOrder.aspx.designer.cs">
+      <DependentUpon>BankResetOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\Salesman.aspx.cs">
+      <DependentUpon>Salesman.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\Salesman.aspx.designer.cs">
+      <DependentUpon>Salesman.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\SysSettle.aspx.cs">
+      <DependentUpon>SysSettle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\SysSettle.aspx.designer.cs">
+      <DependentUpon>SysSettle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\Freeze.aspx.cs">
+      <DependentUpon>Freeze.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\Freeze.aspx.designer.cs">
+      <DependentUpon>Freeze.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\IncreaseAmtEdit.aspx.cs">
+      <DependentUpon>IncreaseAmtEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\IncreaseAmtEdit.aspx.designer.cs">
+      <DependentUpon>IncreaseAmtEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\IncreaseAmts.aspx.cs">
+      <DependentUpon>IncreaseAmts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\IncreaseAmts.aspx.designer.cs">
+      <DependentUpon>IncreaseAmts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Settled\Recharges.aspx.cs">
+      <DependentUpon>Recharges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Settled\Recharges.aspx.designer.cs">
+      <DependentUpon>Recharges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\TocashSchemeModi.aspx.cs">
+      <DependentUpon>TocashSchemeModi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\TocashSchemeModi.aspx.designer.cs">
+      <DependentUpon>TocashSchemeModi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\TocashSchemes.aspx.cs">
+      <DependentUpon>TocashSchemes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\TocashSchemes.aspx.designer.cs">
+      <DependentUpon>TocashSchemes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\Trades.aspx.cs">
+      <DependentUpon>Trades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\Trades.aspx.designer.cs">
+      <DependentUpon>Trades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\Transfers.aspx.cs">
+      <DependentUpon>Transfers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\Transfers.aspx.designer.cs">
+      <DependentUpon>Transfers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Settled\TransferschemeModi.aspx.cs">
+      <DependentUpon>TransferschemeModi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Settled\TransferschemeModi.aspx.designer.cs">
+      <DependentUpon>TransferschemeModi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\Thaw.aspx.cs">
+      <DependentUpon>Thaw.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\Thaw.aspx.designer.cs">
+      <DependentUpon>Thaw.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\SiteInfo.aspx.cs">
+      <DependentUpon>SiteInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\SiteInfo.aspx.designer.cs">
+      <DependentUpon>SiteInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\OrderReport.aspx.cs">
+      <DependentUpon>OrderReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\OrderReport.aspx.designer.cs">
+      <DependentUpon>OrderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport2.aspx.cs">
+      <DependentUpon>orderreport2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport2.aspx.designer.cs">
+      <DependentUpon>orderreport2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport3.aspx.cs">
+      <DependentUpon>orderreport3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport3.aspx.designer.cs">
+      <DependentUpon>orderreport3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport4.aspx.cs">
+      <DependentUpon>orderreport4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport4.aspx.designer.cs">
+      <DependentUpon>orderreport4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport5.aspx.cs">
+      <DependentUpon>orderreport5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport5.aspx.designer.cs">
+      <DependentUpon>orderreport5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport6.aspx.cs">
+      <DependentUpon>orderreport6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport6.aspx.designer.cs">
+      <DependentUpon>orderreport6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport7.aspx.cs">
+      <DependentUpon>orderreport7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\orderreport7.aspx.designer.cs">
+      <DependentUpon>orderreport7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Stat\usersOrderIncomes.aspx.cs">
+      <DependentUpon>usersOrderIncomes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Stat\usersOrderIncomes.aspx.designer.cs">
+      <DependentUpon>usersOrderIncomes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\supplier\APIConfig.aspx.cs">
+      <DependentUpon>APIConfig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\supplier\APIConfig.aspx.designer.cs">
+      <DependentUpon>APIConfig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\supplier\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\supplier\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\supplier\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\supplier\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Sys\CahceManage.aspx.cs">
+      <DependentUpon>CahceManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Sys\CahceManage.aspx.designer.cs">
+      <DependentUpon>CahceManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Sys\TransactionSettings.aspx.cs">
+      <DependentUpon>TransactionSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Sys\TransactionSettings.aspx.designer.cs">
+      <DependentUpon>TransactionSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Template\Configuration.aspx.cs">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Template\Configuration.aspx.designer.cs">
+      <DependentUpon>Configuration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Top.aspx.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Top.aspx.designer.cs">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Manage\Trades.aspx.cs">
+      <DependentUpon>Trades.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Manage\Trades.aspx.designer.cs">
+      <DependentUpon>Trades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\Agentratelimit.aspx.cs">
+      <DependentUpon>Agentratelimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\Agentratelimit.aspx.designer.cs">
+      <DependentUpon>Agentratelimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\GotoMerchantAdmin.aspx.cs">
+      <DependentUpon>GotoMerchantAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\GotoMerchantAdmin.aspx.designer.cs">
+      <DependentUpon>GotoMerchantAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\idimg.aspx.cs">
+      <DependentUpon>idimg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\idimg.aspx.designer.cs">
+      <DependentUpon>idimg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\PayRate.aspx.cs">
+      <DependentUpon>PayRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\PayRate.aspx.designer.cs">
+      <DependentUpon>PayRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\PayRateEdit.aspx.cs">
+      <DependentUpon>PayRateEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\PayRateEdit.aspx.designer.cs">
+      <DependentUpon>PayRateEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\PromUserList.aspx.cs">
+      <DependentUpon>PromUserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\PromUserList.aspx.designer.cs">
+      <DependentUpon>PromUserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\QuestionEdit.aspx.cs">
+      <DependentUpon>QuestionEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\QuestionEdit.aspx.designer.cs">
+      <DependentUpon>QuestionEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\Questions.aspx.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\Questions.aspx.designer.cs">
+      <DependentUpon>Questions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Message\SMSRecords.aspx.cs">
+      <DependentUpon>SMSRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Message\SMSRecords.aspx.designer.cs">
+      <DependentUpon>SMSRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserAdd.aspx.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserAdd.aspx.designer.cs">
+      <DependentUpon>UserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserChannel.aspx.cs">
+      <DependentUpon>UserChannel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserChannel.aspx.designer.cs">
+      <DependentUpon>UserChannel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserEdit.aspx.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserEdit.aspx.designer.cs">
+      <DependentUpon>UserEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\DomainList.aspx.cs">
+      <DependentUpon>DomainList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\DomainList.aspx.designer.cs">
+      <DependentUpon>DomainList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\Credentials.aspx.cs">
+      <DependentUpon>Credentials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\Credentials.aspx.designer.cs">
+      <DependentUpon>Credentials.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserImageCheck.aspx.cs">
+      <DependentUpon>UserImageCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserImageCheck.aspx.designer.cs">
+      <DependentUpon>UserImageCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserList.aspx.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserList.aspx.designer.cs">
+      <DependentUpon>UserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserLoginLog.aspx.cs">
+      <DependentUpon>UserLoginLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserLoginLog.aspx.designer.cs">
+      <DependentUpon>UserLoginLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\SettleAccountBill.aspx.cs">
+      <DependentUpon>SettleAccountBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\SettleAccountBill.aspx.designer.cs">
+      <DependentUpon>SettleAccountBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Finance\UserPayRateEdit.aspx.cs">
+      <DependentUpon>UserPayRateEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Finance\UserPayRateEdit.aspx.designer.cs">
+      <DependentUpon>UserPayRateEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\User\UserUpdateLog.aspx.cs">
+      <DependentUpon>UserUpdateLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\User\UserUpdateLog.aspx.designer.cs">
+      <DependentUpon>UserUpdateLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\Audits.aspx.cs">
+      <DependentUpon>Audits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\Audits.aspx.designer.cs">
+      <DependentUpon>Audits.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\SuppTransLogs.aspx.cs">
+      <DependentUpon>SuppTransLogs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\SuppTransLogs.aspx.designer.cs">
+      <DependentUpon>SuppTransLogs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\Historys.aspx.cs">
+      <DependentUpon>Historys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\Historys.aspx.designer.cs">
+      <DependentUpon>Historys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\Pay.aspx.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\Pay.aspx.designer.cs">
+      <DependentUpon>Pay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\PayingByApi.aspx.cs">
+      <DependentUpon>PayingByApi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\PayingByApi.aspx.designer.cs">
+      <DependentUpon>PayingByApi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\Pays.aspx.cs">
+      <DependentUpon>Pays.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\Pays.aspx.designer.cs">
+      <DependentUpon>Pays.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\Withdraw\Reissue.aspx.cs">
+      <DependentUpon>Reissue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\Withdraw\Reissue.aspx.designer.cs">
+      <DependentUpon>Reissue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Log4Test.aspx.cs">
+      <DependentUpon>Log4Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Log4Test.aspx.designer.cs">
+      <DependentUpon>Log4Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools.aspx.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools.aspx.designer.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ueditor\net\Uploader.cs" />
+    <Compile Include="VerCode.aspx.cs">
+      <DependentUpon>VerCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerCode.aspx.designer.cs">
+      <DependentUpon>VerCode.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="7uka.snk" />
+    <None Include="App_Data\ipList.Dat" />
+    <None Include="Common\Template\xls\cards.xls" />
+    <None Include="Common\Template\xls\Distributions.xls" />
+    <None Include="Common\Template\xls\Settle.xls" />
+    <None Include="Common\Template\xls\SettledAgent.xls" />
+    <None Include="Common\Template\xls\templetfile.xlsx" />
+    <None Include="Configurations\IP\zh-CN\vssver2.scc" />
+    <None Include="Console\js\ControlDate\lang\vssver2.scc" />
+    <None Include="Console\js\ControlDate\skin\default\vssver2.scc" />
+    <None Include="Console\js\ControlDate\skin\vssver2.scc" />
+    <None Include="Console\js\ControlDate\skin\whyGreen\vssver2.scc" />
+    <Content Include="Console\AgentWithdraw\AgentDistNotifyInfo.aspx" />
+    <Content Include="Console\AgentWithdraw\AgentDistNotifys.aspx" />
+    <Content Include="Console\AgentWithdraw\AgentDists.aspx" />
+    <Content Include="Console\AgentWithdraw\AgentDistsInfo.aspx" />
+    <Content Include="Console\AgentWithdraw\AgentDistsSchemeModi.aspx" />
+    <Content Include="Console\AgentWithdraw\AgentDistsSchemes.aspx" />
+    <Content Include="Console\AgentWithdraw\AgentSummarys.aspx" />
+    <Content Include="Console\js\public.js" />
+    <Content Include="Console\Manage\ChangePwd.aspx" />
+    <Content Include="Console\Manage\ChangePwd2.aspx" />
+    <Content Include="Console\News\SendMsg.aspx" />
+    <Content Include="Console\News\MsgList.aspx" />
+    <Content Include="Console\News\MsgView.aspx" />
+    <Content Include="Console\Order\CardReports.aspx" />
+    <Content Include="Console\Order\CardResetOrder.aspx" />
+    <Content Include="Console\style\images\calcul\calBg1.jpg" />
+    <Content Include="Console\style\images\calcul\calBg2.jpg" />
+    <Content Include="Console\style\images\calcul\calBg3.jpg" />
+    <Content Include="Console\style\images\calcul\calBg4.jpg" />
+    <Content Include="Console\style\images\calcul\calBg5.jpg" />
+    <Content Include="Console\style\images\paykeylogo\dinpay.jpg" />
+    <Content Include="Console\style\images\paykeylogo\ebatong.jpg" />
+    <Content Include="Console\style\images\paykeylogo\huisu.jpg" />
+    <Content Include="Console\Sys\RegisterSettings.aspx" />
+    <Content Include="Console\Sys\OtherSettings.aspx" />
+    <Content Include="Console\SysMailList.aspx" />
+    <Content Include="Console\User\UserLevels.aspx" />
+    <Content Include="Console\User\LevelEdit.aspx" />
+    <Content Include="Console\Finance\PayRateShow.aspx" />
+    <Content Include="Console\User\ApiKeyEdit.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Configurations\log4net.config" />
+    <Content Include="Console\js\common.js" />
+    <Content Include="Console\js\ControlDate\calendar.js" />
+    <Content Include="Console\js\ControlDate\config.js" />
+    <Content Include="Console\js\ControlDate\lang\en.js" />
+    <Content Include="Console\js\ControlDate\lang\zh-cn.js" />
+    <Content Include="Console\js\ControlDate\lang\zh-tw.js" />
+    <Content Include="Console\js\ControlDate\My97DatePicker.htm" />
+    <Content Include="Console\js\ControlDate\skin\datePicker.gif" />
+    <Content Include="Console\js\ControlDate\skin\default\datepicker.css" />
+    <Content Include="Console\js\ControlDate\skin\default\img.gif" />
+    <Content Include="Console\js\ControlDate\skin\WdatePicker.css" />
+    <Content Include="Console\js\ControlDate\skin\whyGreen\bg.jpg" />
+    <Content Include="Console\js\ControlDate\skin\whyGreen\datepicker.css" />
+    <Content Include="Console\js\ControlDate\skin\whyGreen\img.gif" />
+    <Content Include="Console\js\ControlDate\WdatePicker.js" />
+    <Content Include="Configurations\memcached.config" />
+    <Content Include="Configurations\runtimeconfiguration.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Console\style\edit.css" />
+    <Content Include="Log4Test.aspx" />
+    <Content Include="TextFile1.txt" />
+    <Content Include="Tools.aspx" />
+    <Content Include="VerCode.aspx" />
+    <Content Include="ueditor\net\fileUp.ashx" />
+    <Content Include="ueditor\net\getContent.ashx" />
+    <Content Include="ueditor\net\getMovie.ashx" />
+    <Content Include="ueditor\net\getRemoteImage.ashx" />
+    <Content Include="ueditor\net\imageManager.ashx" />
+    <Content Include="ueditor\net\imageUp.ashx" />
+    <Content Include="ueditor\net\scrawlUp.ashx" />
+    <Content Include="ueditor\net\Web.config" />
+    <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Base\DBAccess\DBAccess.csproj">
+      <Project>{0D181290-2CAE-47DB-82E4-BAB7E7AF8E5D}</Project>
+      <Name>DBAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{30F24167-FE4A-44F9-9B30-3E8915FA6882}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ETAPI\ETAPI.csproj">
+      <Project>{0D016106-6927-4941-9ABF-9381F3349322}</Project>
+      <Name>ETAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{EA9BF80A-B9B1-4B03-B263-EAA1029AF6B9}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLServerDAL\SQLServerDAL.csproj">
+      <Project>{35F36085-52BD-4C9C-9C59-1E3F2DF01D83}</Project>
+      <Name>SQLServerDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SysInterface\SysInterface.csproj">
+      <Project>{150b0993-ab6e-41c0-8a92-001c03d60f21}</Project>
+      <Name>SysInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebComponents\WebComponents.csproj">
+      <Project>{77FB4EF2-1515-4084-A511-A8EE9DEC077F}</Project>
+      <Name>WebComponents</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51081</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
