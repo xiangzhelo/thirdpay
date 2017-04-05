@@ -95,6 +95,8 @@
     <Compile Include="Finance\PayRate.cs" />
     <Compile Include="Order\OrderNotifyX.cs" />
     <Compile Include="Order\OrderCardNotifyX.cs" />
+    <Compile Include="Quota\quotaOrder.cs" />
+    <Compile Include="Quota\quotapayrate.cs" />
     <Compile Include="Supplier\SupplierAccount.cs" />
     <Compile Include="Sys\SysConfig.cs" />
     <Compile Include="Sys\sysMailConfig.cs" />
@@ -210,6 +212,7 @@
       <Name>Lib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

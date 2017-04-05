@@ -65,6 +65,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Base\DBAccess\bin\Debug\DBAccess.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json.Net20">
+      <HintPath>..\RefDLL\Newtonsoft.Json.Net20.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -106,6 +109,8 @@
     <Compile Include="Order\OrderIncome.cs" />
     <Compile Include="Order\Statistics.cs" />
     <Compile Include="Promotion\Factory.cs" />
+    <Compile Include="Quota\quotaOrder.cs" />
+    <Compile Include="Quota\Quotapayrate.cs" />
     <Compile Include="Supplier\Supplier.cs" />
     <Compile Include="Supplier\SupplierAccount.cs" />
     <Compile Include="Sys\debuglog.cs" />
@@ -154,6 +159,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

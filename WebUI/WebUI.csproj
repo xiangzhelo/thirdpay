@@ -2252,6 +2252,7 @@
     <Content Include="usermodule\css\mytablelist.css" />
     <Content Include="usermodule\css\page.css" />
     <Content Include="usermodule\css\panel.css" />
+    <Content Include="usermodule\css\yifu.css" />
     <Content Include="usermodule\file\1.png" />
     <Content Include="usermodule\file\DD_belatedPNG_0.0.8a-min.js" />
     <Content Include="usermodule\file\dd_mag.png" />
@@ -2322,6 +2323,8 @@
     <Content Include="usermodule\product\cardprice.aspx" />
     <Content Include="usermodule\product\costrate.aspx" />
     <Content Include="usermodule\product\index.aspx" />
+    <Content Include="usermodule\quota\quotaPlaceOrder.aspx" />
+    <Content Include="usermodule\quota\quotarecharge.aspx" />
     <Content Include="usermodule\recharg\GoToRecharge.aspx" />
     <Content Include="usermodule\recharg\index.aspx" />
     <Content Include="usermodule\recharg\recharge.aspx" />
@@ -4278,6 +4281,23 @@
     <Compile Include="usermodule\product\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="usermodule\quota\GetQuotaInfo.ashx.cs">
+      <DependentUpon>GetQuotaInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="usermodule\quota\quotaPlaceOrder.aspx.cs">
+      <DependentUpon>quotaPlaceOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usermodule\quota\quotaPlaceOrder.aspx.designer.cs">
+      <DependentUpon>quotaPlaceOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usermodule\quota\quotarecharge.aspx.cs">
+      <DependentUpon>quotarecharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usermodule\quota\quotarecharge.aspx.designer.cs">
+      <DependentUpon>quotarecharge.aspx</DependentUpon>
+    </Compile>
     <Compile Include="usermodule\recharg\GoToRecharge.aspx.cs">
       <DependentUpon>GoToRecharge.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -4659,6 +4679,7 @@
     <Content Include="usermodule\download\api_example.zip" />
     <None Include="usermodule\download\templetfile.xlsx" />
     <None Include="usermodule\images\pa" />
+    <Content Include="usermodule\quota\GetQuotaInfo.ashx" />
     <None Include="usermodule\static\js\ejs\skin\black\images\vssver2.scc" />
     <None Include="usermodule\static\js\ejs\skin\black\vssver2.scc" />
     <None Include="usermodule\static\js\ejs\skin\bluebar\images\vssver2.scc" />

@@ -149,6 +149,7 @@
                                 <li><a href="api.aspx" target="mainframe"><i class="icon-nav"></i>API接入</a></li>
                                 <li><a href="messages.aspx" target="mainframe"><i class="icon-nav"></i>站内消息</a></li>
                                 <li><a href="feedbacks.aspx" target="mainframe"><i class="icon-nav"></i>留言反馈</a></li>
+                                <li><a href="/usermodule/quota/quotarecharge.aspx" target="mainframe"><i class="icon-nav"></i>额度转换</a></li>
                             </ul>
                         </div>
                     </div>
