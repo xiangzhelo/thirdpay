@@ -150,6 +150,8 @@
                                 <li><a href="messages.aspx" target="mainframe"><i class="icon-nav"></i>站内消息</a></li>
                                 <li><a href="feedbacks.aspx" target="mainframe"><i class="icon-nav"></i>留言反馈</a></li>
                                 <li><a href="/usermodule/quota/quotarecharge.aspx" target="mainframe"><i class="icon-nav"></i>额度转换</a></li>
+                                <li><a href="/usermodule/quota/quotaorder.aspx" target="mainframe"><i class="icon-nav"></i>额度转换记录</a></li>
+                                <li><a href="/usermodule/quota/quotapayrate.aspx" target="mainframe"><i class="icon-nav"></i>额度转换费率</a></li>
                             </ul>
                         </div>
                     </div>

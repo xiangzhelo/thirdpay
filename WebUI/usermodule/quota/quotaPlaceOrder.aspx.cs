@@ -69,7 +69,7 @@ namespace viviAPI.WebUI2015.usermodule.quota
                             model.quota_type = quota_type;
                             model.quotaValue = quotaValue;
                             model.orderid = orderid;
-                            model.clientip = "1234567";
+                            model.clientip = Page.Request.UserHostAddress;
                             int ret=viviapi.BLL.Quota.quotaOrder.Placeorder(model);
                             if (ret == 0) {
                                 msg = "额度转换失败，请联系开发人员";

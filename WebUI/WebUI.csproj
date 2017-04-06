@@ -2323,6 +2323,9 @@
     <Content Include="usermodule\product\cardprice.aspx" />
     <Content Include="usermodule\product\costrate.aspx" />
     <Content Include="usermodule\product\index.aspx" />
+    <Content Include="usermodule\quota\orderview.aspx" />
+    <Content Include="usermodule\quota\quotaorder.aspx" />
+    <Content Include="usermodule\quota\quotapayrate.aspx" />
     <Content Include="usermodule\quota\quotaPlaceOrder.aspx" />
     <Content Include="usermodule\quota\quotarecharge.aspx" />
     <Content Include="usermodule\recharg\GoToRecharge.aspx" />
@@ -4283,6 +4286,27 @@
     </Compile>
     <Compile Include="usermodule\quota\GetQuotaInfo.ashx.cs">
       <DependentUpon>GetQuotaInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="usermodule\quota\orderview.aspx.cs">
+      <DependentUpon>orderview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usermodule\quota\orderview.aspx.designer.cs">
+      <DependentUpon>orderview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usermodule\quota\quotaorder.aspx.cs">
+      <DependentUpon>quotaorder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usermodule\quota\quotaorder.aspx.designer.cs">
+      <DependentUpon>quotaorder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="usermodule\quota\quotapayrate.aspx.cs">
+      <DependentUpon>quotapayrate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="usermodule\quota\quotapayrate.aspx.designer.cs">
+      <DependentUpon>quotapayrate.aspx</DependentUpon>
     </Compile>
     <Compile Include="usermodule\quota\quotaPlaceOrder.aspx.cs">
       <DependentUpon>quotaPlaceOrder.aspx</DependentUpon>
