@@ -40,6 +40,20 @@ namespace viviAPI.WebUI2015.usermodule.quota
                         msg = "1";
                     }
                 }
+                if (get == "quotatype_selfisopen") {
+                    viviapi.Model.Quota.quotapayrate model = new viviapi.Model.Quota.quotapayrate();
+                    model.Userid = this.UserId;
+                    model.Quota_type = int.Parse(context.Request.Params["quota_type"].ToString());
+                    model.Selfisopen = int.Parse(context.Request.Params["selfisopen"].ToString());
+                    int quotatype_selfisopen = viviapi.BLL.Quota.Quotapayrate.update_selfisopen(model);
+                    if (quotatype_selfisopen == 0)
+                    {
+                        msg = "fail";
+                    }
+                    else{
+                        msg = "success";
+                    }
+                }
             }
             catch (Exception ex)
             {

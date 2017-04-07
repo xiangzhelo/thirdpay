@@ -7,6 +7,7 @@ namespace viviapi.BLL.Quota
 {
     public partial class Quotapayrate
     {
+        
         static viviapi.DAL.Quota.Quotapayrate dal = new viviapi.DAL.Quota.Quotapayrate();
 
         public static string Getpayratelist(viviapi.Model.Quota.quotapayrate model)
@@ -19,6 +20,18 @@ namespace viviapi.BLL.Quota
             {
                 ExceptionHandler.HandleException(exception);
                 return "null";
+            }
+        }
+        public static int update_selfisopen(viviapi.Model.Quota.quotapayrate model)
+        {
+            try
+            {
+                return dal.update_selfisopen(model);
+            }
+            catch (Exception exception)
+            {
+                ExceptionHandler.HandleException(exception);
+                return 0;
             }
         }
     }

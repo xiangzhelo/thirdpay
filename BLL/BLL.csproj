@@ -127,6 +127,7 @@
     <Compile Include="pay\payrate.cs" />
     <Compile Include="Quota\quotaOrder.cs" />
     <Compile Include="Quota\Quotapayrate.cs" />
+    <Compile Include="Quota\Quotatype.cs" />
     <Compile Include="Supplier\SupplierAccount.cs" />
     <Compile Include="Sys\Settings\SettleSettings.cs" />
     <Compile Include="Sys\Settings\OtherSettings.cs" />

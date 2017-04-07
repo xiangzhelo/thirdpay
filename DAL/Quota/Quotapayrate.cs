@@ -28,5 +28,21 @@ namespace viviapi.DAL.Quota
                 //return obj.Tables[0].Rows[0].Table;
             }
         }
+        public int update_selfisopen(Model.Quota.quotapayrate model)
+        {
+            int rowsAffected;
+            SqlParameter[] parameters = {
+                    new SqlParameter("@out", SqlDbType.Int,4),
+                    new SqlParameter("@quota_type", SqlDbType.Int,4),
+                    new SqlParameter("@userid", SqlDbType.Int,4),
+                    new SqlParameter("@isopen", SqlDbType.Int,4)
+            };
+            parameters[0].Direction = ParameterDirection.Output;
+            parameters[1].Value = model.Quota_type;
+            parameters[2].Value = model.Userid;
+            parameters[3].Value = model.Selfisopen;
+            DbHelperSQL.RunProcedure("proc_quotapayrate_update", parameters, out rowsAffected);
+            return (int)parameters[0].Value;
+        }
     }
 }

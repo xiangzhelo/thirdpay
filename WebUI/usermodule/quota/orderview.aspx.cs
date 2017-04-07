@@ -33,7 +33,7 @@ namespace viviAPI.WebUI2015.usermodule.quota
             this.lblcharge.Text = decimal.Parse(dsc["charge"].ToString()).ToString("f2");
             this.lblclientip.Text = dsc["clientip"].ToString();
             this.lblorderid.Text = dsc["orderid"].ToString();
-            this.lblpayrate.Text = (decimal.Parse(dsc["payrate"].ToString())*100M).ToString("f2");
+            this.lblpayrate.Text = (decimal.Parse(dsc["payrate"].ToString())*100M).ToString("f2")+"%";
             this.lblquotatype.Text = quotaType[int.Parse(dsc["quota_type"].ToString())];
             this.lblquotaValue.Text = decimal.Parse(dsc["quotaValue"].ToString()).ToString("f2");
         }

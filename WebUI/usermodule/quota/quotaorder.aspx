@@ -116,7 +116,7 @@
                                 <%# quotaType[int.Parse(Eval("quota_type").ToString())]%>
                             </td>
                             <td height="30" align="center" bgcolor="#FFFFFF">
-                                <%# toPercent(Eval("payrate", "{0:f2}"))%>
+                                <%# toPercent(Eval("payrate").ToString())%>%
                             </td>
                             <td height="30" align="center" bgcolor="#FFFFFF">
                                 <%# Eval("charge","{0:f2}")%>

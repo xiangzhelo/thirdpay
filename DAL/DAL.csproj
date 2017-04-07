@@ -111,6 +111,7 @@
     <Compile Include="Promotion\Factory.cs" />
     <Compile Include="Quota\quotaOrder.cs" />
     <Compile Include="Quota\Quotapayrate.cs" />
+    <Compile Include="Quota\QuotaType.cs" />
     <Compile Include="Supplier\Supplier.cs" />
     <Compile Include="Supplier\SupplierAccount.cs" />
     <Compile Include="Sys\debuglog.cs" />
