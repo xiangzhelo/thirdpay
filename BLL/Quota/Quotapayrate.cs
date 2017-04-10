@@ -34,5 +34,43 @@ namespace viviapi.BLL.Quota
                 return 0;
             }
         }
+
+        public static DataSet getpayrate(int searchuserID)
+        {
+            try
+            {
+                return dal.getpayrate(searchuserID);
+            }
+            catch (Exception exception)
+            {
+                ExceptionHandler.HandleException(exception);
+                return null;
+            }
+        }
+
+        public static int settingPayrate(Model.Quota.quotapayrate model)
+        {
+            try
+            {
+                return dal.settingPayrate(model);
+            }
+            catch (Exception exception)
+            {
+                ExceptionHandler.HandleException(exception);
+                return 0;
+            }
+        }
+        public static int settingSysisopen(Model.Quota.quotapayrate model)
+        {
+            try
+            {
+                return dal.settingSysisopen(model);
+            }
+            catch (Exception exception)
+            {
+                ExceptionHandler.HandleException(exception);
+                return 0;
+            }
+        }
     }
 }

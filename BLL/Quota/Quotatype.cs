@@ -22,5 +22,43 @@ namespace viviapi.BLL.Quota
                 return null;
             }
         }
+        public static DataSet getType()
+        {
+            try
+            {
+                return dal.getType();
+            }
+            catch (Exception exception)
+            {
+                ExceptionHandler.HandleException(exception);
+                return null;
+            }
+        }
+        public static bool settingIsopen(int quota_type, int isopen)
+        {
+            try
+            {
+                return dal.settingIsopen(quota_type,isopen);
+            }
+            catch (Exception exception)
+            {
+                ExceptionHandler.HandleException(exception);
+                return false;
+            }
+        }
+
+        public static bool settingDefaultPayrate(int quota_type, decimal payrate)
+        {
+            try
+            {
+                return dal.settingDefaultPayrate(quota_type, payrate);
+            }
+            catch (Exception exception)
+            {
+                ExceptionHandler.HandleException(exception);
+                return false;
+            }
+        }
+
     }
 }

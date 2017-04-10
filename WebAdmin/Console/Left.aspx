@@ -19,7 +19,7 @@ hr { width:90%; text-align:left; size:0; height:0px; border-top:1px solid #46A0C
     <script type="text/javascript">
 	function disp(n){
 	    try {
-	        for (var i = 0; i < 8; i++) {
+	        for (var i = 0; i < 9; i++) {
 	            //if (!document.getElementById("left"+i)) return;			
 	            document.getElementById("left" + i).style.display = "none";
 	        }
@@ -174,6 +174,14 @@ hr { width:90%; text-align:left; size:0; height:0px; border-top:1px solid #46A0C
                         <a target="rightframe" href="AgentWithdraw/AgentDists.aspx?audit_status=2&payment_status=2" >代发成功</a>
                         <a target="rightframe" href="AgentWithdraw/AgentDistNotifys.aspx" >结果通知</a>
                         <a target="rightframe" href="AgentWithdraw/AgentDistsSchemes.aspx" >代发规则</a>                     
+                    </div>
+                    
+                    <div id="left8" style="display: none">
+                        <div class="lefttab"> 额度管理</div>
+                        <div style="padding-top: 10px"></div>    
+                        <a target="rightframe" href="quota/quotalist.aspx" >额度转换列表</a>   
+                        <a target="rightframe" href="quota/quotatype.aspx" >额度类型</a>
+                        <a target="rightframe" href="quota/quotapayrate.aspx" >额度费率</a>                    
                     </div>
                 </td>
             </tr>

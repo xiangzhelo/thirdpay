@@ -25,7 +25,8 @@
                     <a href="#" onclick="parent.left.disp(3);return false;">接口管理</a>|
                     <a href="#" onclick="parent.left.disp(4);return false;">商户与代理</a>| 
                     <a href="#" onclick="parent.left.disp(5);return false;">结算管理</a>| 
-                    <a href="#" onclick="parent.left.disp(7);return false;">对私代发</a>
+                    <a href="#" onclick="parent.left.disp(7);return false;">对私代发</a>|
+                    <a href="#" onclick="parent.left.disp(8);return false;">额度管理</a>
                 </div>
             </td>
             <td align="right">

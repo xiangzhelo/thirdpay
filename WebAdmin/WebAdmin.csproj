@@ -366,11 +366,16 @@
     <Content Include="Configurations\IP\zh-CN\253.000.000.000-253.255.255.255.txt" />
     <Content Include="Configurations\IP\zh-CN\254.000.000.000-254.255.255.255.txt" />
     <Content Include="Configurations\IP\zh-CN\255.000.000.000-255.255.255.255.txt" />
+    <Content Include="Console\js\jquery.js" />
     <Content Include="Console\main.aspx" />
     <Content Include="Console\Order\weixinList.aspx" />
     <Content Include="Console\Order\alipayList.aspx" />
     <Content Include="Console\Order\qqpayList.aspx" />
     <Content Include="Console\Order\BankList2.aspx" />
+    <Content Include="Console\quota\quotalist.aspx" />
+    <Content Include="Console\quota\quotapayrate.aspx" />
+    <Content Include="Console\quota\quotasetting.aspx" />
+    <Content Include="Console\quota\quotatype.aspx" />
     <Content Include="Console\style\ccbsoftkeyboard.htm" />
     <Content Include="Console\style\images\paykeylogo\41.jpg" />
     <Content Include="Console\style\images\paykeylogo\qianyifu.jpg" />
@@ -898,6 +903,34 @@
     </Compile>
     <Compile Include="Console\Order\BankList2.aspx.designer.cs">
       <DependentUpon>BankList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\quota\quotalist.aspx.cs">
+      <DependentUpon>quotalist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\quota\quotalist.aspx.designer.cs">
+      <DependentUpon>quotalist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\quota\quotapayrate.aspx.cs">
+      <DependentUpon>quotapayrate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\quota\quotapayrate.aspx.designer.cs">
+      <DependentUpon>quotapayrate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\quota\quotasetting.aspx.cs">
+      <DependentUpon>quotasetting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\quota\quotasetting.aspx.designer.cs">
+      <DependentUpon>quotasetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Console\quota\quotatype.aspx.cs">
+      <DependentUpon>quotatype.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Console\quota\quotatype.aspx.designer.cs">
+      <DependentUpon>quotatype.aspx</DependentUpon>
     </Compile>
     <Compile Include="Console\supplier\AcctEdit.aspx.cs">
       <DependentUpon>AcctEdit.aspx</DependentUpon>
