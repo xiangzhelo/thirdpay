@@ -41,17 +41,17 @@ namespace viviAPI.WebUI7uka.usermodule.account
             if (ds_ag != null && ds_ag.Tables.Count > 0 && ds_ag.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds_ag.Tables[0].Rows[0];
-                decimal balance = 0;
+
                 if (row["quota_balance"] != DBNull.Value)
                 {
 
-                    foreach (DataRow dr in ds_ag.Tables[0].Rows)
-                    {
-                        //获取行中某个字段（列）的数据
-                        balance += decimal.Parse(dr["quota_balance"].ToString());
-                    }
-                    quota_all += balance;
-                    type_AG.InnerText = balance.ToString();
+                    //foreach (DataRow dr in ds_ag.Tables[0].Rows)
+                    //{
+                    //    //获取行中某个字段（列）的数据
+                    //    balance += decimal.Parse(dr["quota_balance"].ToString());
+                    //}
+                    quota_all += decimal.Parse(row["quota_balance"].ToString());
+                    type_AG.InnerText = decimal.Parse(row["quota_balance"].ToString()).ToString();
 
                 }
             }
@@ -62,18 +62,14 @@ namespace viviAPI.WebUI7uka.usermodule.account
             if (ds_bbin != null && ds_bbin.Tables.Count > 0 && ds_bbin.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds_bbin.Tables[0].Rows[0];
-                decimal balance = 0;
+
                 if (row["quota_balance"] != DBNull.Value)
                 {
 
-                    foreach (DataRow dr in ds_bbin.Tables[0].Rows)
-                    {
-                        //获取行中某个字段（列）的数据
-                        balance += decimal.Parse(dr["quota_balance"].ToString());
-                    }
-                    quota_all += balance;
 
-                    type_BBIN.InnerText = balance.ToString();
+                    quota_all += decimal.Parse(row["quota_balance"].ToString());
+
+                    type_BBIN.InnerText = decimal.Parse(row["quota_balance"].ToString()).ToString();
 
                 }
             }
@@ -83,18 +79,13 @@ namespace viviAPI.WebUI7uka.usermodule.account
             if (ds_MG != null && ds_MG.Tables.Count > 0 && ds_MG.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds_MG.Tables[0].Rows[0];
-                decimal balance = 0;
+
                 if (row["quota_balance"] != DBNull.Value)
                 {
 
-                    foreach (DataRow dr in ds_MG.Tables[0].Rows)
-                    {
+                    quota_all += decimal.Parse(row["quota_balance"].ToString());
 
-                        balance += decimal.Parse(dr["quota_balance"].ToString());
-                    }
-                    quota_all += balance;
-
-                    type_MG.InnerText = balance.ToString();
+                    type_MG.InnerText = decimal.Parse(row["quota_balance"].ToString()).ToString();
 
                 }
             }
@@ -103,17 +94,13 @@ namespace viviAPI.WebUI7uka.usermodule.account
             if (ds_OG != null && ds_OG.Tables.Count > 0 && ds_OG.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds_OG.Tables[0].Rows[0];
-                decimal balance = 0;
+
                 if (row["quota_balance"] != DBNull.Value)
                 {
 
-                    foreach (DataRow dr in ds_OG.Tables[0].Rows)
-                    {
 
-                        balance += decimal.Parse(dr["quota_balance"].ToString());
-                    }
-                    quota_all += balance;
-                    type_OG.InnerText = balance.ToString();
+                    quota_all += decimal.Parse(row["quota_balance"].ToString());
+                    type_OG.InnerText = decimal.Parse(row["quota_balance"].ToString()).ToString();
 
                 }
             }
@@ -123,17 +110,13 @@ namespace viviAPI.WebUI7uka.usermodule.account
             if (ds_HG != null && ds_HG.Tables.Count > 0 && ds_HG.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds_HG.Tables[0].Rows[0];
-                decimal balance = 0;
+
                 if (row["quota_balance"] != DBNull.Value)
                 {
 
-                    foreach (DataRow dr in ds_HG.Tables[0].Rows)
-                    {
 
-                        balance += decimal.Parse(dr["quota_balance"].ToString());
-                    }
-                    quota_all += balance;
-                    type_HG.InnerText = balance.ToString();
+                    quota_all += decimal.Parse(row["quota_balance"].ToString());
+                    type_HG.InnerText = decimal.Parse(row["quota_balance"].ToString()).ToString();
 
                 }
             }
@@ -144,17 +127,13 @@ namespace viviAPI.WebUI7uka.usermodule.account
             if (ds_PT != null && ds_PT.Tables.Count > 0 && ds_PT.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds_PT.Tables[0].Rows[0];
-                decimal balance = 0;
+
                 if (row["quota_balance"] != DBNull.Value)
                 {
 
-                    foreach (DataRow dr in ds_PT.Tables[0].Rows)
-                    {
 
-                        balance += decimal.Parse(dr["quota_balance"].ToString());
-                    }
-                    quota_all += balance;
-                    type_PT.InnerText = balance.ToString();
+                    quota_all += decimal.Parse(row["quota_balance"].ToString());
+                    type_PT.InnerText = decimal.Parse(row["quota_balance"].ToString()).ToString();
 
                 }
             }
@@ -163,17 +142,13 @@ namespace viviAPI.WebUI7uka.usermodule.account
             if (ds_EBET != null && ds_EBET.Tables.Count > 0 && ds_EBET.Tables[0].Rows.Count > 0)
             {
                 DataRow row = ds_EBET.Tables[0].Rows[0];
-                decimal balance = 0;
+
                 if (row["quota_balance"] != DBNull.Value)
                 {
 
-                    foreach (DataRow dr in ds_EBET.Tables[0].Rows)
-                    {
 
-                        balance += decimal.Parse(dr["quota_balance"].ToString());
-                    }
-                    quota_all += balance;
-                    type_EBET.InnerText = balance.ToString();
+                    quota_all += decimal.Parse(row["quota_balance"].ToString());
+                    type_EBET.InnerText = decimal.Parse(row["quota_balance"].ToString()).ToString();
 
                 }
             }
