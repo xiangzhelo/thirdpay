@@ -58,6 +58,33 @@ namespace viviAPI.WebUI7uka.usermodule.account {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl location;
         
         /// <summary>
+        /// lit_news_title 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lit_news_title;
+        
+        /// <summary>
+        /// lit_news_publish_time 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lit_news_publish_time;
+        
+        /// <summary>
+        /// lit_news_content 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal lit_news_content;
+        
+        /// <summary>
         /// lblgetmoney 控件。
         /// </summary>
         /// <remarks>
@@ -112,67 +139,76 @@ namespace viviAPI.WebUI7uka.usermodule.account {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl litFreezeAmt1;
         
         /// <summary>
-        /// lit_news_title 控件。
+        /// txtquota_all 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lit_news_title;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl txtquota_all;
         
         /// <summary>
-        /// lit_news_publish_time 控件。
+        /// type_AG 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lit_news_publish_time;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_AG;
         
         /// <summary>
-        /// lit_news_content 控件。
+        /// type_BBIN 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lit_news_content;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_BBIN;
         
         /// <summary>
-        /// ordercount 控件。
+        /// type_MG 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ordercount;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_MG;
         
         /// <summary>
-        /// totalmoney 控件。
+        /// type_OG 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl totalmoney;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_OG;
         
         /// <summary>
-        /// succordercount 控件。
+        /// type_HG 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl succordercount;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_HG;
         
         /// <summary>
-        /// succtotalmoney 控件。
+        /// type_PT 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl succtotalmoney;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_PT;
+        
+        /// <summary>
+        /// type_EBET 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl type_EBET;
         
         /// <summary>
         /// rptdata 控件。

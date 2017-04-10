@@ -125,6 +125,7 @@
     <Compile Include="Order\OrderIncome.cs" />
     <Compile Include="Order\Statistics.cs" />
     <Compile Include="pay\payrate.cs" />
+    <Compile Include="Quota\Quota.cs" />
     <Compile Include="Quota\quotaOrder.cs" />
     <Compile Include="Quota\Quotapayrate.cs" />
     <Compile Include="Quota\Quotatype.cs" />
